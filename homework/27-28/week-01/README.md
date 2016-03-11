@@ -13,32 +13,41 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 Please use any remaining time to complete and review the exercises from dusk.
 
-<!-- ## Day 2
+
+<!--
+## Day 2
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. -->
+Please use any remaining time to complete and review the exercises from dawn & dusk.
+-->
 
-<!-- ## Day 3
+<!--
+## Day 3
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. -->
+Please use any remaining time to complete and review the exercises from dawn & dusk.
+-->
 
-<!-- ## Day 4
+<!--
+## Day 4
 
 1. Reading
 2. Friday Review Prep
     - Complete the [Week 1 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. -->
+Please use any remaining time to complete and review the exercises from dawn & dusk.
+-->
 
-<!-- ## Day 5 - Weekend Homework
+<!--
+## Day 5 - Weekend Homework
 
 1. Reading
 2. Weekend Lab
 
-Please use any remaining time to review exercises/drills from the week! And don't forget to sleep! -->
+Please use any remaining time to review exercises/drills from the week! And don't forget to sleep!
+-->
