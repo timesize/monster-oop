@@ -25,7 +25,7 @@ Now imagine that a time traveling doctor from 2034 leaves a set of books on your
 
 Bootstrap is like these books from 1950. There is better stuff out there, but this is pretty good to start!
 
-## Boostrap Boilerplate
+## Bootstrap Boilerplate
 
 Here is a boilerplate bootstrap html document. **NOTICE** that bootstrap is being loaded through the web from a CDN `https://maxcdn.bootstrapcdn.com`.
 
