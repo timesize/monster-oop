@@ -286,6 +286,8 @@ Git stores information about your project in a **repository**. A git repository 
 | Show version history | `git log <filename>` |
 | Get help with git commands | `git help <command>` |
 
+## Exercises
+* [Learn Git lab](https://github.com/sf-wdi-27-28/learn-git)
 
 ## Resources
 
