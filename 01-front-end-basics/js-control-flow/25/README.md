@@ -220,7 +220,7 @@ if ( last_name ) {
 }
 ```
 
-Best Practice: surround ternary expressions in parantheses.
+Best Practice: surround ternary expressions in parentheses.
 
 **Conditional assignment: `||` as Default Operator**
 
