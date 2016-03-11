@@ -9,23 +9,38 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 ## Day 1
 
 1. Reading
+    * [Example](#example)
 2. Bonus/Stretch
+    * [Example](#example)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+
+* [Example](#example)
+* [Example](#example)
 
 ## Day 2
 
 1. Reading
+    * [Example](#example)
 2. Bonus/Stretch
+    * [Example](#example)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+
+* [Example](#example)
+* [Example](#example)
 
 ## Day 3
 
 1. Reading
+    * [Example](#example)
 2. Bonus/Stretch
+    * [Example](#example)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+
+* [Example](#example)
+* [Example](#example)
 
 ## Day 4
 
