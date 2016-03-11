@@ -8,8 +8,8 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 ## Day 1
 
-1. [Command Line Mystery](https://github.com/sf-wdi-27-28/command-line-mystery)
-2. Watch [Growth Mindset TED Talk](https://www.youtube.com/watch?v=pN34FNbOKXc)
+1. Follow the instructions on [Command Line Mystery](https://github.com/sf-wdi-27-28/command-line-mystery) to solve the command-line mysteries. Don't worry if you can't complete everything. If you need help, work together and make use of the TAs.
+2. Watch [Growth Mindset TED Talk](https://www.youtube.com/watch?v=pN34FNbOKXc) and think about how you can apply a growth mindset to your new life as a developer!
 
 Please use any remaining time to complete and review the exercises from dusk.
 
