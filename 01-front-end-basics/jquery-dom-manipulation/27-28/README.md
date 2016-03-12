@@ -29,18 +29,19 @@ The DOM is often visualized as a "tree"
 ![DOM tree](https://cloud.githubusercontent.com/assets/6520345/13718763/0ab9a2a0-e7a2-11e5-9214-7a063f26af19.png)
 [Image source](http://www.w3schools.com/js/pic_htmltree.gif)
 
-This visualization is a great starting point for understanding the DOM, but it often leaves out a lot of the details of what's going on.
+__Write out the HTML that the above DOM tree represents.__
+
+The DOM tree visualization is a great starting point for understanding the DOM, but it often leaves out a lot of the details of what's going on.
 
 Firefox, which has its own set of developer tools, also  has a great tool for looking at the stacking of the DOM.
 
-Hit this button ![gear button](https://cloud.githubusercontent.com/assets/6520345/13718657/da0b2b48-e7a0-11e5-83ae-93f0d6afb241.png)
+Hit this button:
+![gear button](https://cloud.githubusercontent.com/assets/6520345/13718657/da0b2b48-e7a0-11e5-83ae-93f0d6afb241.png)
 
-Make sure the 3D view is checked
-
+Make sure the 3D view is checked:
 ![3d view check box](https://cloud.githubusercontent.com/assets/6520345/13718685/16cf81a0-e7a1-11e5-96cc-e903f969cbbe.png)
 
 and click the cube looking button:
-
 ![cube button](https://cloud.githubusercontent.com/assets/6520345/13718634/b128b024-e7a0-11e5-8001-7806557ae99b.png)
 
 Check out what clicking that button does to [The New York Times](nyt.com) and [Buzzfeed](buzzfeed.com).
