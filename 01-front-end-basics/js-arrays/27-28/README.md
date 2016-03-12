@@ -238,9 +238,9 @@ Let's get back to arrays.
 
 We've seen we can traverse an array of elements with a simple `for` loop, but this isn't the most streamlined approach to accessing and changing a list in Javascript.
 
-Javascript has provided us with quite a few powerful built-in "iterator" methods that make it a breeze to do something to each element in an array. Being able to use these methods is one sign of a more mature developer. Plus, and they give us great opportunities to practice using callbacks! 
+Javascript has provided us with quite a few powerful built-in "iterator" methods that make it a breeze to do something to each element in an array. Plus, they give us great opportunities to practice using callbacks! 
 
-*We encourage you to use iterators instead of traditional `for` loops where you can!*
+*Being able to use these methods is one sign of a more mature developer.  We encourage you to use iterators instead of traditional `for` loops wherever you can!*
 
 
 
