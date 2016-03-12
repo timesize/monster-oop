@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Week 2 Assessment [SOLUTIONS]
 
-### DOM Manipulation
+### 1. DOM Manipulation
 
 Use this HTML for the following questions:
 
@@ -33,19 +33,19 @@ Use this HTML for the following questions:
 
 **Using jQuery...**
 
-1. Replace "Welcome to my site!" with "Hello World!"
+1.1 Replace "Welcome to my site!" with "Hello World!"
 
   ```js
   $('h1').text('Hello World!');
   ```
 
-2. Replace the current image with this image: "earth.jpg"
+1.2 Replace the current image with this image: "earth.jpg"
 
   ```js
   $('img').attr('src', 'earth.jpg');
   ```
 
-3. Add a new link to the nav that points to the "/blog" section of the website.
+1.3 Add a new link to the nav that points to the "/blog" section of the website.
 
   ```js
   $('nav ul').append('<li><a href="/blog">Blog</a></li>');
@@ -54,7 +54,7 @@ Use this HTML for the following questions:
   $('ul').append('<li><a href="/blog">Blog</a></li>');
   ```
 
-4. When a user clicks on one of the `nav` links, do not redirect them. Instead, trigger an `alert` that says "Sorry, this page is under construction". **Bonus:** Display the page name ("Home", "About", etc.) in the alert.
+1.4 When a user clicks on one of the `nav` links, do not redirect them. Instead, trigger an `alert` that says "Sorry, this page is under construction". **Bonus:** Display the page name ("Home", "About", etc.) in the alert.
 
   ```js
   $('nav a').on('click', function(event) {
@@ -79,9 +79,9 @@ Use this HTML for the following questions:
   });
   ```
 
-### JavaScript OOP
+### 2. JavaScript OOP
 
-1. Create a JavaScript object constructor for a `Person`. Every instance of `Person` should have the following properties:
+2.1 Create a JavaScript object constructor for a `Person`. Every instance of `Person` should have the following properties:
   * first name
   * last name
   * number of siblings
@@ -96,7 +96,7 @@ Use this HTML for the following questions:
   }
   ```
 
-2. Using your `Person` constructor, create a `greet` method that returns a string, e.g. "Hi, my name is Steve Wozniak and I have 3 siblings!"
+2.2 Using your `Person` constructor, create a `greet` method that returns a string, e.g. "Hi, my name is Steve Wozniak and I have 3 siblings!"
 
   ```js
   Person.prototype.greet = function() {
@@ -104,13 +104,13 @@ Use this HTML for the following questions:
   };
   ```
 
-3. Create a new instance of `Person`, and demonstrate how you would call the `greet` method.
+2.3 Create a new instance of `Person`, and demonstrate how you would call the `greet` method.
 
   ```js
   var steve = new Person("Steve", "Wozniak", 3, ["CA"]);
   ```
 
-4. Create a method called `placesLived` that prints all the states a person has lived in, one per line.
+2.4 Create a method called `placesLived` that prints all the states a person has lived in, one per line.
 
   ```js
   Person.prototype.placesLived = function() {
@@ -120,9 +120,9 @@ Use this HTML for the following questions:
   };
   ```
 
-### AJAX
+### 3. AJAX
 
-1. Name and describe the parts of the following URL: https://www.youtube.com/watch?v=y8Kyi0WNg40&t=1s
+3.1 Name and describe the parts of the following URL: https://www.youtube.com/watch?v=y8Kyi0WNg40&t=1s
 
   ```
   https://www.youtube.com/watch: webpage URL
@@ -138,7 +138,7 @@ Use this HTML for the following questions:
   The URL parameters send data to the server.
   ```
 
-2. Juggler Supply Co. has an api with the following documentation:
+3.2 Juggler Supply Co. has an api with the following documentation:
 
   **API Endpoint:** http://jugglersupply.co
 
