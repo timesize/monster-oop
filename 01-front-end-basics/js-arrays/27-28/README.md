@@ -218,18 +218,19 @@ eatSandwich('bacon', 'lettuce', 'tomato', function makeBigSandwich(toppingsArray
 
 Let's get back to arrays.
 
-As we've seen we can traverse an array of elements with a simple for-loop, but this *really* isn't the best approach to accessing and changing a list in Javascript.
+As we've seen we can traverse an array of elements with a simple `for` loop, but this isn't the most streamlined approach to accessing and changing a list in Javascript.
 
-As per usual, Javascript has provided us with quite a few powerful built-in methods that make accessing elements in an array a relative breeze.
+Javascript has provided us with quite a few powerful built-in "iterator" methods that make it a breeze to do something to each element in an array. 
 
-*We will no longer be using the traditional for-loop structure to access and work with the elements within an array.  Adios!*
+*Being able to use these methods is one sign of a more mature developer, and they give us great opportunities to practice using callbacks! We'll encourage you to use iterators instead of traditional `for` loops where you can!*
+
 
 
 ### array.forEach() ###
 
-To loop through an array with the ability to alter each element, similar to a for-loop traversal , JavaScript gives us an Array method `forEach()`
+To loop through an array with the ability to alter each element, similar to a `for` loop traversal , JavaScript gives us an Array method `forEach()`.
 
-**forEach function skeleton**:
+**`forEach` function skeleton**:
 
 ```javascript
 array.forEach(function callBack(element, index) {
