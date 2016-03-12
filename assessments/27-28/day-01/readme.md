@@ -127,7 +127,7 @@
 	<br>
 	<br>
 	<br>
-
+	
 	**7.1** Based on the code you just wrote, what is the output of the following function calls:
 
 	```js
@@ -137,6 +137,9 @@
 	evaluateTemp(50);  //=>
 	evaluateTemp(70);  //=>
 	```
+
+	<img width="706" alt="indicate how confident, how hard" src="https://cloud.githubusercontent.com/assets/1489337/13724610/3d76ecd6-e840-11e5-83b9-4db361a2bd53.png">
+
 
 8. Write a function called `findGreater` that takes two arguments and returns the greater of the pair.
 
@@ -164,5 +167,7 @@
 	findGreater(b, s) === b;  //=>
 	findGreater(s, 1) === s;  //=>
 	```
+
+	<img width="706" alt="indicate how confident, how hard" src="https://cloud.githubusercontent.com/assets/1489337/13724610/3d76ecd6-e840-11e5-83b9-4db361a2bd53.png">
 
 9. Name as many JavaScript datatypes as you can think of. **Bonus:** give an example of each!
