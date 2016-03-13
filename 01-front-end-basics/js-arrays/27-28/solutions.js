@@ -27,8 +27,8 @@ var fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry",
 "Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
 
 for (var i=0; i<fruits.length; i++) {
-  console.log(fruits[i]);
-}
+  console.log( fruits[i] );
+} 
 /*
  Apple
  Banana
@@ -49,7 +49,7 @@ console.log("\nChallenge 3.0");
 
 for (var i=0; i<fruits.length; i++) {
    var index = fruits.length - 1 - i;
-   console.log(fruits[index])
+   console.log( fruits[index] ); 
 }
 
 /* prints:
@@ -66,9 +66,18 @@ for (var i=0; i<fruits.length; i++) {
 */
 
 
+/* Challenge 4 */
+console.log("\nChallenge 4.0");
 
+for (var i=2; i<fruits.length; i = i+3) {
+   console.log( fruits[i] );
+}
 
-
+/* prints:
+ Cherry
+ Fig
+ Ice plant
+*/
 
 
 
@@ -100,22 +109,28 @@ dogs.forEach(function(element, index) {
 
 
 
-/* Challenge 1c (forEach)
+/* Challenge 2
 
 Curry up now has a line wrapped around the truck!
 It takes about two minutes per delicious curry burrito.
 Output the customer's name & their expected wait time.
 */
-console.log("\nChallenge 1c");
-
-
-var customers = ["Justin", "Ilias", "Nathan", "Camilo", "Vikash", "Adam",
-"Brianna", "Sarah", "Ali", "Jessie", "Cameron"];
-
-var waitTime = 2;
-customers.forEach(function(element) {
-  console.log(element + ": " + waitTime + " minutes");
-  waitTime +=2;
-});
 
 console.log("\n\nChallenge 2.0");
+
+
+var customers = ["Ali", "Ilias", "Alex", "Mercedes", "Sarah", "Ben", "Ayinde", "Dani", "Jamey", "Jessie"];
+
+// forEach solution
+customers.forEach(function callback(element, index) {
+  var waitTime = 2 + 2*index;
+  console.log(element + ": " + waitTime + " minutes");
+});
+
+// for loop solution
+var waitTime;
+for (var i=0; i<customers.length; i++){
+  waitTime = 2 + 2*i;
+  console.log(customers[i] + ": " + waitTime + " minutes");
+}
+

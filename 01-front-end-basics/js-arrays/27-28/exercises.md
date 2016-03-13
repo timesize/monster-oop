@@ -19,17 +19,19 @@ Each of the following tasks can be accomplished using a single Array method in 1
 
 ### Challenge 2 ###
 
-Use `for` to print out each fruit from the list.
+1. Use `for` to print out each fruit from the list.
 
-```js
-var fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry",
-"Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
-```
-
+	```js
+	var fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry",
+	"Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
+	```
 ### Challenge 3 ###
 
-Print the same list as above, in reverse order.
+1. Print the same list items as above, in reverse order. 
 
+### Challenge 4 ###
+
+1. Use a `for` loop to print out every *third* fruit. The output should be `"Cherry"`, `"Fig"`, `"Ice plant"`.
 
 
 **stop here until we reach the next exercise**
@@ -52,9 +54,9 @@ Use `forEach` and `String.toUpperCase` method to convert the list of characters 
 Use `console.log( dogs )` to verify your solution has changed the `dogs` array.
 
 
-###Challenge 1c ###
+###Challenge 2 ###
 
-*Curry up now* has a line wrapped around the truck! It takes about two minutes per delicious curry burrito. Output the customer's name & their expected wait time.
+1. *Curry up now* has a line wrapped around the truck! It takes about two minutes per delicious curry burrito. Output the customer's name & their expected wait time.
 
 ```javascript
 // warning -- below is pseudo-code!
@@ -72,3 +74,9 @@ customers.forEach(fn);
    Jessie: 20 minutes
 */
 ```
+
+1. If you originally solved this challenge with a `for` loop, rewrite it using `forEach`. You may want to check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">documentation about `forEach`</a>'s callback method arguments.  If you originally solved this challenge with `forEach`, rewrite your solution with a `for` loop. 
+
+
+
+
