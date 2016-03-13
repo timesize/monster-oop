@@ -9,6 +9,9 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 ## Day 1
 
 1. Follow the instructions on [Command Line Mystery](https://github.com/sf-wdi-27-28/command-line-mystery) to solve the command-line mysteries. Don't worry if you can't complete everything. If you need help, work together and make use of the TAs.
+1. Go to your class schedule ([27](https://github.com/sf-wdi-27-28/schedule-27)/[28](https://github.com/sf-wdi-27-28/schedule-28)). Click on the "Issues" tab at the top -> "New Issue" button. For the title type "YOUR_FIRST_NAME's links". In the comment section, type your Slack and GitHub usernames.
+
+  ![Issue example](https://cloud.githubusercontent.com/assets/3010270/13731806/f468a340-e92f-11e5-8cef-346edffb510a.png)
 2. Watch [Growth Mindset TED Talk](https://www.youtube.com/watch?v=pN34FNbOKXc) and think about how you can apply a growth mindset to your new life as a developer!
 
 Please use any remaining time to complete and review the exercises from dusk.
