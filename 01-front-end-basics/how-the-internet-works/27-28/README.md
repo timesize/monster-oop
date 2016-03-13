@@ -234,7 +234,7 @@ Are the old books still there?
 
 As a developer, you'll want to have a designated directory on your computer where you keep all your projects. This makes it faster to navigate to specific projects, since you know you can find them all in one place.
 
-Follow these steps to set up your development directory (which we'll call `develop`):
+Follow these steps to set up your development directory (which we'll call `wdi`):
 
 1. Change into your home directory:
 
@@ -242,19 +242,19 @@ Follow these steps to set up your development directory (which we'll call `devel
   ➜  cd ~
   ```
 
-2. Create a new directory called `develop`:
+2. Create a new directory called `wdi`:
 
   ```zsh
   ➜  mkdir develop
   ```
 
-3. Whenever you start a new project, change into your `develop` directory, then you're ready to go!
+3. Whenever you start a new project, change into your `wdi` directory, then you're ready to go!
 
   ```zsh
-  ➜  cd ~/develop
+  ➜  cd ~/wdi
   ```
 
-**Important:** DO NOT turn your home (`~`) or development (`~/develop`) directory into a git repository. This would be done by running `git init` in either directory (which you DO NOT want to do). If `~` or `~/develop` is a git repository, any project you create inside `~/develop` won't be properly tracked by GitHub.
+**Important:** DO NOT turn your home (`~`) or development (`~/wdi`) directory into a git repository. This would be done by running `git init` in either directory (which you DO NOT want to do). If `~` or `~/wdi` is a git repository, any project you create inside `~/wdi` won't be properly tracked by GitHub.
 
 ## Git/GitHub
 
