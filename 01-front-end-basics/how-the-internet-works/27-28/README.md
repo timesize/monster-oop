@@ -245,7 +245,7 @@ Follow these steps to set up your development directory (which we'll call `wdi`)
 2. Create a new directory called `wdi`:
 
   ```zsh
-  ➜  mkdir develop
+  ➜  mkdir wdi
   ```
 
 3. Whenever you start a new project, change into your `wdi` directory, then you're ready to go!
