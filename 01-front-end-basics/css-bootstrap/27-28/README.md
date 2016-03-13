@@ -68,3 +68,4 @@ Here is a boilerplate bootstrap html document. **NOTICE** that bootstrap is bein
 
 ## Resources
 1. [Bootstrap docs](http://getbootstrap.com/)
+1. [Made with Bootstrap](http://builtwithbootstrap.com/)
