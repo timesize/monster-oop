@@ -2,6 +2,7 @@
 
 |Learning Objectives|
 | :--- |
+| Create arrays and store them in variables |
 | Access and change information inside arrays with array methods |
 | Explain examples that use callback functions to create more flexible code |
 | Traverse arrays with `for` loops and the `forEach` iterator array method |
@@ -88,11 +89,7 @@ for (var i=0; i<fruits.length; i++) {
 <!--  --> 
 
 
-Quick Exercise:
-
-**head over to the exercises**
-
-@TODO - link/associate exercises
+**Quick Exercise**:  Let's look at a few exercises!
 
 
 
