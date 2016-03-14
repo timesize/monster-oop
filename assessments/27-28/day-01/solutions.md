@@ -35,19 +35,6 @@
   </html>
   ```
 
-  **2.1** The HTML you just wrote can be described as having a “tree” structure. Draw a diagram which visualizes your HTML’s structure.
-
-  ```
-  - html
-  - head
-  - body
-    - h1
-    - h3
-    - p
-    - p
-    - img
-  ```
-
 3. Given the below code, how would you get the value `30`?
 
 	```js
@@ -60,21 +47,36 @@
 
 4. Given the below code, how would you add the name "Michael Nesmith" to the monkees?
 
-	```js
-	var monkees = ["Peter Tork", "Micky Dolenz", "Davy Jones"];
-	```
+    ```js
+    var monkees = ["Peter Tork", "Micky Dolenz", "Davy Jones"];
+    ```
 
-  ```js
-  monkees.push("Michael Nesmith");
-  ```
+    ```js
+    monkees.push("Michael Nesmith");
+    ```
 
 	**4.1** How would you find the total number of band members?
 
-	```js
-  monkees.length
-  ```
+    ```js
+    monkees.length
+    ```
 
-5. Given the `combine` function below, what is the output of the following function calls:
+5. Given the code below, how would you get the street part of the address?
+    ```js
+    var address = {
+        city: "San Francisco",
+        number: 225,
+        street: "Bush St.",
+        state: "CA",
+        zip: 94104
+    };
+
+    address["street"]   // "Bush St."
+    address['street']   // "Bush St."
+    address.street      // "Bush St."
+    ```
+
+6. Given the `combine` function below, what is the output of the following function calls:
 
 	```js
 	function combine (a, b) {
@@ -96,7 +98,7 @@
 	combine(x, b);	       //=> 15
 	```
 
-6. What is the output of the following code?
+7. What is the output of the following code?
 
 	```js
 	var rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
@@ -120,7 +122,7 @@
 	// we didn't mark it wrong if you missed the `undefined` part - that was tricky :)
   ```
 
-7. Write a function called `evaluateTemp` that returns "warm" or "cool" depending on the temperature. Anything above 50 degrees is "warm", while anything 50 degrees or below is "cool".
+8. Write a function called `evaluateTemp` that returns "warm" or "cool" depending on the temperature. Anything above 50 degrees is "warm", while anything 50 degrees or below is "cool".
 
 	```js
   function evaluateTemp (temp) {
@@ -142,7 +144,7 @@
 	evaluateTemp(70);  //=> "warm"
 	```
 
-8. Write a function called `findGreater` that takes two arguments and returns the greater of the pair.
+9. Write a function called `findGreater` that takes two arguments and returns the greater of the pair.
 
   ```js
   function findGreater (num1, num2) {
@@ -155,7 +157,7 @@
   }
   ```
 
-	**8.1** Based on the code you just wrote, what is the output of the following function calls:
+	**9.1** Based on the code you just wrote, what is the output of the following function calls:
 
 	```js
 	// input			      //=> output
@@ -169,7 +171,7 @@
 	findGreater(s, 1) === s;  //=> true
 	```
 
-9. Name as many JavaScript data types as you can think of. **Bonus:** give an example of each!
+10. Name as many JavaScript data types as you can think of. **Bonus:** give an example of each!
 
   ```js
   // PRIMITIVE

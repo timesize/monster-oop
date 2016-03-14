@@ -30,19 +30,6 @@
 	<br>
 	<br>
 
-  **2.1** The HTML you just wrote can be described as having a “tree” structure. Draw a diagram which visualizes your HTML’s structure.
-
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-
 3. Given the below code, how would you get the value `30`?
 
 	```js
@@ -73,7 +60,23 @@
 	<br>
 	<br>
 
-5. Given the `combine` function below, what is the output of the following function calls:
+5. Given the code below, how would you get the street part of the address?
+    ```js
+    var address = {
+        city: "San Francisco",
+        number: 225,
+        street: "Bush St.",
+        state: "CA",
+        zip: 94104
+    };
+    ```
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+6. Given the `combine` function below, what is the output of the following function calls:
 
 	```js
 	function combine (a, b) {
@@ -95,7 +98,7 @@
 	combine(x, b);	       //=>
 	```
 
-6. What is the output of the following code?
+7. What is the output of the following code?
 
 	```js
 	var rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
@@ -115,7 +118,7 @@
 	<br>
 	<br>
 
-7. Write a function called `evaluateTemp` that returns "warm" or "cool" depending on the temperature. Anything above 50 degrees is "warm", while anything 50 degrees or below is "cool".
+8. Write a function called `evaluateTemp` that returns "warm" or "cool" depending on the temperature. Anything above 50 degrees is "warm", while anything 50 degrees or below is "cool".
 
 	<br>
 	<br>
@@ -128,7 +131,7 @@
 	<br>
 	<br>
 	
-	**7.1** Based on the code you just wrote, what is the output of the following function calls:
+	**8.1** Based on the code you just wrote, what is the output of the following function calls:
 
 	```js
 	// input		//=> output
@@ -141,7 +144,7 @@
 	<img width="706" alt="indicate how confident, how hard" src="https://cloud.githubusercontent.com/assets/1489337/13724610/3d76ecd6-e840-11e5-83b9-4db361a2bd53.png">
 
 
-8. Write a function called `findGreater` that takes two arguments and returns the greater of the pair.
+9. Write a function called `findGreater` that takes two arguments and returns the greater of the pair.
 
 	<br>
 	<br>
@@ -154,7 +157,7 @@
 	<br>
 	<br>
 
-	**8.1** Based on the code you just wrote, what is the output of the following function calls:
+	**9.1** Based on the code you just wrote, what is the output of the following function calls:
 
 	```js
 	// input			      //=> output
@@ -170,4 +173,4 @@
 
 	<img width="706" alt="indicate how confident, how hard" src="https://cloud.githubusercontent.com/assets/1489337/13724610/3d76ecd6-e840-11e5-83b9-4db361a2bd53.png">
 
-9. Name as many JavaScript datatypes as you can think of. **Bonus:** give an example of each!
+10. Name as many JavaScript datatypes as you can think of. **Bonus:** give an example of each!
