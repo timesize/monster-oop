@@ -35,13 +35,13 @@ fruits[fruits.length-1]; // "Jackfruit
 **Adding** an element to the **front**:
 
 ```javascript
-fruits.unshift( "Apricot" ); // 11
+fruits.unshift("Apricot"); // 11
 ```
 
 **Adding** an element to the **end**:  
 
 ```javascript
-fruits.push( "Kiwi" ); // 12
+fruits.push("Kiwi"); // 12
 ```
 
 **Removing** an element from the **front**:
@@ -58,15 +58,15 @@ fruits.pop(); // "Kiwi"
 **Finding** the index of an element:  
 
 ```javascript
-fruits.indexOf( "Jackfruit" ); // 9
+fruits.indexOf("Jackfruit"); // 9
 fruits[9]; // "Jackfruit"
 ```
 
 **Removing** an element by index position:  
 
 ```javascript
-var huckleBerryPos = fruits.indexOf( "HuckleBerry" );
-var removedItem = fruits.splice( huckleBerryPos, 1 );
+var huckleBerryPos = fruits.indexOf("HuckleBerry");
+var removedItem = fruits.splice(huckleBerryPos, 1);
 // ["Apple", "Banana", "Cherry", "Durian", "Elderberry", "Fig", "Guava", "Ice plant", "Jackfruit"];
 ```
 
@@ -82,7 +82,7 @@ var fruits = ["Apple", "Banana", "Cherry", "Durian", "Elderberry",
 "Fig", "Guava", "Huckleberry", "Ice plant", "Jackfruit"];
 
 for (var i=0; i<fruits.length; i++) {
-  console.log( "eating a", fruits[i] );
+  console.log("eating a", fruits[i]);
 }
 ```   
 
@@ -98,17 +98,17 @@ for (var i=0; i<fruits.length; i++) {
 When we call a function, we usually pass some arguments to it.  For example here, we're passing a string `Strawberry` to the `indexOf` function.
 
 ```js
-fruits.indexOf( "Strawberry" );
+fruits.indexOf("Strawberry");
 ```
 We can do this with our own functions as well.
 
 ```js
-function makeSandwich( meat, cheese ) {
+function makeSandwich(meat, cheese) {
   return "bread, " + meat + ", " + cheese + ", bread";
 }
 
 // call makeSandwich and pass arguments to it
-makeSandwich( "turkey", "provolone" );  // => bread, turkey, provolone, bread
+makeSandwich("turkey", "provolone");  // => bread, turkey, provolone, bread
 ```
 
 
@@ -116,17 +116,17 @@ Arguments can also be passed in with their variable names.
 
 ```javascript
 var favoriteMeat = "ham";
-makeSandwich( favoriteMeat, "colby" );  // call makeSandwich with "ham" and "colby"
+makeSandwich(favoriteMeat, "colby");  // call makeSandwich with "ham" and "colby"
 ```
 
 We can pass other types of arguments too, including arrays and objects.
 
 ```js
-function makeBigSandwich( toppingsArray ) {
+function makeBigSandwich(toppingsArray) {
   return "bread," + toppingsArray.toString() + ",&bread";
 }
 
-makeBigSandwich( ['ham', 'salami', 'provolone'] );
+makeBigSandwich(['ham', 'salami', 'provolone']);
 // "bread,ham,salami,provolone,&bread"
 ```
 
@@ -137,9 +137,9 @@ When a function is passed in as an argument, it can be called within the functio
 First let's look at a function that just uses another function.
 
 ```javascript
-function add( a, b ) {
+function add(a, b) {
   var result = a + b;
-  console.log( result );
+  console.log(result);
 }
 ```
 
@@ -152,17 +152,17 @@ function add( a, b ) {
 Now let's make our `add` function a little more flexible. We'd like the option to display the result in multiple ways instead of always using `console.log`.  We'll remove `console.log` and pass in a more generic display function to call instead.
 
 ```javascript
-function add( a, b, displayFunction ) {
+function add(a, b, displayFunction) {
   var result = a + b;
-  displayFunction( result );  // use the displayFuction function to show the result
+  displayFunction(result);  // use the displayFuction function to show the result
 }
 
-function printToConsole( input ) {
-  console.log( input );
+function printToConsole(input) {
+  console.log(input);
 }
 
 // then calling it:
-add( 2, 2, printToConsole ); // => console logs 4
+add(2, 2, printToConsole); // => console logs 4
 ```
 
 When a function takes in another function and calls it, we say the second function is a "callback" function.  
@@ -172,12 +172,12 @@ When a function takes in another function and calls it, we say the second functi
 We can also use a different function as the `displayFunction`.  This gives us a lot of flexibility.
 
 ```javascript
-function toAlert( input ) {
-  alert( input );
+function toAlert(input) {
+  alert(input);
 }
 
 // then calling it:
-add( 8, 9, toAlert ); // => alerts 17
+add(8, 9, toAlert); // => alerts 17
 ```
 
 A common way to write this is to define the `displayFunction` function **in-line** with the main function call.
@@ -185,8 +185,8 @@ A common way to write this is to define the `displayFunction` function **in-line
 ```javascript
 
 // defining our specific display function as we call the add function ("in-line"):
-add( 8, 9, function toAlert( input ) {
-  alert( input );
+add(8, 9, function toAlert(input) {
+  alert(input);
 }); // => still alerts 17
 ```
 
@@ -194,14 +194,14 @@ Let's have another example, a more delicious example:
 
 ```javascript
 
-function eatSandwich( topping1, topping2, topping3, sandwichMaker ) {
-    console.log( "I'm going to make and eat a sandwich with: " + topping1 + ', ' + topping2 + ' and ' + topping3 );
+function eatSandwich(topping1, topping2, topping3, sandwichMaker) {
+    console.log("I'm going to make and eat a sandwich with: " + topping1 + ', ' + topping2 + ' and ' + topping3);
     var layers = [topping1, topping2, topping3];
-    var sandwich = sandwichMaker( layers );
-    console.log( "Finished eating my " + sandwich + " sandwich!" );
+    var sandwich = sandwichMaker(layers);
+    console.log("Finished eating my " + sandwich + " sandwich!");
 }
 
-function makeBigSandwich( toppingsArray ) {
+function makeBigSandwich(toppingsArray) {
   return "bread," + toppingsArray.toString() + ",&bread";
 }
 
@@ -216,15 +216,15 @@ And now we'll re-write this with the function definition in-line with the functi
 ```javascript
 
 // eatSandwich stays the same
-var eatSandwich = function( topping1, topping2, topping3, sandwichMaker ) {
-    console.log( "I'm going to make and eat a sandwich with: " + topping1 + ', ' + topping2 + ' and ' + topping3 );
+var eatSandwich = function(topping1, topping2, topping3, sandwichMaker) {
+    console.log("I'm going to make and eat a sandwich with: " + topping1 + ', ' + topping2 + ' and ' + topping3);
     var layers = [topping1, topping2, topping3];
-    var sandwich = sandwichMaker( layers );
-    console.log( "Finished eating my " + sandwich + " sandwich!" );
+    var sandwich = sandwichMaker(layers);
+    console.log("Finished eating my " + sandwich + " sandwich!");
 }
 
 // then to call the function:
-eatSandwich( 'bacon', 'lettuce', 'tomato', function makeBigSandwich( toppingsArray ) {
+eatSandwich('bacon', 'lettuce', 'tomato', function makeBigSandwich(toppingsArray) {
   return "bread," + toppingsArray.toString() + "&bread";
 });
 ```
@@ -248,16 +248,16 @@ To loop through an array with the ability to alter each element, similar to a `f
 **`forEach` function skeleton**:
 
 ```javascript
-array.forEach( function callBack( element, index ) {
-    console.log( index + ". " + element );
+array.forEach(function callBack(element, index) {
+    console.log(index + ". " + element);
 });
 ```
 
 Fruity Example - Make a numbered list
 
 ```javascript
-fruits.forEach( function callBack( element, index ) {
-  console.log( index + ". " + element );
+fruits.forEach(function callBack(element, index) {
+  console.log(index + ". " + element);
 });
 /*  0. Apple
   1. Banana
