@@ -28,7 +28,7 @@
   * Object
   * {}
 
-1. What is the outcome of the following expressions?
+1. What is the outcome of each of the following expressions?
   *  true && 6
   *  0 || "hi"
   *  ["a","b","c"] || "123"
