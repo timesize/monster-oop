@@ -16,18 +16,19 @@ Please refer to the [Instructions for Submitting Homework](/how-to/submit-homewo
 
 Please use any remaining time to complete and review the exercises from dusk.
 
-<!--
 ## Day 2
 
-1. Read all about primitive data types and simple objects [here](https://github.com/SF-WDI-LABS/js-object-primitives).  Clone the repository and complete the exercise file after you have finsihed the README compmletely.
+1. In preperation for tomorrow, read all about [Javascript Objects, Primitives, & Loops](https://github.com/SF-WDI-LABS/js-object-primitives).
+2. Due Tonight: [Function Exercises](https://github.com/SF-WDI-LABS/functions-exercises) - [Solution](https://github.com/SF-WDI-LABS/functions-exercises/blob/master/solutions.js)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+* [Control Flow Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-control-flow/25/exercises.md) - [Solution](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-control-flow/25/solutions.md)
+
 <!--
 ## Day 3
 
 1. Reading
-2. Bonus/Stretch
+2. DUE TONIGHT: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
