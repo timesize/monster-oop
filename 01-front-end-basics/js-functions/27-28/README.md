@@ -350,4 +350,4 @@ countDown(10);
 
 
 ## Exercises
-[jQuery Function Exercises](exercises.md) - [solutions](solutions.md)
+[Function Exercises](https://github.com/SF-WDI-LABS/functions-exercises) 
