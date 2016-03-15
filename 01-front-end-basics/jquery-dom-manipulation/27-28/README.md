@@ -9,6 +9,8 @@
 | Select elements from the page using CSS Selectors and use jQuery to dynamically change the DOM |
 
 #### Chrome Developer Tools
+To open the developer tools, press `cmd-option-i` on a webpage in Chrome.
+
 Please take a quick look at the following documentation for the [Chrome Developer Console](https://developer.chrome.com/devtools), specifically the [Elements tab](https://developer.chrome.com/devtools/docs/dom-and-styles), and the [Console tab](https://developer.chrome.com/devtools/docs/console) (Max 20 minutes). This is one of the most important tools in your developer toolbelt.
 
 #### What is the DOM?
