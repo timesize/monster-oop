@@ -15,7 +15,7 @@
 
 #Setup
 
-1. Summon the Chrome Developer Console ( Option + Command + I )
+1. Summon the Chrome Developer Console (Option + Command + I)
 1. Navigate to the `Sources` tab in the Chrome Developer Console.
 2. Click on the `Snippets` tab within the Sources display.
 3. Right-click and choose `New` to create a new Snippets file.
@@ -48,10 +48,10 @@ The above code is called a *function definition*.  On its own, the function will
 ```
 
 #Defining a function with a parameter
-When a function receives a parameter, it will use that value to perform an action. In the function `greetPerson( name )` the function requires that a name variable be given to it.  
+When a function receives a parameter, it will use that value to perform an action. In the function `greetPerson(name)` the function requires that a name variable be given to it.  
 
 ```javascript
-    function greetPerson( name ) {
+    function greetPerson(name) {
         console.log("Hello " + name);
     }
 ```
@@ -83,8 +83,8 @@ Functions can take multiple paramters.  Each parameter must be separated from an
 
 ```javascript
    	// Add two intergers
-    function sum( a, b ) {
-        console.log( a + b );
+    function sum(a, b) {
+        console.log(a + b);
     }
     
     var x = 6;
@@ -99,19 +99,19 @@ Functions can take multiple paramters.  Each parameter must be separated from an
 ```javascript
     // Subtract two integers
     function subtract(a, b) {
-        console.log( a - b );
+        console.log(a - b);
     }
 ```
 ``` javascript  
     // Multiply two integers
-    function multiply( a, b) {
-        console.log( a  *  b);
+    function multiply(a, b) {
+        console.log(a  *  b);
     }
 ```
 ```javascript
     // Divide two integers
     function divide(a, b) {
-        console.log( a / b );
+        console.log(a / b);
     }
 ``` 
 ##Functions on Strings
@@ -119,29 +119,29 @@ Functions may perform actions upon Strings as well.
 
 ```javascript
     // convert String to uppercase
-    function shout( phrase ) {
-        console.log( phrase.toUpperCase() );
+    function shout(phrase) {
+        console.log(phrase.toUpperCase());
     }
     
     var phrase = 'i am mighty.'
-    shout( phrase ); // I AM MIGHTY.
+    shout(phrase); // I AM MIGHTY.
 ```
 ```javascript
     // convert String to lowercase
-    function whisper( phrase ) {
-        console.log( phrase.toLowerCase() );
+    function whisper(phrase) {
+        console.log(phrase.toLowerCase());
     }
     
-    whisper( "I AM SMALL"); // i am small
+    whisper("I AM SMALL"); // i am small
 ``` 
 ```javascript
     // append an exclamation point to the end of a phrase
-    function exclaim( phrase ) {
-        console.log( phrase + '!');
+    function exclaim(phrase) {
+        console.log(phrase + '!');
     }
     
     var phrase = "Avast, ye mateys";
-    exclaim( phrase ); // Avast, ye mateys!
+    exclaim(phrase); // Avast, ye mateys!
 ```
 
 **Note:** When naming functions, it is best practice to 
@@ -163,12 +163,12 @@ Functions may perform actions upon Strings as well.
 
 ```javascript
     // convert spaces to dashes in a phrase
-    function spacesToDashes( phrase ) {
+    function spacesToDashes(phrase) {
         console.log(phrase.replace(/ /g, "-"));
     }
     
     var phrase = "Dash is also a great API lookup tool!";
-    spacesToDashes( phrase ); // Dash-is-also-a-great-API-lookup-tool!
+    spacesToDashes(phrase); // Dash-is-also-a-great-API-lookup-tool!
 ```
 
 In the case of the function spacesToDashes, the function description 'spaces to dashes' the first letters were capitalized and the phrase was concatenated to 'spacesToDashes'
@@ -178,14 +178,14 @@ The above functions use console.log() to display the result of their internal ac
 
 ```javascript
     // square a number and return the new value
-    function square( a ) {
+    function square(a) {
       return a * a;
     }
 
-    var mySquaredValue = square( 8 );
-    console.log( mySquaredValue ); // 64
+    var mySquaredValue = square(8);
+    console.log(mySquaredValue); // 64
 ```
-The particular function above multiplies the value it received as a parameter by itself and *returns* the resulting product back to the point where it was called.  The variable `mySquaredValue` now has the *return* value of hte function `square( 8 )` assigned to it. 
+The particular function above multiplies the value it received as a parameter by itself and *returns* the resulting product back to the point where it was called.  The variable `mySquaredValue` now has the *return* value of hte function `square(8)` assigned to it. 
 
 
 
@@ -204,7 +204,7 @@ Functions are able to receive and return boolean values.  Functions that return 
 ### Function with boolean value as a parameter
 ```javascript
 // outputs a statement based on boolean value
-function hasCheezburger( answer ) ){
+function hasCheezburger(answer)){
     if (answer === true) {
         console.log("Can I haz ur Cheezburger?");
     } else {
@@ -218,8 +218,8 @@ hasCheezeburger(answer); // Can I haz ur Cheezburger?
 ### Function with boolean return value
 ```javascript
 // checks if number is greater or less than 5
-function isGreaterThanFive( number ){
-    if( number > 5 ) {
+function isGreaterThanFive(number){
+    if(number > 5) {
         return true;
     } else {
         return false;
@@ -227,7 +227,7 @@ function isGreaterThanFive( number ){
 }
 
 var number = 3;
-var result = isGreaterThanFive( number );
+var result = isGreaterThanFive(number);
 console.log(result); // false; 
 ```
 The above function has two return statements.  Since both are within an `if / else ` statement, only one will apply to the condition.  Once a return statement is executed the function ends.  This ensures that only one return statement can be executed per function.  
@@ -238,7 +238,7 @@ The above function has two return statements.  Since both are within an `if / el
 
 ```javascript
 // return opposite boolean value of parameter received
-function completelyDisagree( option ) {
+function completelyDisagree(option) {
     if (option === true) {
         return false;
     } else {
@@ -247,8 +247,8 @@ function completelyDisagree( option ) {
 }
     
 var iAmRight = true;
-var doYouAgree = completelyDisagree( iAmRight );
-console.log( doYouAgree ); // false
+var doYouAgree = completelyDisagree(iAmRight);
+console.log(doYouAgree); // false
 ```
 
 
@@ -263,30 +263,30 @@ Functions can access and modify global variables at will.  A program cannot acce
 var banana = 1;
 
 /* This function will change the global variable `banana` */
-function sliceBanana( slices ){
+function sliceBanana(slices){
     banana = slices;
     return;
 }
 
-sliceBanana( 4 );
-console.log( banana ) ;
+sliceBanana(4);
+console.log(banana) ;
 => 4
 => undefined
 ```
 
 ```javascript
-function multiplyBySix( x ){
+function multiplyBySix(x){
     /* mult is a local variable and can only be accessed and altered within the function */
     var mult = 6;
     x = x * mult;
     return x;
 }
 
-console.log(multiplyBySix( 4 ));
+console.log(multiplyBySix(4));
 => 24
 
 /* Attempting to display a local variable outside of its scope will return an undefined */
-console.log( mult );
+console.log(mult);
 => Uncaught ReferenceError: mult is not defined!!! So Bad!!!!
 ```
 
@@ -309,7 +309,7 @@ Function recursion is the act of a function calling itself within its own code. 
 /* Display all numbers from num to 0 on the screen */
 function countDown(num){
     /* Base Case */
-    if(num < 0 ){
+    if(num < 0){
         return;
     } else {
     
