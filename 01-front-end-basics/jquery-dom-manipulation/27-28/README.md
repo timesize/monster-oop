@@ -130,8 +130,11 @@ jQuery often saves *you* a bunch of time. Because it's just JavaScript under the
 
 Take a look at [this Comparison of jQuery and Vanilla JS](http://bl.ocks.org/joyrexus/7307312) . Here are some of the basic differences:
 
+
+
 **Selecting Elements**
 
+Note: the jQuery variables below are named with `$` at the beginning in order to indicate that they're jQuery created objects. This is a convention, not required syntax.
 ```js
 // jquery
 var $divs = $('div');
