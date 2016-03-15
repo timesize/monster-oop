@@ -18,7 +18,7 @@ Please use any remaining time to complete and review the exercises from dusk.
 
 ## Day 2
 
-1. In preperation for tomorrow, read all about [Javascript Objects, Primitives, & Loops](https://github.com/SF-WDI-LABS/js-object-primitives).
+1. Reading: [Javascript Objects, Primitives, & Loops](https://github.com/SF-WDI-LABS/js-object-primitives/blob/master/README.md).
 2. Due Tonight: [Function Exercises](https://github.com/SF-WDI-LABS/functions-exercises) - [Solution](https://github.com/SF-WDI-LABS/functions-exercises/blob/master/solutions.js)
 
 Please use any remaining time to complete and review the exercises from dawn & dusk:
@@ -28,7 +28,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 ## Day 3
 
 1. Reading
-2. DUE TONIGHT: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
+2. Due Tonight: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
