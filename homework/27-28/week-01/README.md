@@ -19,7 +19,7 @@ Please use any remaining time to complete and review the exercises from dusk.
 <!--
 ## Day 2
 
-1. Read all about primitive data types and simple objects [here](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-object-primitives/27-28/README.md).  Complete the exercise file after you have finsihed the README compmletely
+1. Read all about primitive data types and simple objects [here](https://github.com/SF-WDI-LABS/js-object-primitives).  Clone the repository and complete the exercise file after you have finsihed the README compmletely.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
