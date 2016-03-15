@@ -10,7 +10,8 @@
 |Create simple Javascript functions with parameters|  
 |Explain difference between returning and printing values|  
 |Demonstrate proper function naming conventions|  
-|Understand the concept of scoped variables within a function|  
+|Use scope rules to determine which variables will be defined within a function|
+
 
 
 #Setup
@@ -82,7 +83,7 @@ Functions can take variables as parameters or Strings
 Functions can take multiple paramters.  Each parameter must be separated from another by a comma.  
 
 ```javascript
-   	// Add two intergers
+   	// Add two integers
     function sum(a, b) {
         console.log(a + b);
     }
@@ -114,6 +115,10 @@ Functions can take multiple paramters.  Each parameter must be separated from an
         console.log(a / b);
     }
 ``` 
+
+But what if you want to perform functions on numbers that aren't integers?!  Don't worry; Javascript lumps integers and decimal numbers together in one `number` data type, so your functions will still work if you give them arguments that aren't whole numbers. 
+
+
 ##Functions on Strings
 Functions may perform actions upon Strings as well.
 
@@ -144,10 +149,10 @@ Functions may perform actions upon Strings as well.
     exclaim(phrase); // Avast, ye mateys!
 ```
 
-**Note:** When naming functions, it is best practice to 
+**Note:** When naming Javascript functions, it is best practice to 
  use camelCase if multiple words are used in the title. 
  This helps with readability, much like the case with 
- variable and filename naming convention.
+ variable and file naming conventions.
 
 > **Bad Naming Convention:**
 > 
