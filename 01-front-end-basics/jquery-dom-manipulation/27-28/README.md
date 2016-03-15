@@ -70,6 +70,8 @@ To do this, we have two options:
 
   The quickest way to include jQuery in your project is to grab the jQuery library using a "CDN" (a blazing fast "content delivery network") and dropping it into a script tag in the head of your html (just google "jQuery cdn" and copy paste!):
 
+  Any script tags for your own JavaScript files must come after the script tag for jQuery.
+
 
 ``` html
 <!DOCTYPE html>
