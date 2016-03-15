@@ -3,7 +3,7 @@
 - Work in your Chrome Developer Console.  
     * Pro-Tip: use the "up" arrow key to save yourself some typing: it will pull up previously entered code.
 - Remember, you can also work in a file (like controlFlow.js) in your text editor (Sublime, Atom, etc) to keep your code.  Run it from the terminal by typing `node controlFlow.js`, or copy and paste sections into the Chrome developer console.
-- Please submit your answers using your fork of the homework repo.
+
 - See [solutions.md](solutions.md) for solutions. No Peeking!
 
 
