@@ -14,13 +14,13 @@ To open the developer tools, press `cmd-option-i` on a webpage in Chrome.
 Please take a quick look at the following documentation for the [Chrome Developer Console](https://developer.chrome.com/devtools), specifically the [Elements tab](https://developer.chrome.com/devtools/docs/dom-and-styles), and the [Console tab](https://developer.chrome.com/devtools/docs/console) (Max 20 minutes). This is one of the most important tools in your developer toolbelt.
 
 #### What is the DOM?
-DOM stands for __Document Object Model__. It's a fancy way of describing what's going on in your browser when you visit a website. You may think that a website is just a chunk of html, css, and javscript. But between the pure data (text), and the rendered page that you can explore, there's an important intermediate step. It turns out that everything you interact with inside of your browser can be represented as a javascript `object`. For example, this paragraph is an object, and it's full of information about being an html `p` tag.
+DOM stands for __Document Object Model__. It's a fancy way of describing what's going on in your browser when you visit a website. You may think that a website is just a chunk of HTML, CSS, and JavaScript. But between the pure data (text), and the rendered page that you can explore, there's an important intermediate step. It turns out that everything you interact with inside of your browser can be represented as a javascript `object`. For example, this paragraph is an object, and it's full of information about being an HTML `p` tag.
 
 
 ### DOM Analogy: The Human Body
 
 * HTML = Skeleton
-* Javascript = Muscles, Brain, and Organs
+* JavaScript = Muscles, Brain, and Organs
 * CSS = Skin and Clothing
 
 ![muscles](https://cloud.githubusercontent.com/assets/7833470/10700126/8e2997da-7970-11e5-96ba-1e5eaf793394.jpg)
@@ -57,9 +57,9 @@ We use jQuery because it's:
 - Convenient: solves problems developers commonly face.
 - Less Buggy: ensures javascript DOM manipulation works the same, cross-browser.
 - Modern: brings javascript DOM manipulation into the 21st century.
-- Popular: 26.95% of all sites use jQuery! (see Builtwith.com).
+- Popular: 15.3% of all sites and 70.4% of the top 100k sites use jQuery! (see Builtwith.com).
 
-But some would argue, [you might not need jQuery](http://youmightnotneedjquery.com/)! It can be overkill, depending on what you're doing!
+Sites like: github.com, css-tricks.com, and jquery.com (!) all include the jQuery library on their page. This means all you have to do is open up your Chrome Developer Console on one of those sites, and you can start playing with jQuery on the page!
 
 #### How to get jQuery
 You can only use jQuery if it's included in your page.
@@ -81,10 +81,7 @@ To do this, we have two options:
         <!-- Nothing here yet! -->
     </body>
 </html>
-
 ```
-
-Sites like: github.com, css-tricks.com, and jquery.com (!) all include the jQuery library on their page. This means all you have to do is open up your Chrome Developer Console on one of those sites, and you can start playing with jQuery on the page!
 
 ###### 2. Download a copy of jQuery to host in your own project:
 
@@ -129,7 +126,7 @@ Take a look at the [raw jquery library](http://code.jquery.com/jquery-2.1.3.js) 
 
 jQuery often saves *you* a bunch of time. Because it's just JavaScript under the hood, some argue [you might not need jQuery](http://youmightnotneedjquery.com). It's always less efficient for the computer to execute jQuery (this often doesn't matter though) and it sometimes can be overkill, depending on what you're doing.
 
-Take a look at [this](http://bl.ocks.org/joyrexus/5322252) Comparison of jQuery and Vanilla JS</a>. Here are some of the basic differences:
+Take a look at [this Comparison of jQuery and Vanilla JS](http://bl.ocks.org/joyrexus/7307312) . Here are some of the basic differences:
 
 **Selecting Elements**
 
