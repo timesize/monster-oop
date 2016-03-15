@@ -4,7 +4,7 @@
 | :---- |
 | *__Students will be able to:__* |
 | Use the Chrome Developer Tools and the Console |
-| Describe visualize the Document Object Model (DOM) of an HTML document|
+| Describe and visualize the Document Object Model (DOM) of an HTML document|
 | Explain the relationship between JavaScript and jQuery and the benefits of using jQuery for DOM manipulation |
 | Select elements from the page using CSS Selectors and use jQuery to dynamically change the DOM |
 
@@ -14,7 +14,7 @@ To open the developer tools, press `cmd-option-i` on a webpage in Chrome.
 Please take a quick look at the following documentation for the [Chrome Developer Console](https://developer.chrome.com/devtools), specifically the [Elements tab](https://developer.chrome.com/devtools/docs/dom-and-styles), and the [Console tab](https://developer.chrome.com/devtools/docs/console) (Max 20 minutes). This is one of the most important tools in your developer toolbelt.
 
 #### What is the DOM?
-DOM stands for __Document Object Model__. It's a fancy way of describing what's going on in your browser when you visit a website. You may think that a website is just a chunk of html, css, and javscript. But between it being pure data (text), and it being a rendered page that you can explore, there's an important intermediate step. It turns out that everything you interact with inside of your browser can be represented as a javascript `object`. For example, this paragraph is an object, and it's full of information about being an html `p` tag.
+DOM stands for __Document Object Model__. It's a fancy way of describing what's going on in your browser when you visit a website. You may think that a website is just a chunk of html, css, and javscript. But between the pure data (text), and the rendered page that you can explore, there's an important intermediate step. It turns out that everything you interact with inside of your browser can be represented as a javascript `object`. For example, this paragraph is an object, and it's full of information about being an html `p` tag.
 
 
 ### DOM Analogy: The Human Body
@@ -75,7 +75,7 @@ To do this, we have two options:
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
     </head>
     <body>
         <!-- Nothing here yet! -->
