@@ -3,7 +3,7 @@
 console.log(process.argv);
 
 // Pythagorean Theorem = a^2 + b^2 = c^2 (solve for c)
-function pythagoreanTheorem( x1, y1, x2, y2 ) {
+function pythagoreanTheorem(x1, y1, x2, y2) {
 	var a = Math.abs(y1 - x1);
 	var b = Math.abs(y2 - x2);
 	var c = (a * a) + (b * b);
@@ -16,7 +16,7 @@ function pythagoreanTheorem( x1, y1, x2, y2 ) {
 
 
 // Area of a circle = pi * r^2
-function areaOfACircle( radius ) {
+function areaOfACircle(radius) {
 	var r = radius * radius;
 	console.log(r);
 	var area = Math.PI * r;
@@ -28,11 +28,11 @@ function areaOfACircle( radius ) {
 
 // count the number of occurence of vowels in a word.
 // vowels = [a, e, i, o, u, y]
-function countVowels( word ) {
+function countVowels(word) {
 	var count = 0;
 	word = word.toLowerCase();
 	for(var i = 0; i < word.length; i++) {
-		if( word[i] === 'a' || word[i] === 'e' || word[i] === 'i' || word[i] === 'o' ||  word[i] === 'u' ||  word[i] === 'y'){
+		if(word[i] === 'a' || word[i] === 'e' || word[i] === 'i' || word[i] === 'o' ||  word[i] === 'u' ||  word[i] === 'y'){
 			count++;
 		}
 	}
@@ -44,7 +44,7 @@ function countVowels( word ) {
 
 
 // display the phrase to the console n times
-function repeatPhrase( phrase, n ) {
+function repeatPhrase(phrase, n) {
 	for(var i = 0; i < n; i++) {
 		console.log(phrase);
 	}
@@ -53,7 +53,7 @@ function repeatPhrase( phrase, n ) {
 //repeatPhrase ( "Hello", 5);
 
 // display number ^ power without using built-in Math functions
-function toTheNthPower( number, power ) {
+function toTheNthPower(number, power) {
 	var result = 1;
 	for(var i = 0; i < power; i++) {
 		result *= number;
@@ -64,7 +64,7 @@ function toTheNthPower( number, power ) {
 
 //toTheNthPower(4, 4);
 
-function isXEvenlyDivisibleByY( x, y ) {
+function isXEvenlyDivisibleByY(x, y) {
 	var result = x % y === 0;
 	console.log(result);
 	return result;
@@ -74,8 +74,8 @@ function isXEvenlyDivisibleByY( x, y ) {
 
 // return a new string that is the combination of the two parameters
 // Example: combineWords('dog', 'house') => 'doghouse'
-function combineWords( word1, word2 ) {
-	var result = word1+word2;
+function combineWords(word1, word2) {
+	var result = word1 + word2;
 	console.log(result);
 	return result;
 }
