@@ -54,7 +54,7 @@
 ``` javascript
 // title
 $("h1#san-francisco_title").text("Indiana Jones and the Temple of DOM");
-$("h1#san-francisco_title").append("<small>(Rated G)</small>")
+$("h1#san-francisco_title").append("<small>(Rated G)</small>");
 
 // image swap
 var $target = $("div.image-wrapper img").eq(0);

@@ -174,6 +174,5 @@ document.body.appendChild(newDiv);
 ```
 
 ## Practice
-- [CSS Selector Challenge](exercises.md) - [solutions](solutions.md)
-- [Indiana Jones and the Temple of DOM](exercises.md) - [solutions](solutions.md)
-- [Hack Github with jQuery](jquery-github-hack-exercise) - [solutions](jquery-github-hack-exercise/solutions.md)
+- [CSS Selector Exercises, Indiana Jones and the Temple of DOM, and Hack Github with jQuery](exercises.md) - [solutions](solutions.md)
+- [jQuery DOM lab](https://github.com/SF-WDI-LABS/jquery-dom-lab) - [solutions](https://github.com/SF-WDI-LABS/jquery-dom-lab/solutions)
