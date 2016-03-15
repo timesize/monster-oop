@@ -26,8 +26,11 @@ Please use any remaining time to complete and review the exercises from dawn & d
 <!--
 ## Day 3
 
-1. Reading
-2. Bonus/Stretch
+1. When a web browser displays a page, it's not just showing the contents of an HTML file. For example, you've seen that it calculates styles from CSS. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). It models the HTML document with objects. Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).
+
+1. Chrome includes powerful tools to inspect and edit DOM elements. Open the dev tools with `Cmd` + `Opt` + `i`, and find the Elements tab. Try all the features in Chrome's [Developer Guide on Editing the DOM](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom), up to and including the "Edit DOM nodes and attributes" section.  Then try all the features in the Developer guide on [Editing Styles](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles), up to and including the "Add a new property declaration" section.  If you'd like, make changes to a website from today or to a live website you visit often and share a screenshot on slack! 
+
+	![Chrome dev tools elements panel screenshot](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/imgs/elements-panel.png)
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
