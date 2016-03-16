@@ -95,7 +95,7 @@ These can be combined to make longer assertions that evaluate to either `true` o
 Beware loose equality!
 
 * Strict equality (`===`) is the best practice!
-* Here's why: [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/)
+* Here's why: [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/) (look at `if()` and `===` tabs)
 
 
 ## Conditionals
@@ -386,7 +386,7 @@ In your own words, describe what's going on here:
 * Which values are "falsy"? Can you list them all?
 * Is there any kind of logic to it?
 
-More info on truthy / falsy / equality: [Javascript Equality Table](https://dorey.github.io/)
+More info on truthy / falsy / equality: [Javascript Equality Table](https://dorey.github.io/JavaScript-Equality-Table/) (look at `if()` and `===` tabs)
 
 ## Exercises
 

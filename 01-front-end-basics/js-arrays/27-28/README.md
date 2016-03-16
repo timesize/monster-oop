@@ -70,7 +70,7 @@ var removedItem = fruits.splice(huckleBerryPos, 1);
 // ["Apple", "Banana", "Cherry", "Durian", "Elderberry", "Fig", "Guava", "Ice plant", "Jackfruit"];
 ```
 
-![img](http://www.frusion.com/media/1011/fruit-row.png)
+![img](https://thewaysofk.files.wordpress.com/2015/03/fruit-row.png)
 
 
 ## Basic array traversal with `for` ##
@@ -89,7 +89,8 @@ for (var i=0; i<fruits.length; i++) {
 <!--  --> 
 
 
-**Quick Exercise**:  Let's look at a few exercises!
+
+**Quick Exercise**:  Practice array methods with  [Challenge Set A](exercises.md)!
 
 
 
@@ -123,7 +124,7 @@ We can pass other types of arguments too, including arrays and objects.
 
 ```js
 function makeBigSandwich(toppingsArray) {
-  return "bread," + toppingsArray.toString() + ",&bread";
+  return "bread," + toppingsArray.toString() + ", & bread";
 }
 
 makeBigSandwich(['ham', 'salami', 'provolone']);
@@ -190,6 +191,8 @@ add(8, 9, function toAlert(input) {
 }); // => still alerts 17
 ```
 
+![img](http://i.giphy.com/lUQxdO6Y7Vmx2.gif)
+
 Let's have another example, a more delicious example:
 
 ```javascript
@@ -210,6 +213,8 @@ eatSandwich('bacon', 'lettuce', 'tomato', makeBigSandwich);
 ```
 
 We passed the `makeBigSandwich` function to the `eatSandwich` function as an argument.  `eatSandwich` calls `makeBigSandwich`.
+
+![img](http://i.giphy.com/ZgWYWo814vti8.gif)
 
 And now we'll re-write this with the function definition in-line with the function call.
 
@@ -271,6 +276,11 @@ fruits.forEach(function callBack(element, index) {
   9. Jackfruit
 */
 ```
+
+
+**Quick Exercise**:  Practice `forEach` with  [Challenge Set B](exercises.md)!
+
+![img](http://www.ontariotenderfruit.ca/trade/images/fruit-row.png)
 
 ### Array Method Documentation!
 

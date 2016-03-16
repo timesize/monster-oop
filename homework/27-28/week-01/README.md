@@ -16,14 +16,15 @@ Please refer to the [Instructions for Submitting Homework](/how-to/submit-homewo
 
 Please use any remaining time to complete and review the exercises from dusk.
 
-<!--
 ## Day 2
 
-1. Read all about primitive data types and simple objects [here](https://github.com/SF-WDI-LABS/js-object-primitives).  Clone the repository and complete the exercise file after you have finsihed the README compmletely.
+1. Reading: [Javascript Objects, Primitives, & Loops](https://github.com/SF-WDI-LABS/js-object-primitives/blob/master/README.md).
+2. Due Tonight: [Function Exercises](https://github.com/sf-wdi-27-28/functions-exercises) - [Solution](https://github.com/SF-WDI-LABS/functions-exercises/blob/master/solutions.js)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
-<!--
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+* [Control Flow Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-control-flow/25/exercises.md) - [Solution](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-control-flow/25/solutions.md)
+
+
 ## Day 3
 
 1. When a web browser displays a page, it's not just showing the contents of an HTML file. For example, you've seen that it calculates styles from CSS. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). It models the HTML document with objects. Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).
@@ -32,8 +33,12 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 	![Chrome dev tools elements panel screenshot](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/imgs/elements-panel.png)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
+2. Due Tonight: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
+
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+
+* [Array Manipulation Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/exercises.md) - [Solutions](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/solutions.js)
+* [Bootrap CSS Lab](https://github.com/sf-wdi-27-28/bootstrap-boilerplate) - [Solution](https://github.com/sf-wdi-27-28/bootstrap-boilerplate/tree/solution)
 
 <!--
 ## Day 4
