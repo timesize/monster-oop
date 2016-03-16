@@ -124,7 +124,7 @@ We can pass other types of arguments too, including arrays and objects.
 
 ```js
 function makeBigSandwich(toppingsArray) {
-  return "bread," + toppingsArray.toString() + ",&bread";
+  return "bread," + toppingsArray.toString() + ", & bread";
 }
 
 makeBigSandwich(['ham', 'salami', 'provolone']);
