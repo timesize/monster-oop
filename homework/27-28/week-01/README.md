@@ -33,7 +33,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 	![Chrome dev tools elements panel screenshot](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/imgs/elements-panel.png)
 
-2. Due Tonight: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
+1. Due Tonight: Fork & clone the [Javascript Objects & Primitives Homework Repo](https://github.com/SF-WDI-LABS/js-object-primitives), and begin working on the `exercises.md` file. (Note there is a `solution.md` file!)
 
 Please use any remaining time to complete and review the exercises from dawn & dusk:
 
