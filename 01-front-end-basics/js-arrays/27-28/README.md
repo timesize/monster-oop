@@ -191,6 +191,8 @@ add(8, 9, function toAlert(input) {
 }); // => still alerts 17
 ```
 
+![img](http://i.giphy.com/lUQxdO6Y7Vmx2.gif)
+
 Let's have another example, a more delicious example:
 
 ```javascript
