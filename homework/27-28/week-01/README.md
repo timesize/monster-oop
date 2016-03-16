@@ -27,16 +27,18 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 ## Day 3
 
-1. **Reading**: When a web browser displays a page, it's not just showing the contents of an HTML file. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. **Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).**
+*There are a lot of things available for you to try today, so we've added some rough time guidelines.*
 
-1. **Activity**: Open the Chrome dev tools with `Cmd` + `Opt` + `i`, and find the Elements tab. 
+1. **Reading**: *15 minutes* When a web browser displays a page, it's not just showing the contents of an HTML file. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. **Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).** 
+
+1. **Activity**: *45 minutes* Open the Chrome dev tools with `Cmd` + `Opt` + `i`, and find the Elements tab. 
     <img src="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/imgs/elements-panel.png" alt="Chrome dev tools elements panel screenshot" width="500px">
-    * You'll be learning some new ways to edit sites in Chrome. If you'd like, make changes to your site from this afternoon or to a live website you visit often and share a screenshot on slack! 
-    * Try all the features in Chrome's [Developer Guide on Editing the DOM](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom), up to and including the "Edit DOM nodes and attributes" section.  
-    * Try all the features in the Developer guide on [Editing Styles](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles), up to and including the "Add a new property declaration" section.  
+    * You'll be learning some new ways to edit sites in Chrome. You can make changes to the Developer Guide sections listed below, the site you worked on this afternoon, or a live website you visit often. If you come up with something you like, you can share a screenshot on slack! 
+    * Try out features from Chrome's [Developer Guide on Editing the DOM](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom), up to and including the "Edit DOM nodes and attributes" section.  
+    * Try  out features from the Developer guide on [Editing Styles](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles), up to and including the "Add a new property declaration" section.  
 
 
-1. **DUE TONIGHT**: Fork and clone the [function drills lab](https://github.com/sf-wdi-27-28/function-lab). Attempt at least `sillySum`, `isPrime`, and `filter`.  Add your solutions to the `functions.js` file, and follow the pull request workflow to submit. Don't forget to add a comment indicating comfort and completeness!
+1. **DUE TONIGHT**: *60 minutes* Fork and clone the [function drills lab](https://github.com/sf-wdi-27-28/function-lab). Attempt at least `sillySum`, `isPrime`, and `filter`.  Add your solutions to the `functions.js` file, and follow the normal homework pull request workflow to submit. Don't forget to add a comment to the pull request indicating comfort and completeness!
 
 Please use any remaining time to complete and review the exercises from today:
 
