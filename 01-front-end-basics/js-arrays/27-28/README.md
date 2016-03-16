@@ -70,7 +70,7 @@ var removedItem = fruits.splice(huckleBerryPos, 1);
 // ["Apple", "Banana", "Cherry", "Durian", "Elderberry", "Fig", "Guava", "Ice plant", "Jackfruit"];
 ```
 
-![img](http://www.frusion.com/media/1011/fruit-row.png)
+![img](https://thewaysofk.files.wordpress.com/2015/03/fruit-row.png)
 
 
 ## Basic array traversal with `for` ##
