@@ -1,7 +1,7 @@
 # jQuery & DOM Exercises
 
 #### Nature Drawing 101: Draw a Tree! - [solutions](solutions.md)
-1. Draw the structure of the following HTML document:
+1. Draw the structure (DOM tree) of the following HTML document:
 
 ``` html
 <!DOCTYPE html>
@@ -62,7 +62,7 @@ Go to the [General Assembly homepage](https://generalassemb.ly/) and open your C
 
 
 # Exercise - Hack Github with jQuery!
-Each exercise will require you to use your ninja jQuery skills to alter the the wdi-25 notes repository page.  In your `solutions.md` file, include your jQuery code snippet with the associated challenge number.
+Each exercise will require you to use your ninja jQuery skills to alter the the wdi-27 or wdi-28 schedule repository repository page.  In your `solutions.md` file, include your jQuery code snippet with the associated challenge number.
 
 We highly suggest that you complete all of the challenges using the following jQuery methods:
 
