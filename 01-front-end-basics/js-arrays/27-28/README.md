@@ -272,6 +272,8 @@ fruits.forEach(function callBack(element, index) {
 */
 ```
 
+![img](http://www.ontariotenderfruit.ca/trade/images/fruit-row.png)
+
 ### Array Method Documentation!
 
 Check out Mozilla Developer Network's <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array documentation</a> for more information on arrays. All of the methods listed in the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_instances" target="_blank">Array instances</a> section are available to use with JavaScript arrays. Commonly used methods in this section include `join`, `sort`, and `reverse`.
