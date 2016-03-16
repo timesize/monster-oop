@@ -27,7 +27,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 ## Day 3
 
-*There are a lot of things available for you to try today, so we've added some rough time guidelines.*
+*Homework has a lot of parts today, so we've added some rough time estimates for each part.*
 
 1. **Reading**: *15 minutes* When a web browser displays a page, it's not just showing the contents of an HTML file. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. **Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).** 
 
