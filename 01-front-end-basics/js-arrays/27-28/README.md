@@ -89,7 +89,8 @@ for (var i=0; i<fruits.length; i++) {
 <!--  --> 
 
 
-**Quick Exercise**:  Let's look at a few exercises!
+
+**Quick Exercise**:  Practice array methods with  [Challenge Set A](exercises.md)!
 
 
 
@@ -271,6 +272,9 @@ fruits.forEach(function callBack(element, index) {
   9. Jackfruit
 */
 ```
+
+
+**Quick Exercise**:  Practice `forEach` with  [Challenge Set B](exercises.md)!
 
 ![img](http://www.ontariotenderfruit.ca/trade/images/fruit-row.png)
 
