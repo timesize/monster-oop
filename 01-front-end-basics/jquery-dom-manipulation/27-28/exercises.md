@@ -76,7 +76,7 @@ We highly suggest that you complete all of the challenges using the following jQ
  - `.toggleClass()`
 
 ## Challenge 1 - Name Changer
-Change the name of the repository author (in this current case, nathanallen - it might be Justin or Travis when you start this exercise) to `anonymous`
+Change the name of the repository author (in this current case, nathanallen to `anonymous`
 
 #### Before  
 <img src = "img/1.png" width = 400px style="border: solid grey 3px">
