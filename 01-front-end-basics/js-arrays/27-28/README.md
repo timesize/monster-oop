@@ -212,6 +212,8 @@ eatSandwich('bacon', 'lettuce', 'tomato', makeBigSandwich);
 
 We passed the `makeBigSandwich` function to the `eatSandwich` function as an argument.  `eatSandwich` calls `makeBigSandwich`.
 
+![img](http://i.giphy.com/ZgWYWo814vti8.gif)
+
 And now we'll re-write this with the function definition in-line with the function call.
 
 ```javascript
