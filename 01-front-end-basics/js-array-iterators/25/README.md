@@ -130,7 +130,7 @@ even = numbers.filter(function filterEvens(num) {
 ### array.reduce() ###
 The `reduce()` method is designed to create one single object that is the result of an action performed among all elements in an array.  It essentially 'reduces' the values of an array into one single element.
 
-Fruity Example - Return the first letter of every word in fruits concatentated into one single string:  
+Fruity Example - Return the first letter of every word in fruits concatenated into one single string:  
 
 ```javascript
 avgLen = fruits.reduce(function concatFirstLetter(previous, current, index) {
