@@ -41,7 +41,7 @@ Please refer to [this google doc](https://docs.google.com/document/d/1sKbuZaSio1
 
 For each page, come up with as many CSS Selectors as you can think of to select the html elments in **red**, and *only* the elements in red.
 
-#### Indiana Jones And the Temple of DOM - [solutions](solutions.md)
+<!-- #### Indiana Jones And the Temple of DOM - [solutions](solutions.md)
 
 Go to the [General Assembly homepage](https://generalassemb.ly/) and open your Chrome Developer Console. Follow the instructions by editing the DOM using jQuery in the console.
 
@@ -58,7 +58,7 @@ Go to the [General Assembly homepage](https://generalassemb.ly/) and open your C
 1. Change the text of *only* the first paragraph to: "Snakes. Why did it have to be snakes?"
     * Now, change the text of *every* paragraph to the same quote.
 
-1. Bonus: Combine all your code into a single function called `changeAllTheThings`. When you call the function, it should make all your changes to the page.
+1. Bonus: Combine all your code into a single function called `changeAllTheThings`. When you call the function, it should make all your changes to the page. -->
 
 
 # Exercise - Hack Github with jQuery!
