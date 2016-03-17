@@ -42,7 +42,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 Please use any remaining time to complete and review the exercises from today:
 
-* [Bootrap CSS Lab](https://github.com/sf-wdi-27-28/bootstrap-boilerplate) - [Solution](https://github.com/sf-wdi-27-28/bootstrap-boilerplate/tree/solution)
+* [Bootstrap CSS Lab](https://github.com/sf-wdi-27-28/bootstrap-boilerplate) - [Solution](https://github.com/sf-wdi-27-28/bootstrap-boilerplate/tree/solution)
 * [Array Manipulation Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/exercises.md) - [Solutions](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/solutions.js)
 
 <!--
