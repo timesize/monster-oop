@@ -11,7 +11,7 @@
 #### Chrome Developer Tools
 To open the developer tools, press `cmd-option-i` on a webpage in Chrome.
 
-Please take a quick look at the following documentation for the [Chrome Developer Console](https://developer.chrome.com/devtools), specifically the [Elements tab](https://developer.chrome.com/devtools/docs/dom-and-styles), and the [Console tab](https://developer.chrome.com/devtools/docs/console) (Max 20 minutes). This is one of the most important tools in your developer toolbelt.
+For more information, look at the [Chrome Developer Console](https://developer.chrome.com/devtools), specifically the [Elements tab](https://developer.chrome.com/devtools/docs/dom-and-styles), and the [Console tab](https://developer.chrome.com/devtools/docs/console).
 
 #### What is the DOM?
 DOM stands for __Document Object Model__. It's a fancy way of describing what's going on in your browser when you visit a website. You may think that a website is just a chunk of HTML, CSS, and JavaScript. But between the pure data (text), and the rendered page that you can explore, there's an important intermediate step. It turns out that everything you interact with inside of your browser can be represented as a javascript `object`. For example, this paragraph is an object, and it's full of information about being an HTML `p` tag.
@@ -175,6 +175,6 @@ var newDiv = document.createElement('div');
 document.body.appendChild(newDiv);
 ```
 
-## Practice
+## Exercises
 - [CSS Selector Exercises, Indiana Jones and the Temple of DOM, and Hack Github with jQuery](exercises.md) - [solutions](solutions.md)
 - [jQuery DOM lab](https://github.com/sf-wdi-27-28/jquery-dom-lab)
