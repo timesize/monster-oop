@@ -46,7 +46,9 @@ Please use any remaining time to complete and review the exercises from today:
 
 ## Day 4
 
-1. Ask and/or up-vote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
+1. Friday Review Prep
+    * Ask and/or up-vote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
+    * Fill out this [Week 1 Self Assessment](https://docs.google.com/forms/d/1zs-78lazuIUX3faa-x7QUVant7eCGeFvVAhlT5KFmyU/viewform)
 1. **DUE TONIGHT**: [Events Lab](https://github.com/sf-wdi-27-28/events_lab) - do as many as you can, but at a minimum finish `click` and `keypress`.  Please submit a pull-request with your solutions.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk:
