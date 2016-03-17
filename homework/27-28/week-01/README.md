@@ -44,7 +44,6 @@ Please use any remaining time to complete and review the exercises from today:
 * [Bootstrap CSS Lab](https://github.com/sf-wdi-27-28/bootstrap-boilerplate) - [Solution](https://github.com/sf-wdi-27-28/bootstrap-boilerplate/tree/solution)
 * [Array Manipulation Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/exercises.md) - [Solutions](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-arrays/27-28/solutions.js)
 
-<!--
 ## Day 4
 
 1. Ask and/or up-vote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
@@ -52,7 +51,6 @@ Please use any remaining time to complete and review the exercises from today:
 1. If you feel shaky on jQuery Events and you want more practice with DOM Manipulation, try this [jQuery Manipulation Lab](https://github.com/sf-wdi-27-28/jquery-dom-lab).  You don't need to submit this.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
 
 <!--
 ## Day 5 - Weekend Homework
