@@ -48,8 +48,9 @@ Please use any remaining time to complete and review the exercises from today:
 <!--
 ## Day 4
 
+1. Ask and/or up-vote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
 1. Due Tonight: [Events Lab](https://github.com/sf-wdi-27-28/events_lab) - do as many as you can, but at a minimum finish `click` and `keypress`.  Please submit a pull-request with your solution.
-2. If you feel shaky on jQuery Events and you want more practice with DOM Manipulation, try this [jQuery Manipulation Lab](https://github.com/sf-wdi-27-28/jquery-dom-lab).  You don't need to submit this.
+1. If you feel shaky on jQuery Events and you want more practice with DOM Manipulation, try this [jQuery Manipulation Lab](https://github.com/sf-wdi-27-28/jquery-dom-lab).  You don't need to submit this.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
