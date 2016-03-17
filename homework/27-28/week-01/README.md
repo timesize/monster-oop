@@ -54,7 +54,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 - [CSS Selector Exercises](/01-front-end-basics/jquery-dom-manipulation/27-28/exercises.md#css-selector-challenge---solutions) - [Solutions](/01-front-end-basics/jquery-dom-manipulation/27-28/solutions.md#css-selector-challenge)
 - [Hack Github with jQuery Exercises](https://github.com/sf-wdi-27-28/hack-github-with-jquery) - [Solutions](https://github.com/sf-wdi-27-28/hack-github-with-jquery/blob/master/solutions.md)
 - [jQuery DOM Manipulation Exercises](https://github.com/sf-wdi-27-28/jquery-dom-lab) - [Solution](https://github.com/sf-wdi-27-28/jquery-dom-lab/blob/master/solutions.md)
-- [jQuery Event Binding Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/jquery-event-binding/27-28/exercises.md)
+- [jQuery Event Binding Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/jquery-event-binding/27-28/exercises.md) - [Solutions](/01-front-end-basics/jquery-event-binding/27-28/solutions.md)
 
 <!--
 ## Day 5 - Weekend Homework
