@@ -1,4 +1,4 @@
-## Challenge set A: Array iterators ##
+## Challenge Set A: Array iterators ##
 
 ### Challenge 1 (map) ###
 
@@ -6,9 +6,9 @@ Elaine the Etsy Merchant thinks her prices are scaring off customers. Subtractin
 Help her out:
 
 ```javascript
-var prices = [3.00,4.00,10.00,2.25,3.01];
+var prices = [3.00, 4.00, 10.00, 2.25, 3.01];
 prices.map(callbackfn);
-//[2.99, 3.99, 9.99, 2.24, 3.00]
+// returns: [2.99, 3.99, 9.99, 2.24, 3.00]
 ```
 
 More Challenges:
@@ -26,7 +26,7 @@ var birthDates = [1, 1, 2, 4, 7, 4, 12, 30,...];
 birthdates.filter(callbackfn);
 evenBirthdates = [2, 4, 4, 12, 30];
 ```
--  In an organized and semi-nonchaotic fashion,  create a master list of all birthdates with every person in the class.  We're only interested in the birthdate (1 - 31), we don't care about month or year.
+-  In an organized and semi-nonchaotic fashion, create a master list of all birthdates with every person in the class.  We're only interested in the birthdate (1 - 31), we don't care about month or year.
 
 -  Independently write a filter array function that creates an array for either odd or even birth dates.
 
