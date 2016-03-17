@@ -49,7 +49,7 @@
 * div p .small
 * div.page p a.small
 
-#### Indiana Jones And the Temple of DOM
+<!-- #### Indiana Jones And the Temple of DOM
 
 ``` javascript
 // title
@@ -60,7 +60,7 @@ $("h1#san-francisco_title").append("<small>(Rated G)</small>");
 var $target = $("div.image-wrapper img").eq(0);
 var new_image = "http://media2.giphy.com/media/MS0fQBmGGMaRy/giphy.gif";
 $target.attr("src", new_image);
-```
+``` -->
 
 # Solutions - Hack Github with jQuery!
 
