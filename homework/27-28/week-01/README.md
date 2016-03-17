@@ -29,11 +29,11 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 *Homework has a lot of parts today. We've added some rough time requirement estimates to help you plan.*
 
-1. **Reading**: *15 minutes* When a web browser displays a page, it's not just showing the contents of an HTML file. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. **Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).** 
+1. **Reading**: *15 minutes* When a web browser displays a page, it's not just showing the contents of an HTML file. It also creates a structure that JavaScript can interact with. This structure is called the Document Object Model (DOM). Unlike the HTML file, the DOM can change over time -- and we can change it with JavaScript! The DOM is vitally important for dynamic web pages where elements are added, removed, or changed over time. **Read this [brief introduction to the DOM](http://docs.webplatform.org/wiki/dom/tutorials/introduction).**
 
-1. **Activity**: *45 minutes* Open the Chrome dev tools with `Cmd` + `Opt` + `i`, and find the Elements tab. 
+1. **Activity**: *45 minutes* Open the Chrome dev tools with `Cmd` + `Opt` + `i`, and find the Elements tab.
     <img src="https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/imgs/elements-panel.png" alt="Chrome dev tools elements panel screenshot" width="500px">
-    * You'll be learning some new ways to edit sites in Chrome. You can make changes to the Developer Guide sections listed below, the site you worked on this afternoon, or a live website you visit often. If you come up with something you like, you can share a screenshot on slack! 
+    * You'll be learning some new ways to edit sites in Chrome. You can make changes to the Developer Guide sections listed below, the site you worked on this afternoon, or a live website you visit often. If you come up with something you like, you can share a screenshot on slack!
     * Try out features from Chrome's [Developer Guide on Editing the DOM](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom), up to and including the "Edit DOM nodes and attributes" section.  
     * Try  out features from the Developer guide on [Editing Styles](https://developers.google.com/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles), up to and including the "Add a new property declaration" section.  
 
@@ -48,10 +48,8 @@ Please use any remaining time to complete and review the exercises from today:
 <!--
 ## Day 4
 
-1. Reading
-2. Friday Review Prep
-    - Complete the [Week 1 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
-    - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
+1. Due Tonight: [Events Lab](https://github.com/sf-wdi-27-28/events_lab) - do as many as you can, but at a minimum finish `click` and `keypress`.  Please submit a pull-request with your solution.
+2. If you feel shaky on jQuery Events and you want more practice with DOM Manipulation, try this [jQuery Manipulation Lab](https://github.com/sf-wdi-27-28/jquery-dom-lab).  You don't need to submit this.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
