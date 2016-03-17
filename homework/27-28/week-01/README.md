@@ -47,10 +47,14 @@ Please use any remaining time to complete and review the exercises from today:
 ## Day 4
 
 1. Ask and/or up-vote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w1-review
-1. Due Tonight: [Events Lab](https://github.com/sf-wdi-27-28/events_lab) - do as many as you can, but at a minimum finish `click` and `keypress`.  Please submit a pull-request with your solution.
-1. If you feel shaky on jQuery Events and you want more practice with DOM Manipulation, try this [jQuery Manipulation Lab](https://github.com/sf-wdi-27-28/jquery-dom-lab).  You don't need to submit this.
+1. Due Tonight: [Events Lab](https://github.com/sf-wdi-27-28/events_lab) - do as many as you can, but at a minimum finish `click` and `keypress`.  Please submit a pull-request with your solutions.
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
+Please use any remaining time to complete and review the exercises from dawn & dusk:
+
+- [CSS Selector Exercises](/01-front-end-basics/jquery-dom-manipulation/27-28/exercises.md#css-selector-challenge---solutions) - [Solutions](/01-front-end-basics/jquery-dom-manipulation/27-28/solutions.md#css-selector-challenge)
+- [Hack Github with jQuery Exercises](https://github.com/sf-wdi-27-28/hack-github-with-jquery) - [Solutions](https://github.com/sf-wdi-27-28/hack-github-with-jquery/blob/master/solutions.md)
+- [jQuery DOM Manipulation Exercises](https://github.com/sf-wdi-27-28/jquery-dom-lab) - [Solution](https://github.com/sf-wdi-27-28/jquery-dom-lab/blob/master/solutions.md)
+- [jQuery Event Binding Exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/jquery-event-binding/27-28/exercises.md)
 
 <!--
 ## Day 5 - Weekend Homework
