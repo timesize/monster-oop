@@ -33,7 +33,7 @@ Be sure to verify that your functions are working before moving on to the next s
         * On each iteration, print the item to the console.
     * Output: undefined;
 * Modify the above to become `printEachPlus`:
-    * Input: an array and a function.  Use `function(){return "!"}` as the function.
+    * Input: an array and **another function**.  Use `function() { return "!" }` as the function.
         * On each iteration, print the item to the console concatenated with the output of the callback function.
     * Output: undefined;
     ```
