@@ -176,5 +176,6 @@ document.body.appendChild(newDiv);
 ```
 
 ## Exercises
-- [CSS Selector Exercises and Hack Github with jQuery](exercises.md) - [solutions](solutions.md)
+- [CSS Selector Exercises](exercises.md) - [solutions](solutions.md)
+- [Hack Github with jQuery Challenges](https://github.com/sf-wdi-27-28/hack-github-with-jquery) - [Solutions](https://github.com/sf-wdi-27-28/hack-github-with-jquery/blob/master/solutions.md)
 - [jQuery DOM lab](https://github.com/sf-wdi-27-28/jquery-dom-lab)
