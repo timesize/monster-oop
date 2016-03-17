@@ -221,7 +221,7 @@ And now we'll re-write this with the function definition in-line with the functi
 ```javascript
 
 // eatSandwich stays the same
-var eatSandwich = function(topping1, topping2, topping3, sandwichMaker) {
+function eatSandwich(topping1, topping2, topping3, sandwichMaker) {
     console.log("I'm going to make and eat a sandwich with: " + topping1 + ', ' + topping2 + ' and ' + topping3);
     var layers = [topping1, topping2, topping3];
     var sandwich = sandwichMaker(layers);
