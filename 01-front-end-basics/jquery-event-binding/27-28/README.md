@@ -140,33 +140,3 @@ $("a").on("click", function handleClick(event){
     return false;
 });
 ```
-
-## Practice
-
-[Solutions](solutions.md) are available if you get stuck and can't find help, or if you've finished and want to compare approaches.
-
-#### Octocat & Mouse
-Open you Chrome Developer Console on [Github](https://github.com/sf-wdi-25/notes).
-
-Whenever you mouseover the Octocat icon/logo in the top left corner...
-
-1. `console.log("i gotchew mowsie!")`
-2. Does it also work when you hover your mouse over the Ocotocat in the footer?
-
-#### Infinite Scroll 
-Open you Chrome Developer Console on [Github](https://github.com/sf-wdi-25/notes).
-
-1. Can you capture the `scroll` event? (hint: you need to listen to the `window` object using `$(window)`)
-2. Can you add `<p>to infinity... and beyond!</p>` to the bottom of the page every time the user scrolls?
-
-#### Hijack Click
-Hijack the big red button on the [GA homepage](https://generalassemb.ly/)!
-
-When you click the button...
-
-1. Prevent the default link behavior, and print "Clicked!" to the console.
-2. Use `$(this)` to change the text of the link to say "1".
-3. Display the number of times the link has been clicked. If I click it again it should say "2".
-
-### Events Lab 
-Please Fork & Clone the [Events Lab](https://github.com/sf-wdi-27-28/events_lab), work on it, and submit your work as a pull request!
