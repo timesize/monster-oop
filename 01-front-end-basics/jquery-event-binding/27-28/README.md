@@ -43,7 +43,7 @@ Let's listen for a click on our `greeting` div:
 ```js
 $("#greeting").on("click", function handleClick(event) {
   alert("Clicked!!");
-};
+});
 ```
 
 We can also listen for other types of events like hovering (but do we want "mouseover", "mouseenter" or "mouseleave"!?):
@@ -51,7 +51,7 @@ We can also listen for other types of events like hovering (but do we want "mous
 ```js
 $("#greeting").on("mouseover", function handleMouseover(event) {
   console.log("You hovered on", this);
-};
+});
 
 ```
 
@@ -65,7 +65,7 @@ When you pass a function into a function, we call the second function a "callbac
 var letters = ['a', 'b', 'c'];
 ['a', 'b', 'c'].forEach(function logOneLetter(element) {
 	console.log(element);
-})
+});
 ```
 
 Another pattern we often use in jQuery is called "Event Binding", which uses "Event Listeners".
@@ -81,7 +81,7 @@ All together this looks like:
 ```js
 $("p").on("mouseover", function handleHover(event){
     console.log("hi mousey!");
-})
+});
 ```
 
 Sometimes you will see this shorthand:
@@ -89,7 +89,7 @@ Sometimes you will see this shorthand:
 ```js
 $("p").mouseover(function(event){
     console.log("hi mousey!");
-})
+});
 ```
 
 * `.mouseover(...)` is the equivalent of `.on("mouseover", ...)`
@@ -116,7 +116,7 @@ Try this on the <a href="https://generalassemb.ly/" target="_blank">GA homepage<
 var $links = $("a"); // every link on the page
 $links.on("click", function handleClick(event){
     alert("You just clicked a link. You are about to be redirected.");
-};
+});
 ```
 
 Redirecting to a new page is the *default behavior* of anchor tags (`a` elements). How would we stop this behavior? What if we need to "prevent (the) default"?
@@ -129,7 +129,7 @@ We have two options: we can `return false` or we can use a special method called
 $("a").on("click", function handleClick(event){
     event.preventDefault();
     // more code down here
-};
+});
 ```
 
 **`return false`** (this works too!):
@@ -138,7 +138,7 @@ $("a").on("click", function handleClick(event){
 $("a").on("click", function handleClick(event){
     // more code up here
     return false;
-};
+});
 ```
 
 ## Practice
