@@ -239,9 +239,7 @@ What's happening internally?
   * Where does it come from?
   * How do we know what to name it?
 
-<!-- TBD: do we do the big lab here or exercises_b like in 25's copy?  
 ### The Big Challenge ###
 
 We are going to **implement our own iterators**, from scratch.
- Head on over [to the lab repo and we'll get started.](https://github.com/sf-wdi-25/building_iterators)
--->
+Head on over to the lab repo and we'll get started. https://github.com/YOUR-CLASS/building_js_iterators_lab
