@@ -85,7 +85,7 @@ var keys = Object.keys(person);
 
 ### Practice
 
-- Practice retrieving values from the object bellow
+- Practice retrieving values from the objects bellow
   - Copy and paste them into the Chrome Developer Console
   - How would you get your name from the hash?
 
