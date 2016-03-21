@@ -225,20 +225,6 @@ Let's check:
 });
 ```
 
-
-## Writing our own ##
-
-Let's go back to forEach one more time and review.
-What's happening internally?
-
-* What are our inputs?
-* What is our output?
-* What happens on each loop?
-* What does the callback function do?
-* What gets passed into our callback function? i.e. what arguments?
-  * Where does it come from?
-  * How do we know what to name it?
-
 ### The Big Challenge ###
 
 We are going to **implement our own iterators**, from scratch.
