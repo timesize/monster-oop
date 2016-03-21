@@ -2,8 +2,9 @@
 
 | Objectives |
 | :--- |
-| _Students will be able to:_|
-| Explore Ajax and explain why we use it |
+| _Students will be able to:_ |
+| Give examples of useful APIs |
+| Explain why we use Ajax |
 | Use Ajax to GET & POST data to an API |
 
 ## APIs
@@ -190,8 +191,14 @@ function onError(res, status, err){
 function onCompletion(data){
   /* perform this no matter the status
      code of the response */
-}
+};
 ```
+
+## Lab work
+
+[Giffaw lab](https://github.com/SF-WDI-LABS/giffaw)
+
+For a solution, checkout the solution branch or find it [here on GitHub](https://github.com/SF-WDI-LABS/giffaw/tree/solution).
 
 ## Further Reading
 
