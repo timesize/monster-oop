@@ -23,8 +23,8 @@ Is there an interesting trend in birthdays?  Do people tend to be born more on e
 
 ```javascript
 var birthDates = [1, 1, 2, 4, 7, 4, 12, 30,...];
-birthdates.filter(callbackfn);
-evenBirthdates = [2, 4, 4, 12, 30];
+var evenBirthdates = birthDates.filter(callbackfn);
+// evenBirthdates = [2, 4, 4, 12, 30];
 ```
 -  In an organized and semi-nonchaotic fashion, create a master list of all birthdates with every person in the class.  We're only interested in the birthdate (1 - 31), we don't care about month or year.
 
@@ -40,7 +40,7 @@ Goyle has a lucrative dog walking business. He's made mucho moolah this summer. 
 ```javascript
 var earnings = [20, 25, 60, 20, 85, 20];
 earnings.reduce(callbackfn);
-// 210
+// returns: 230
 ```
 Challenge:
 
