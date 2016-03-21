@@ -19,7 +19,7 @@ function fruitPrinter(element, index) {
     console.log(index + ". " + element);
 }
 
-array.forEach(fruitsPrinter);
+fruits.forEach(fruitsPrinter);
 
 /*  0. Apple
   1. Banana
@@ -37,7 +37,7 @@ array.forEach(fruitsPrinter);
 A little later we saw that we could write the same thing a little more succinctly.
 
 ```javascript
-array.forEach(function fruitPrinter(element, index) {
+fruits.forEach(function fruitPrinter(element, index) {
     console.log(index + ". " + element);
 });
 ```
@@ -49,7 +49,7 @@ See how that `fruitPrinter` function is now declared right inside the call to `a
 There's one more way to shorten that up, and that's to remove the name from the function and make it an *anonymous function*.  
 
 ```javascript
-array.forEach(function (element, index) {
+fruits.forEach(function (element, index) {
     console.log(index + ". " + element);
 });
 ```
@@ -134,9 +134,9 @@ var vowelFruits = fruits.filter(function vowelFruit(fruit) {
 Numbers Example - Find all even numbers within an array that are greater than 5:  
 
 ```javascript
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-even = numbers.filter(function filterEvens(num) {
+var even = numbers.filter(function filterEvens(num) {
   var isEven = num%2==0;
   var greaterThanFive = num > 5;
   return isEven && greaterThanFive;
@@ -182,7 +182,7 @@ an initial starting point.
 ```javascript
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-sum = numbers.reduce(function add(previous, current) {
+var sum = numbers.reduce(function add(previous, current) {
   return current + previous;
 }, 100);
 // sum is 155
