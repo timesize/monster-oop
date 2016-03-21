@@ -10,8 +10,7 @@
 
 ```html
 <form method="POST" action="/page">
-  <label for="name">Page Name</label>
-  <input id="name" type="text" name="page_name" />
+  <input type="text" name="page_name" />
   <input type="submit" value="Create" />
 </form>
 ```
@@ -31,31 +30,7 @@ In the opening of the `<form>` tag you can see two attributes: `method` & `actio
 
 ![client/server](https://mdn.mozillademos.org/files/4291/client-server.png)
 
-### The `<label>` Element (Tag)
-
-The `<label>` element is the formal way to define a label for an HTML form widget.
-"This is the most important element if you want to build accessible forms." *— MDN*
-
-There are two ways to use labels correctly:
-
-```html
-<!-- Simple (nested) label example -->
-<label>Click me
-  <input type="text" id="user" name="name" />
-</label>
-
-<!-- Using the "for" attribute with the input's id -->
-<label for="user">Click me</label>
-<input id="user" type="text" name="name" />
-```
-
-#### `<label>`'s Attributes
-
-* The `for` in a label references an `<input>`s `id` attribute, not it's `name` attribute! Sometimes these values will be the same, but `for` always is matched with `id`.
-
-* The `name` is the `key` of the `<input>`'s value when data is sent.
-
-## Common Inputs
+## Common Inputs (Fun Toys!)
 
 | Field Type | HTML Code | Widget (Control) | Notes |
 |:-- |:-- |:-- |:-- |
@@ -100,13 +75,128 @@ Radio buttons or checkboxes:
 - **`value`**: the data or value that is returned for a specific group (a multi-element control), if
   this element is checked.
 
+## Form Submission Demo
+#### Round 1.
+
+Given the following HTML...
+
+``` html
+<form>
+    <input name="instrument" value="bongos"> <!-- Text Field -->
+    <input type="submit">                   <!-- Submit Button -->
+</form>
+```
+
+<details>
+<summary>**What endpoint/action are we submitting to?** (Click Here)</summary>
+<br>
+We did not supply a form `action`. That means that it will default to the current endpoint. In otherwords, you will refresh the current page.
+</details>
+
+<details>
+<summary>**What data will be submitted to the server?** (Click Here)</summary>
+<br>
+* **instrument**: "bongos"
+</details>
+
+<details>
+<summary>**What will that data look like? How will it be formatted?** (Click Here)</summary>
+<br>
+`?instrument=bongos`
+</details>
+
+
+#### Round 2.
+
+Given the following HTML...
+
+``` html
+<form action="https://musicbrainz.org/search" method="GET">
+    <label for="artist">Search by Music Artist</label>
+    <input id="artist" name="query" value="Adele">
+    <input name="type" value="artist" hidden>
+    <input type="submit">
+</form>
+```
+
+<details>
+<summary>**What endpoint/action are we submitting to?** (Click Here)</summary>
+<br>
+We are making a "GET" request to "https://musicbrainz.org/search".
+</details>
+
+<details>
+<summary>**What data will be submitted to the server?** (Click Here)</summary>
+<br>
+* **artist**: "Adele"
+* **type**: "artist"
+</details>
+
+<details>
+<summary>**What will that data look like? How will it be formatted?** (Click Here)</summary>
+<br>
+It will be in the form of a query parameter: `?query=adele&type=artist`
+</details>
+
+## Form Submission & Query Parameters
+
+When a form is submitted it triggers the `submit` event. We can listen to this event using jQuery.
+
+``` javascript
+$("form").on("submit", function(event){
+    alert("See you later! You're submitting a form!")
+})
+```
+
+In order to **stop** the form from submitting, we have to prevent it's *default* behavior.
+
+``` javascript
+$("form").on("submit", function(event){
+    event.preventDefault(); // Stops the form from submitting!
+    alert("You're not going anywhere! (You prevented the form from submitting).")
+})
+```
+
+If we want to grab all the values in the form, we can use jQuery's [`serialize` method](http://api.jquery.com/serialize/).
+
+``` javascript
+$("form").on("submit", function(event) {
+  event.preventDefault(); // Stops the form from submitting!
+  var form_data = $(this).serialize();
+  console.log( form_data ); // e.g. "?query=adele&type=artist"
+});
+```
+
+
+### The `<label>` Element (Tag)
+We encourage you to always use the optional `<label>` tag with each of your form inputs.
+
+    "This is the most important element if you want to build accessible forms." *— MDN*
+
+There are two ways to use labels correctly:
+
+```html
+<!-- Simple (nested) label example -->
+<label>Username
+  <input type="text" name="username" />
+</label>
+
+<!-- Using the "for" attribute with the input's id -->
+<label for="password">Username</label>
+<input id="password" type="text" name="password" />
+```
+
+> Make sure the label's `for` attribute matches the input's `id` attribute!
+
 ## Common Validations
 
-Validations help to prevent users from submitting bad data to the server. Knowing how to use them will save time and make your app a lot more usable.
+Form validations help to prevent users from submitting bad data to the server:
 
-Bad data could be anything from a required field being empty, an email address that was mistyped, or a password confirmation that doesn't match. Thankfully, HTML forms give us simple out-of-the-box validations for these common situations.
+* a missing or empty field (required)
+* an email address that was missing an "@" symbol (wrong format)
+* a password that is obiously too short (wrong length)
 
-###Required
+#### `required` attribute
 
 Try submitting the below form without entering your name:
 
@@ -119,7 +209,7 @@ Try submitting the below form without entering your name:
 ```
 Notice the `required` attribute on the input. Therefore, the form will not submit until some information is entered into the field.
 
-###Pattern matching
+#### `pattern` attribute
 
 ```html
 <form>
@@ -131,14 +221,14 @@ Notice the `required` attribute on the input. Therefore, the form will not submi
 
 The `pattern` attribute allows us to specify the values we will accept. In this case only `bob` or `bobert` are acceptable.
 
-###Length
+#### `length` attribute
 
 You may need the user to enter a specific amount of characters. Let's say you need a username to be at least 6 characters. You can use the `minlength` or `maxlength` attributes to help.
 
 ```html
 <form>
-  <label for="userName">What's your username?</label>
-  <input id="userName" name="userName" minlength="6" required>
+  <label for="password">What's your password?</label>
+  <input id="password" type="password" name="password" minlength="8" required>
   <button>Submit</button>
 </form>
 ```
