@@ -59,7 +59,7 @@ There's not a way to remove just a value. Use `null` as a marker for an empty va
 
 ```js
 person.hairColor = null;
-``` 
+```
 
 
 **Fully removing** a key-value pair:
@@ -81,4 +81,41 @@ Finding **keys** in the object:
 ```js
 var keys = Object.keys(person);
 // ['name', 'age', 'hairColor']
+```
+
+### Practice
+
+- Practice retrieving values from the object bellow
+  - Copy and paste them into the Chrome Developer Console
+  - How would you get your name from the hash?
+
+```js
+var wdi27 = {
+    city: "san francisco",
+    students: 22,
+    roster: ["Adam", "Andrea", "Anna",
+             "Arthur", "Ayush", "Bryan",
+             "Eric", "Herman", "Ilter",
+             "Jacquelyn", "Joanne", "John",
+             "Jonathan", "Justin", "Keith",
+             "Marcelo", "Nathan", "Paul",
+             "Phillbert", "Rene", "Sarah", "Kirby"],
+    instructors: 3,
+    dir: 1,
+    team: ["Brianna", "Cory", "Travis", "Will"]
+};
+var wdi28 = {
+    city: "san francisco",
+    students: 21,
+    roster: ["Adam", "Adriana", "Ameer",
+             "Anna", "Bob", "Chiyuki",
+             "Christine", "Emily ", "Franklin",
+             "Hector", "Hila", "Jim",
+             "Justin", "Lotus", "Matthew",
+             "Melissa", "Michael", "Morgan",
+             "Samuel", "Scott", "Sean"],
+    instructors: 3,
+    dir: 1,
+    team: ["Justin", "Juliana", "Nathan", "Nick"]
+};
 ```
