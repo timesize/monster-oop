@@ -10,6 +10,7 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 1. **Reading**: [Query Parameters](https://en.wikipedia.org/wiki/Query_string)
 2. **Reading**: [Submitting a Form with jQuery](http://code.tutsplus.com/tutorials/submit-a-form-without-page-refresh-using-jquery--net-59)
+3. **Install**: Please add the following extensions to Chrome - [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) & [JSON view](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
 
 Please use any remaining time to complete and review the morning/afternoon exercises:
 
