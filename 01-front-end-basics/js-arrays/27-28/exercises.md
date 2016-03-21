@@ -57,23 +57,23 @@ Use `console.log( dogs )` to verify your solution has changed the `dogs` array.
 ###Challenge 2 ###
 
 1. *Curry up now* has a line wrapped around the truck! It takes about two minutes per delicious curry burrito. Output the customer's name & their expected wait time.
-
-```javascript
-// warning -- below is pseudo-code!
-var customers:   Ali, Ilias, Alex, Mercedes, Sarah, Ben, Ayinde, Dani, Jamey, Jessie
-customers.forEach(fn);
-
-
-/* sample output:
-   Ali: 2 minutes
-   Ilias: 4 minutes
-   Alex: 6 minutes
-   Mercedes: 8 minutes
-   Sarah: 10 minutes
-   ...
-   Jessie: 20 minutes
-*/
-```
+	
+	```javascript
+	// warning -- below is pseudo-code!
+	var customers:   Ali, Ilias, Alex, Mercedes, Sarah, Ben, Ayinde, Dani, Jamey, Jessie
+	customers.forEach(fn);
+	
+	
+	/* sample output:
+	   Ali: 2 minutes
+	   Ilias: 4 minutes
+	   Alex: 6 minutes
+	   Mercedes: 8 minutes
+	   Sarah: 10 minutes
+	   ...
+	   Jessie: 20 minutes
+	*/
+	```
 
 1. If you originally solved this challenge with a `for` loop, rewrite it using `forEach`. You may want to check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">documentation about `forEach`</a>'s callback method arguments.  If you originally solved this challenge with `forEach`, rewrite your solution with a `for` loop. 
 
