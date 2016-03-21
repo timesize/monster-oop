@@ -2,14 +2,15 @@
 
 | Objectives |
 | :--- |
-| Explore Ajax and why we use it |
+| _Students will be able to:_|
+| Explore Ajax and explain why we use it |
 | Use Ajax to GET & POST data to an API |
 
 ## APIs
 
 An Application Program Interface (API) is the way in which you interact with a piece of software. In other words it is the interface for an application or a program.
 
-  * Organizations have APIs to publicly expose parts of their program to the outside world, allowing people to send them queries and receive data (e.g. <a href="https://developer.github.com/v3" target="_blank">GitHub API</a>), but this is a narrow view of what the term fully encompasses.
+  * Organizations have APIs to publicly expose parts of their program to the outside world, allowing people to send them queries and receive data (e.g. [GitHub API](https://developer.github.com/v3) ), but this is a narrow view of what the term fully encompasses.
   * Remember, even an `Array` has an API. Its API consists of all the methods that can be called on it, such as: `.forEach`, `.pop`, `.length` etc. See the full list: `Object.getOwnPropertyNames(Array.prototype)`.
 
 A **GUI** exists to make an application more convenient for the user. An **API** does the same for its users, but with a lexical rather than a graphical interface.
@@ -30,7 +31,7 @@ jQuery gives us a [several methods](https://api.jquery.com/category/Ajax) for ma
 
 ## GET and POST
 
-The HTTP protocol was designed specifically for web browsers and servers to communicate with each other in a request/responce cycle.
+The HTTP protocol was designed specifically for web browsers and servers to communicate with each other in a request/response cycle.
 
 `GET` and `POST` are the most common verbs used in HTTP requests:
 
@@ -43,7 +44,7 @@ jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.ajax) method, whi
 
 ## Ajax Setup
 
-Using jQuery's `$.ajax()` method, we can specify a list of parameters, including:
+Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 
 * type of request
 * request URL
@@ -57,12 +58,15 @@ $.ajax({
   type: 'GET',
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
   dataType: 'json',
-  success: function(data) {
-    //celebrate!
-  }
+  success: onSuccess
 });
-```
 
+function onSuccess(data) {
+    console.log(data);
+    // celebrate!
+};
+```
+<!--
 If we're doing a simple `GET` request, we can (and should) avoid the `$.ajax()` method and use the helper method `$.get()` instead. Here, we only need to pass in the request URL and callback function for the same Ajax request as the example above.
 
 ```js
@@ -72,7 +76,7 @@ $.get(endpoint, function(response_data) {
   // just remember to make it local once your done inspecting!
   window.newData = response_data;
 });
-```
+``` -->
 
 For a `POST` request, we can also use the `$.ajax()` method, but this time, the data type is `"POST"`. Since `POST` requests send data to a server, we also need to send an object of data (the `book`).
 
@@ -87,13 +91,17 @@ $.ajax({
   url: "/books", // this is a "relative" link
   data: book_data,
   dataType: "json",
-  success: function(data) {
-    console.log(data);
-  }
+  success: onSuccess
 });
+
+function onSuccess(data) {
+  console.log(data);
+  // celebrate!
+};
+
 ```
 
-Just like with `GET`, the `POST` request above can be refactored to use the much simpler `$.post()` method. We pass in the request URL, data, and callback function. Note: there is an equivalent [`$.get()`](https://api.jquery.com/jquery.get/) method as well.
+<!-- Just like with `GET`, the `POST` request above can be refactored to use the much simpler `$.post()` method. We pass in the request URL, data, and callback function. Note: there is an equivalent [`$.get()`](https://api.jquery.com/jquery.get/) method as well.
 
 ```js
 var book_data = {
@@ -104,7 +112,7 @@ var book_data = {
 $.post('/books', book, function(data) {
   console.log(data);
 });
-```
+``` -->
 
 #### Ajax and Event Handlers
 
@@ -115,17 +123,34 @@ var endpoint = 'https://api.spotify.com/v1/search?q=goodbye&type=artist'
 
 // click event on button
 $('button').on('click', function(event) {
-  $.get(spotify_endpoint, function(data) {
-    console.log(data);
+  $.ajax({
+    type: 'GET',
+    url: endpoint,
+    dataType: 'json',
+    success: onClickReqSuccess
   });
 });
 
+function onClickReqSuccess(data){
+  console.log(data);
+  // process data
+}
+
 // submit event on form
 $('form').on('submit', function(event){
-  $.get(endpoint, function(data) {
-    console.log(data);
+  $.ajax({
+    type: 'GET',
+    url: endpoint,
+    dataType: 'json',
+    success: onSubmitReqSuccess
   });
 });
+
+function onSubmitReqSuccess(data){
+  console.log(data);
+  // process data
+}
+
 ```
 
 #### Handling Success and Failure
@@ -135,16 +160,37 @@ We can't guarantee that our API will respond, or will respond quick enough. In t
 ```js
 var endpoint = 'https://api.spotify.com/v1/search?q=come%20together&type=track';
 
-$.get(endpoint)
-  .done(function(response_data) {
-    // We're all good! (status code in the 200s).
-    console.log("data: ", response_data);
-  })
-  .fail(function() {
-    // Timeout or server error (status code in the 400s).
-    console.log("no data :(");
-  })
-;
+$.ajax({
+  type: 'GET',
+  url: endpoint,
+  dataType: 'json',
+  success: onSuccess,
+  error: onError,
+  complete: onCompletion
+});
+
+function onSuccess(data){
+  /*  perform this function if the
+     status code of the response was in
+     the 200s */
+};
+
+function onError(res, status, err){
+  /* perform this function if the
+     response timed out or if the
+     status code of the response is
+     in the 400s or 500s (error)
+     res: the full response object
+     status: a string that describes
+     the response status
+     err: a string with any error
+     message associated with that status */
+};
+
+function onCompletion(data){
+  /* perform this no matter the status
+     code of the response */
+}
 ```
 
 ## Further Reading
