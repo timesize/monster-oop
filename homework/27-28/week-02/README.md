@@ -6,19 +6,18 @@ If you have any remaining time, please complete/review the exercises from dawn a
 
 Please refer to the [Instructions for Submitting Homework](/how-to/homework-submission.md).
 
-<!--
 ## Day 1
 
-1. Reading
-    * [Example](#example)
-2. Bonus/Stretch
-    * [Example](#example)
+1. **Read** (15 min): [Query Parameters](https://en.wikipedia.org/wiki/Query_string)
+2. **Read** (30 min): [Submitting a Form with jQuery](http://code.tutsplus.com/tutorials/submit-a-form-without-page-refresh-using-jquery--net-59)
+3. **Install** (10 min): Please add the following extensions to Chrome - [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) & [JSON view](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk:
+Please use any remaining time to complete and review the morning/afternoon exercises:
 
-* [Example](#example)
-* [Example](#example)
--->
+
+* Array Iterator Exercises: [`map`, `filter`, `reduce`](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-array-iterators/28/exercises.md) - [Solutions](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-array-iterators/28/solutions.js)
+* [JSON & HTML Strings Lab](https://github.com/sf-wdi-27-28/html_strings) - [Solution](https://github.com/sf-wdi-27-28/html_strings/tree/solutions)
+* Refactor your Tic Tac Toe solution! Resolve an issue!
 
 <!-- 
 ## Day 2
