@@ -6,19 +6,17 @@ If you have any remaining time, please complete/review the exercises from dawn a
 
 Please refer to the [Instructions for Submitting Homework](/how-to/homework-submission.md).
 
-<!--
 ## Day 1
 
-1. Reading
-    * [Example](#example)
-2. Bonus/Stretch
-    * [Example](#example)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk:
+1. **Reading**: [Query Parameters](https://en.wikipedia.org/wiki/Query_string)
+2. **Reading**: [Submitting a Form with jQuery](http://code.tutsplus.com/tutorials/submit-a-form-without-page-refresh-using-jquery--net-59)
 
-* [Example](#example)
-* [Example](#example)
--->
+Please use any remaining time to complete and review the morning/afternoon exercises:
+
+* Brush up on built-in javascript methods
+    * Array Iterator Exercises: [`map`, `filter`, `reduce`](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-array-iterators/28/exercises.md) - [Solutions](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/js-array-iterators/28/solutions.js)
+* [JSON & HTML Strings Lab](https://github.com/sf-wdi-27-28/html_strings) - [Solution](https://github.com/sf-wdi-27-28/html_strings/tree/solutions)
 
 <!-- 
 ## Day 2
