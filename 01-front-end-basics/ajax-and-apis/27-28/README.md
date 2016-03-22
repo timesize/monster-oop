@@ -146,7 +146,7 @@ var endpoint = 'https://api.spotify.com/v1/search?q=goodbye&type=artist'
 // click event on button
 $('button').on('click', function(event) {
   $.ajax({
-    type: 'GET',
+    method: 'GET',
     url: endpoint,
     dataType: 'json',
     success: onClickReqSuccess
@@ -161,7 +161,7 @@ function onClickReqSuccess(json){
 // submit event on form
 $('form').on('submit', function(event){
   $.ajax({
-    type: 'GET',
+    method: 'GET',
     url: endpoint,
     dataType: 'json',
     success: onSubmitReqSuccess
@@ -183,7 +183,7 @@ We can't guarantee that our API will respond, or will respond quick enough. In t
 var endpoint = 'https://api.spotify.com/v1/search?q=come%20together&type=track';
 
 $.ajax({
-  type: 'GET',
+  method: 'GET',
   url: endpoint,
   dataType: 'json',
   success: onSuccess,
