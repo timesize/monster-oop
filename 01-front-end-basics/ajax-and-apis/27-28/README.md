@@ -30,7 +30,16 @@ With a partner, spend 10 minutes
 
 ## Ajax
 
-Asynchronous JavaScript And XML (Ajax) allows us to make requests to a server (ours or another application's) without refreshing the page. You may also hear the term `XMLHttpRequest`. This is the same thing as Ajax! In fact, `window` object in the Browser has available to it another object, `XMLHttpRequest`. This is how you would make these types of requests without using jQuery.
+__Asynchronous JavaScript And XML__ (Ajax) allows us to make requests to a server (ours or another application's) without refreshing the page.
+
+Let's break that down:
+
+__Asynchronous__ - not happening at the same time. Some of your code will be executed at a later time. Specifically, when you hear back from a server about a request you made sometime in the past. This waiting time won't hold up the performance of the rest of your page.
+
+__XML__ - another standard for communicating data. It's mostly been replaced by JSON and Ajax doesn't require the use of XML.
+
+You may also hear the term `XMLHttpRequest`. This is the same thing as Ajax! In fact, `window` object in the Browser has available to it another object, `XMLHttpRequest`. This is how you would make these types of requests without using jQuery.
+
 
 #### Why do we care?
 
@@ -40,7 +49,7 @@ Asynchronous JavaScript And XML (Ajax) allows us to make requests to a server (o
 
 #### How do we use it?
 
-jQuery gives us [several methods](https://api.jquery.com/category/Ajax) for making Ajax requests.
+jQuery gives us [several methods](https://api.jquery.com/category/Ajax) for making Ajax requests. We're going to stick to using the `$.ajax()` method [available here](https://api.jquery.com/jQuery.ajax/).
 
 ## GET and POST
 
