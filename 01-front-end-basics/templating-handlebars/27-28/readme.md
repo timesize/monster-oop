@@ -35,7 +35,6 @@
 1. Add the Handlebars CDN to your `index.html` (remember you can go to <a href="https://cdnjs.com" target="_blank">cdnjs</a> to search for CDNs). Make sure to require Handlebars before your custom script file.
 
   ```html
-<<<<<<< HEAD
   <head>
     <!-- meta tags, title, css links -->
     <!-- ... -->
@@ -49,29 +48,6 @@
     <!-- custom script -->
     <script type="text/javascript" src="js/app.js"></script>
   </head>
-=======
-  
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <!--title, meta tags, styles, etc. -->
-      
-      <!-- jquery -->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  
-      <!-- handlebars -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
-  
-      <!-- custom script -->
-      <script type="text/javascript" src="main.js"></script>
-    </head>
-    <body>
-      <div class="container">
-        <!-- page content -->
-      </div>
-    </body>
-  </html>
->>>>>>> 4b5feb96f76c1497982ab0ab659af48b3265db4e
   ```
 
 2. Next create an element in your `index.html` where you will append the data from your template. Give this element an `id` (e.g. `results`) so you can select it very specifically with jQuery.
@@ -81,7 +57,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <div id="results"></div>
+          <div id="results">
+          </div>
         </div>
       </div>
     </div>
