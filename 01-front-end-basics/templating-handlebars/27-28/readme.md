@@ -35,21 +35,19 @@
 1. Add the Handlebars CDN to your `index.html` (remember you can go to <a href="https://cdnjs.com" target="_blank">cdnjs</a> to search for CDNs). Make sure to require Handlebars before your custom script file.
 
   ```html
-  <body>
-    <div class="container">
-      <!-- page content -->
-    </div>
+  <head>
+    <!-- meta tags, title, css links -->
+    <!-- ... -->
 
     <!-- jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
 
     <!-- handlebars -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 
     <!-- custom script -->
-    <script type="text/javascript" src="main.js"></script>
-  </body>
-  </html>
+    <script type="text/javascript" src="js/app.js"></script>
+  </head>
   ```
 
 2. Next create an element in your `index.html` where you will append the data from your template. Give this element an `id` (e.g. `results`) so you can select it with jQuery.
@@ -99,30 +97,30 @@
   var template = Handlebars.compile(source);
   ```
 
-5. On success of your AJAX call, pass the data that comes back from the API into your template function. The output of the template function is HTML that contains the data from the API. The last step is to append the HTML to the view.
+5. In the success handler for your AJAX call, pass the data that comes back from the API into your template function. The output of the template function is HTML that contains the data from the API. The last step is to append the HTML to the view.
 
   ```js
-  $.get(searchUrl, function (data) {
 
+  function renderSpotifyData(data) {
     // track results are in an array called `items`
     // which is nested in the `tracks` object
     var trackResults = data.tracks.items;
+    console.log(trackResults);
+
+    // ...
 
     // pass in data to render in the template
     var trackHtml = template({ tracks: trackResults });
 
     // append html to the view
     $results.append(trackHtml);
-  });
+  }
   ```
 
 ## Challenges
 
-* Refactor your <a href="https://github.com/sf-wdi-24/spotify-search" target="_blank">Spotify Search app</a> to use Handlebars templating. Feel free to pull down the <a href="https://github.com/sf-wdi-24/spotify-search/tree/solution" target="_blank">solution branch</a> if you want to start with fresh code.
+* Refactor your Spotify Search app to use Handlebars templating. Feel free to pull down the `solution` branch if you want to start with fresh code.
 
-## Stretch Challenge
-
-* <a href="https://github.com/sf-wdi-24/geoquakes" target="_blank">GeoQuakes</a>
 
 ## Resources
 
