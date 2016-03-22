@@ -47,21 +47,31 @@ jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.ajax) method, whi
 
 Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 
-* HTTP method for the request
+* what kind of request
 * request URL
 * data type
 * callback function (which will run on successful completion of the Ajax request)
 
-Let's try sending a get request to [Spotify's API](https://developer.spotify.com/web-api/search-item)
+Let's try sending a get request to [Spotify's API](https://developer.spotify.com/web-api/search-item):
 
 ```js
 $.ajax({
+  // What kind of request
   method: 'GET',
+
+  // The URL for the request
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
+
+  // The type of data we want back
   dataType: 'json',
+
+  // Code to run if the request succeeds; the HTTP
+  // response is passed to the function as an argument.
   success: onSuccess
 });
 
+// defining the callback function that will happen
+// if the request succeeds.
 function onSuccess(data) {
     console.log(data);
     // celebrate!
@@ -79,10 +89,10 @@ $.get(endpoint, function(response_data) {
 });
 ``` -->
 
-For a `POST` request, we can also use the `$.ajax()` method, but this time, the data type is `"POST"`. Since `POST` requests send data to a server, we also need to send an object of data (the `book`).
+For a `POST` request, we can also use the `$.ajax()` method, but this time, the `method` attribute is `"POST"`. Since `POST` requests send data to a server, we also need to send an object of data (the `book`).
 
 ```js
-var book_data = {
+var bookData = {
   title: "The Giver",
   author: "Lowis Lowry"
 };
@@ -90,7 +100,7 @@ var book_data = {
 $.ajax({
   method: "POST",
   url: "/books", // this is a "relative" link
-  data: book_data,
+  data: bookData,
   dataType: "json",
   success: onSuccess
 });
@@ -196,9 +206,11 @@ function onCompletion(data){
 
 ## Lab work
 
-[Giffaw lab](https://github.com/SF-WDI-LABS/giffaw)
+#### [Giffaw lab](https://github.com/SF-WDI-LABS/giffaw)
 
-For a solution, checkout the solution branch or find it [here on GitHub](https://github.com/SF-WDI-LABS/giffaw/tree/solution).
+For a solution, checkout the `solution` branch or find it [here on GitHub](https://github.com/SF-WDI-LABS/giffaw/tree/solution).
+
+For the bonus solution, see the `solution-more` branch or find it [here on GitHub](https://github.com/SF-WDI-LABS/giffaw/tree/solution-more).
 
 ## Further Reading
 
