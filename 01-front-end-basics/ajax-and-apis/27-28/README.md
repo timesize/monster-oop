@@ -1,11 +1,11 @@
-# Intro to Ajax
+# Intro to AJAX
 
 | Objectives |
 | :--- |
 | _Students will be able to:_ |
 | Give examples of useful APIs |
-| Explain why we use Ajax |
-| Use Ajax to GET data from an API |
+| Explain why we use AJAX |
+| Use AJAX to GET data from an API |
 
 ## APIs
 
@@ -28,28 +28,28 @@ With a partner, spend 10 minutes
     1. Does this API require an API key?
     1. Can you view an API endpoint url in your browser? Do it!
 
-## Ajax
+## AJAX
 
-__Asynchronous JavaScript And XML__ (Ajax) allows us to make requests to a server (ours or another application's) without refreshing the page.
+__Asynchronous JavaScript And XML__ (AJAX) allows us to make requests to a server (ours or another application's) without refreshing the page.
 
 Let's break that down:
 
 __Asynchronous__ - not happening at the same time. Some of your code will be executed at a later time. Specifically, when you hear back from a server about a request you made sometime in the past. This waiting time won't hold up the performance of the rest of your page.
 
-__XML__ - another standard for communicating data. It's mostly been replaced by JSON and Ajax doesn't require the use of XML.
+__XML__ - another format for structuring data so that it can be sent and received. XML has mostly been replaced by JSON and AJAX doesn't require the use of XML.
 
-You may also hear the term `XMLHttpRequest`. This is the same thing as Ajax! In fact, `window` object in the Browser has available to it another object, `XMLHttpRequest`. This is how you would make these types of requests without using jQuery.
+You may also hear the term `XMLHttpRequest`. This is the same thing as AJAX! In fact, `window` object in the Browser has available to it another object, `XMLHttpRequest`. This is how you would make these types of requests without using jQuery.
 
 
 #### Why do we care?
 
-* Ajax lets us exchange data with the server behind the scenes. When a change is made on the client we can send off an Ajax Request to notify the server of what just happened. This is an important way to maintain state between a client and a server that communicate in HTTP, an inherently stateless protocol.
+* AJAX lets us exchange data with the server behind the scenes. When a change is made on the client we can send off an AJAX Request to notify the server of what just happened. This is an important way to maintain state between a client and a server that communicate in HTTP, an inherently stateless protocol.
 
 * Limiting page reloads makes our web apps feel *faster* and mostly gives our users a *better experience*. Imagine if you experienced a full page refresh every time you "liked" a post on Facebook...
 
 #### How do we use it?
 
-jQuery gives us [several methods](https://api.jquery.com/category/Ajax) for making Ajax requests. We're going to stick to using the `$.ajax()` method [available here](https://api.jquery.com/jQuery.ajax/).
+jQuery gives us [several methods](https://api.jquery.com/category/AJAX) for making AJAX requests. We're going to stick to using the `$.aJAX()` method [available here](https://api.jquery.com/jQuery.aJAX/).
 
 ## GET and POST
 
@@ -60,23 +60,23 @@ The HTTP protocol was designed specifically for web browsers and servers to comm
   * A browser will use `GET` to indicate it would like to receive a specific web page or resource from a server.
   * A browser will use `POST` to indicate it would like to send some data to a server.
 
-Conveniently can use Ajax to make both `GET` and `POST` requests to servers. From the perspective of the server, it is just another request.
+Conveniently can use AJAX to make both `GET` and `POST` requests to servers. From the perspective of the server, it is just another request.
 
-jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.ajax) method, which will allow us to perform any Ajax request.
+jQuery gives us the [`$.aJAX()`](https://api.jquery.com/jQuery.aJAX) method, which will allow us to perform any AJAX request.
 
-## Ajax Setup
+## AJAX Setup
 
 Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 
 * type of request
 * request URL
 * data type
-* callback function (which will run on successful completion of the Ajax request)
+* callback function (which will run on successful completion of the AJAX request)
 
 Let's try sending a `GET` request to [Spotify's API](https://developer.spotify.com/web-api/search-item)
 
 ```js
-$.ajax({
+$.aJAX({
   type: 'GET',
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
   dataType: 'json',
@@ -89,7 +89,7 @@ function onSuccess(data) {
 };
 ```
 <!--
-If we're doing a simple `GET` request, we can (and should) avoid the `$.ajax()` method and use the helper method `$.get()` instead. Here, we only need to pass in the request URL and callback function for the same Ajax request as the example above.
+If we're doing a simple `GET` request, we can (and should) avoid the `$.aJAX()` method and use the helper method `$.get()` instead. Here, we only need to pass in the request URL and callback function for the same AJAX request as the example above.
 
 ```js
 var endpoint = 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT';
@@ -116,8 +116,8 @@ $.ajax({
   success: onSuccess
 });
 
-function onSuccess(data) {
-  console.log(data);
+function onSuccess(json) {
+  console.log(json);
   // celebrate!
 };
 
@@ -136,9 +136,9 @@ $.post('/books', book, function(data) {
 });
 ``` -->
 
-#### Ajax and Event Handlers
+#### AJAX and Event Handlers
 
-We can combine Ajax calls with any jQuery event handlers. You may want to execute an Ajax call when the user clicks and button or submits a form.
+We can combine AJAX calls with any jQuery event handlers. You may want to execute an AJAX call when the user clicks and button or submits a form.
 
 ```js
 var endpoint = 'https://api.spotify.com/v1/search?q=goodbye&type=artist'
@@ -153,8 +153,8 @@ $('button').on('click', function(event) {
   });
 });
 
-function onClickReqSuccess(data){
-  console.log(data);
+function onClickReqSuccess(json){
+  console.log(json);
   // process data
 }
 
@@ -168,8 +168,8 @@ $('form').on('submit', function(event){
   });
 });
 
-function onSubmitReqSuccess(data){
-  console.log(data);
+function onSubmitReqSuccess(json){
+  console.log(json);
   // process data
 }
 
@@ -177,7 +177,7 @@ function onSubmitReqSuccess(data){
 
 #### Handling Success and Failure
 
-We can't guarantee that our API will respond, or will respond quick enough. In these cases the Ajax request will fail or error. Using the `jquery.get()` shorthand we can handle these eventualities by "chaining" additional listeners to our initial request:
+We can't guarantee that our API will respond, or will respond quick enough. In these cases the AJAX request will fail or error. Using the `jquery.get()` shorthand we can handle these eventualities by "chaining" additional listeners to our initial request:
 
 ```js
 var endpoint = 'https://api.spotify.com/v1/search?q=come%20together&type=track';
@@ -191,25 +191,25 @@ $.ajax({
   complete: onCompletion
 });
 
-function onSuccess(data){
+function onSuccess(json){
   /*  perform this function if the
      status code of the response was in
      the 200s */
 };
 
-function onError(res, status, err){
+function onError(xhr, status, errorThrown){
   /* perform this function if the
      response timed out or if the
      status code of the response is
      in the 400s or 500s (error)
-     res: the full response object
+     xhr: the full response object
      status: a string that describes
      the response status
-     err: a string with any error
+     errorThrown: a string with any error
      message associated with that status */
 };
 
-function onCompletion(data){
+function onCompletion(json){
   /* perform this no matter the status
      code of the response */
 };
@@ -217,9 +217,11 @@ function onCompletion(data){
 
 ## Lab work
 
-[Giffaw lab](https://github.com/SF-WDI-LABS/giffaw)
+[Giffaw lab](https://github.com/sf-wdi-27-28/giffaw)
 
-For a solution, checkout the solution branch or find it [here on GitHub](https://github.com/SF-WDI-LABS/giffaw/tree/solution).
+For a solution, checkout the `solution` branch or find it [here on GitHub](https://github.com/sf-wdi-27-28/giffaw/tree/solution).
+
+For a solution to the bonus checkout the `solution-more` branch or find it here on [GitHub](https://github.com/sf-wdi-27-28/giffaw/tree/solution-more).
 
 ## Further Reading
 
