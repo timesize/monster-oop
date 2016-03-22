@@ -19,14 +19,15 @@ Please use any remaining time to complete and review the morning/afternoon exerc
 * [JSON & HTML Strings Lab](https://github.com/sf-wdi-27-28/html_strings) - [Solution](https://github.com/sf-wdi-27-28/html_strings/tree/solutions)
 * Refactor your Tic Tac Toe solution! Resolve an issue!
 
-<!-- 
+
 ## Day 2
 
-1. Reading
-2. Bonus/Stretch
+1. Do this [Spotify Search Lab](https://github.com/sf-wdi-27-28/spotify-search) and get more experience with AJAX and forms.  You'll be building a search tool that uses the Spotify API!
+2. Re-read the info in [HTML Forms](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/html-forms/27-28/) and try to finish up any remaining [Forms exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/01-front-end-basics/html-forms/27-28/exercises.md#forms----solutions).  (The "Movie Search" exercise will require a little AJAX!)
+3. If you have more time, make sure to take another look at the [Giphy/AJAX Lab](https://github.com/sf-wdi-27-28/giffaw) and keep working on it. - You can also take a look at the [solution branches](https://github.com/sf-wdi-27-28/giffaw/branches).
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
--->
+Please use any remaining time to complete and review the exercises from dawn & dusk.  You can find those on the class schedules. [27](https://github.com/sf-wdi-27-28/schedule-27) [28](https://github.com/sf-wdi-27-28/schedule-28)
+
 
 <!-- 
 ## Day 3
