@@ -5,7 +5,7 @@
 | _Students will be able to:_ |
 | Give examples of useful APIs |
 | Explain why we use Ajax |
-| Use Ajax to GET & POST data to an API |
+| Use Ajax to GET data from an API |
 
 ## APIs
 
@@ -15,6 +15,17 @@ An Application Program Interface (API) is the way in which you interact with a p
   * Remember, even an `Array` has an API. Its API consists of all the methods that can be called on it, such as: `.forEach`, `.pop`, `.length` etc. See the full list: `Object.getOwnPropertyNames(Array.prototype)`.
 
 A **GUI** exists to make an application more convenient for the user. An **API** does the same for its users, but with a lexical rather than a graphical interface.
+
+#### Some useful APIs
+Instagram, Food2Fork, Twitter, Spotify, Google Books, Google Maps, Weather, etc.
+
+#### Breakout
+With a partner, spend 10 minutes
+1. Discussing your understanding of APIs
+2. Finding an API on the internet, looking at the documentation, and answering these questions:
+  1. What format of data does this API return?
+  1. How would you access the data that you'd likely be interested in? For example, for Giphy, the gif data that we're interested in is located in the `data` object.
+  1. Does this API require an API key?
 
 ## Ajax
 
@@ -28,7 +39,7 @@ Asynchronous JavaScript And XML (Ajax) allows us to make requests to a server (o
 
 #### How do we use it?
 
-jQuery gives us a [several methods](https://api.jquery.com/category/Ajax) for making Ajax requests.
+jQuery gives us [several methods](https://api.jquery.com/category/Ajax) for making Ajax requests.
 
 ## GET and POST
 
@@ -52,7 +63,7 @@ Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 * data type
 * callback function (which will run on successful completion of the Ajax request)
 
-Let's try sending a get request to [Spotify's API](https://developer.spotify.com/web-api/search-item)
+Let's try sending a `GET` request to [Spotify's API](https://developer.spotify.com/web-api/search-item)
 
 ```js
 $.ajax({
