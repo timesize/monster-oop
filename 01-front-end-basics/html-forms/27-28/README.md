@@ -66,6 +66,7 @@ All input types (including `<textarea>`s):
 - **`placeholder`**: not a default value, but a useful HTML5 addition of a data "prompt" for an input.
 - **`autofocus`**: defaults the cursor to a specific input when the page originally loads. You can only have one autofocus on your page.
 - **`disabled`**: a Boolean attribute indicating that the "widget" is not available for interaction.
+- **`required`**: a Boolean attribute indicating that the field must have a value / cannot be left empty.
 
 Radio buttons or checkboxes:
 
@@ -192,7 +193,8 @@ $("form").on("submit", function(event){
 > **Reminder**: You do not need jQuery to submit a form. We use jQuery to *stop* a form from submitting, and to *manually* submit data ourselves, with the goal of never causing the page to refresh.
 
 
-### The `<label>` Element (Tag)
+## Good Looking Forms
+#### The `<label>` Element (Tag)
 We encourage you to always use the optional `<label>` tag with each of your form inputs.
 
     "This is the most important element if you want to build accessible forms." *— MDN*
@@ -206,11 +208,32 @@ There are two ways to use labels correctly:
 </label>
 
 <!-- Using the "for" attribute with the input's id -->
+<!-- This is the preferred method if you are using Bootstrap -->
 <label for="password">Username</label>
 <input id="password" type="text" name="password" />
 ```
 
 > Make sure the label's `for` attribute matches the input's `id` attribute!
+
+#### Bootstrap Forms
+Out of the box, unstyled HTML5 `inputs` look *terrible*.
+
+Bootstrap to the rescue!
+
+``` html
+<form>
+    <div class="form-group">
+        <label for="exampleInput">Example Bootstrap Input</label>
+        <input type="text" class="form-control" id="exampleInput">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
+
+Note that the `form-group` class is meant to "group" together `label`/`input` pairs (and give them more vertical whitespace / breathing room). Also note that each `input` element receives a `form-control` class.
+
+For super good looking forms, you'll need to dig into the docs: [Bootstrap Forms](https://getbootstrap.com/css/)
+
 
 ## Common Validations
 
