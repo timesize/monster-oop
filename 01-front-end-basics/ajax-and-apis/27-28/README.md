@@ -62,7 +62,7 @@ The HTTP protocol was designed specifically for web browsers and servers to comm
 
 Conveniently can use AJAX to make both `GET` and `POST` requests to servers. From the perspective of the server, it is just another request.
 
-jQuery gives us the [`$.aJAX()`](https://api.jquery.com/jQuery.aJAX) method, which will allow us to perform any AJAX request.
+jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.aJAX) method, which will allow us to perform any AJAX request.
 
 ## AJAX Setup
 
@@ -76,7 +76,7 @@ Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 Let's try sending a `GET` request to [Spotify's API](https://developer.spotify.com/web-api/search-item)
 
 ```js
-$.aJAX({
+$.ajax({
   type: 'GET',
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
   dataType: 'json',
