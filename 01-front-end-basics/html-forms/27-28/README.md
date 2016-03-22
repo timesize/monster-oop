@@ -138,7 +138,10 @@ We are making a "GET" request to "https://musicbrainz.org/search".
 It will be in the form of a query parameter: `?query=adele&type=artist`
 </details>
 
-## Form Submission & Query Parameters
+## Form Submission & jQuery
+> **Important**: You do not need jQuery to submit a form. You do not need jQuery to submit a form. You do not need jQuery to submit a form.
+
+Sometimes we want to submit a form, in the background, without ever refreshing the page. This is a common pattern in modern "single page applications". How do you submit form data *in the background*?
 
 When a form is submitted it triggers the `submit` event. We can listen to this event using jQuery.
 
@@ -157,15 +160,36 @@ $("form").on("submit", function(event){
 })
 ```
 
-If we want to grab all the values in the form, we can use jQuery's [`serialize` method](http://api.jquery.com/serialize/).
+If we want to grab a value from our form, we can use jQuery's [`val` method](http://api.jquery.com/val/).
 
 ``` javascript
-$("form").on("submit", function(event) {
-  event.preventDefault(); // Stops the form from submitting!
-  var form_data = $(this).serialize();
-  console.log( form_data ); // e.g. "?query=adele&type=artist"
-});
+$("input#artist").val(); // "Adele"
+$("input[name=query]").val(); // "Adele"
+$("input#artist").attr("name"); // "query"
 ```
+
+> **Note**: jQuerys `text` method will not work on inputs!
+
+If we want to grab **all** of the data (name/value pairs) in the form, we can use jQuery's [`serialize` method](http://api.jquery.com/serialize/).
+
+``` javascript
+$("form").serialize(); // e.g. "?query=Adele&type=artist"
+```
+
+Generally we will do this when the user clicks "submit", in combination with a `submit` listener and `preventDefault`, then we will use `ajax` to submit the form in the background (without ever refreshing the page!)
+
+``` javascript
+$("form").on("submit", function(event){
+    event.preventDefault(); // Stops the form from submitting!
+    var form_data = $(this).serialize();
+    // ... verify the user didn't miss anything
+    // ... add a spinner wheel to the page
+    // ... send the form_data to the server using AJAX
+    // ... wait for a response
+})
+```
+
+> **Reminder**: You do not need jQuery to submit a form. We use jQuery to *stop* a form from submitting, and to *manually* submit data ourselves, with the goal of never causing the page to refresh.
 
 
 ### The `<label>` Element (Tag)
