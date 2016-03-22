@@ -47,7 +47,7 @@ jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.ajax) method, whi
 
 Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 
-* type of request
+* HTTP method for the request
 * request URL
 * data type
 * callback function (which will run on successful completion of the Ajax request)
@@ -56,7 +56,7 @@ Let's try sending a get request to [Spotify's API](https://developer.spotify.com
 
 ```js
 $.ajax({
-  type: 'GET',
+  method: 'GET',
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
   dataType: 'json',
   success: onSuccess
@@ -88,7 +88,7 @@ var book_data = {
 };
 
 $.ajax({
-  type: "POST",
+  method: "POST",
   url: "/books", // this is a "relative" link
   data: book_data,
   dataType: "json",
@@ -125,7 +125,7 @@ var endpoint = 'https://api.spotify.com/v1/search?q=goodbye&type=artist'
 // click event on button
 $('button').on('click', function(event) {
   $.ajax({
-    type: 'GET',
+    method: 'GET',
     url: endpoint,
     dataType: 'json',
     success: onClickReqSuccess
@@ -140,7 +140,7 @@ function onClickReqSuccess(data){
 // submit event on form
 $('form').on('submit', function(event){
   $.ajax({
-    type: 'GET',
+    method: 'GET',
     url: endpoint,
     dataType: 'json',
     success: onSubmitReqSuccess
@@ -162,7 +162,7 @@ We can't guarantee that our API will respond, or will respond quick enough. In t
 var endpoint = 'https://api.spotify.com/v1/search?q=come%20together&type=track';
 
 $.ajax({
-  type: 'GET',
+  method: 'GET',
   url: endpoint,
   dataType: 'json',
   success: onSuccess,
