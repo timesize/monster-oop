@@ -49,7 +49,7 @@ You may also hear the term `XMLHttpRequest`. This is the same thing as AJAX! In 
 
 #### How do we use it?
 
-jQuery gives us [several methods](https://api.jquery.com/category/AJAX) for making AJAX requests. We're going to stick to using the `$.aJAX()` method [available here](https://api.jquery.com/jQuery.aJAX/).
+jQuery gives us [several methods](https://api.jquery.com/category/AJAX) for making AJAX requests. We're going to stick to using the `$.ajax()` method [available here](https://api.jquery.com/jQuery.aJAX/).
 
 ## GET and POST
 
