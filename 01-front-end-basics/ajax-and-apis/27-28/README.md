@@ -24,8 +24,9 @@ With a partner, spend 10 minutes
 1. Discussing your understanding of APIs
 2. Finding an API on the internet, looking at the documentation, and answering these questions:
   1. What format of data does this API return?
-  1. How would you access the data that you'd likely be interested in? For example, for Giphy, the gif data that we're interested in is located in the `data` object.
+  1. How would you access the data that you'd likely be interested in? For example, for Giphy, the gif data that we're interested in is located in the `data` array.
   1. Does this API require an API key?
+  1. Can you view an API endpoint url in your browser? Do it!
 
 ## Ajax
 
