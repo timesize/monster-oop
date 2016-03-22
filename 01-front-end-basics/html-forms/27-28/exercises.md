@@ -1,6 +1,6 @@
 **Forms & Queries** -- Exercises
 
-Please clone and use this [blank template](https://github.com/sf-wdi-25/blank_template) as your starting point.
+Please clone and use this [blank template](https://github.com/sf-wdi-27-28/blank_template) as your starting point.
 
 ### Query Parameters -- [solutions](solutions.md)
 
