@@ -12,18 +12,18 @@
 
 * Thus far, we've been using jQuery to append HTML strings when we have data to send to the view from a server (via AJAX).
 
-* To avoid building long strings of HTML every time we have data to send to the view, we'll use <a href="http://handlebarsjs.com" target="_blank">Handlebars templating</a> to dynamically display data in our HTML. The parameters for our data will live inside `{{}}` tags.
+* To avoid building long strings of HTML every time we have data to send to the view, we'll use <a href="http://handlebarsjs.com" target="_blank">Handlebars templating</a>. This will allow us to dynamically display data in our HTML. The parameters for our data will live inside `{{}}` tags.
 
 ## Why use client-side templating?
 
 * Separate markup from logic. Remember this?
 
   ```js
-  var $trackHtml = '<p><strong>' + trackData.name + '</strong> by ' + trackData.artist + '</p>';
-  $results.append($trackHtml);
+  var trackHtml = '<p><strong>' + trackData.name + '</strong> by ' + trackData.artist + '</p>';
+  $results.append(trackHtml);
   ```
 
-  * When appending new HTML elements to the page, the string of elements to append will only get longer as you begin to write more complex markup. [<a href="https://github.com/sf-wdi-24/spotify-search/blob/solution/main.js#L56" target="_blank">see spotify-search</a>]
+  * When appending new HTML elements to the page, the string of elements to append will only get longer as you begin to write more complex markup.
   * Wouldn't it be nice if the HTML structure was already set up for us? That's where templating comes in!
 
 * Maximize code reusability and maintainability.
@@ -35,6 +35,7 @@
 1. Add the Handlebars CDN to your `index.html` (remember you can go to <a href="https://cdnjs.com" target="_blank">cdnjs</a> to search for CDNs). Make sure to require Handlebars before your custom script file.
 
   ```html
+<<<<<<< HEAD
   <head>
     <!-- meta tags, title, css links -->
     <!-- ... -->
@@ -48,9 +49,32 @@
     <!-- custom script -->
     <script type="text/javascript" src="js/app.js"></script>
   </head>
+=======
+  
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--title, meta tags, styles, etc. -->
+      
+      <!-- jquery -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  
+      <!-- handlebars -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
+  
+      <!-- custom script -->
+      <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <!-- page content -->
+      </div>
+    </body>
+  </html>
+>>>>>>> 4b5feb96f76c1497982ab0ab659af48b3265db4e
   ```
 
-2. Next create an element in your `index.html` where you will append the data from your template. Give this element an `id` (e.g. `results`) so you can select it with jQuery.
+2. Next create an element in your `index.html` where you will append the data from your template. Give this element an `id` (e.g. `results`) so you can select it very specifically with jQuery.
 
   ```html
   <body>
@@ -64,7 +88,7 @@
   </body>
   ```
 
-3. Create the template inside your `results` element. Give your template an `id` (e.g. `tracks-template`) so you can select it with jQuery. This template acts as an HTML "skeleton" which you'll fill with data. The `{{}}` parameters will be replaced by the data that comes back from your API call.
+3. Create the template inside your `results` element. Give your template an `id` (e.g. `tracks-template`) so you can select it with jQuery. This template acts as an HTML "mad lib" which you'll fill with data. The `{{}}` parameters will be replaced by the data that comes back from your API call.
 
   ```html
   <body>
@@ -89,7 +113,7 @@
 
   **Note:** The example above uses the Spotify API. We use `{{each}}` to iterate through the tracks that come back from Spotify. Each track has a `name` and an array of `artists`. Notice the extra `.` we need when accessing a value from an array (this syntax is specific to Handlebars). `artists.[0]` gives us the first artist from the array.
 
-4. Compile your template in `main.js`. Calling `Handlebars.compile(source)` returns a function, which we save to the variable `template`. We will later use our new `template` function to pass in the data we want to render in the template.
+4. Compile your template in `js/app.js`. Handlebars has a function called `Handlebars.compile(source)`. The source is takes in is the html from inside your template script. Handlebars' `compile` function returns a function, which we'll save to a variable called `template`. This isn't a special varible name; it just reminds us what the function does. Later, we'll use the `template` function to  pass in data to render in the template part of the page.
 
   ```js
   // compile handlebars template
@@ -120,6 +144,7 @@
 ## Challenges
 
 * Refactor your Spotify Search app to use Handlebars templating. Feel free to pull down the `solution` branch if you want to start with fresh code.
+
 
 
 ## Resources
