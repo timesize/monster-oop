@@ -117,7 +117,7 @@ entirely **NEW** Flower object!
 
 <h3>Uber Challenge</h3>
 -  Create a method within the Flower object that will render a description of your flower along with all of its vital statistics we have collected as well as an image to a simple website.  
--  Name your webpage "The San Francisco First Annual General Assembly Parade of Flowers."  
+-  Name your webpage "The San Francisco Seventh Annual General Assembly Parade of Flowers."  
 -  If we are consistent botanists all of our objects will have the same methods and properties.  
 -  Share your team's flower object on slack and we will all be able to include all 7 flowers in our Parade of Flowers website!
 
