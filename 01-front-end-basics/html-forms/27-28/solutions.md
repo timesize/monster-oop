@@ -75,30 +75,28 @@ function convertToQueryParameter(o) {
 
 ####Return of the Movie Search
 ``` javascript
-$.get("http://omdbapi.com/?t=primer", function(response_data){
-    console.log("I'm back! Here's your data:")
-    console.log(response_data.Plot);
+$.ajax({
+    method: "GET",
+    url: "http://omdbapi.com/?t=primer",
+    success: onSuccess
 });
 
-// or
-
-$.get("http://omdbapi.com", {t: "primer"}, function(response_data){
-    console.log("I'm back! Here's your data:")
-    console.log(response_data.Plot);
-});
-
-// or the more advanced syntax
+// or, alternatively
 
 $.ajax({
     method: "GET",
     url: "http://omdbapi.com",
-    data: {t: "primer"},
-    success: function(response_data){
-        console.log("I'm back! Here's your data:");
-        console.log(response_data.Plot);
-    },
-    error: function(){
-        console.log(":(");
-    }
+    data: {t: "primer"}, // note the difference here
+    success: onSuccess,
+    error: onError
 });
+
+function onSuccess(response_data){
+    console.log("I'm back! Here's your data:");
+    console.log(response_data.Plot);
+}
+
+function onError(){
+    console.log(":(");
+}
 ```
