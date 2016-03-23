@@ -86,15 +86,15 @@ $.ajax({
   // The type of data we want back
   dataType: 'json',
 
-  // Code to run if the request succeeds; the HTTP
+  // Code to run if the request succeeds; the JSON
   // response is passed to the function as an argument.
   success: onSuccess
 });
 
 // defining the callback function that will happen
 // if the request succeeds.
-function onSuccess(data) {
-    console.log(data);
+function onSuccess(json) {
+    console.log(json);
     // celebrate!
 };
 ```
