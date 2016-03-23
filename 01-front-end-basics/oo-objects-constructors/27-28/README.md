@@ -45,7 +45,7 @@ var data = {
  	- How many of the properties are Arrays?
  	- If there is an array, what is the array data type?
 
-The `data` object is a grouping of key & value pairs (known as properties) that describe our class, WDI28.  
+The `data` object is a grouping of key & value pairs (known as properties) that describe our class.  
   
 ```javascript 
 school: "General Assembly"
@@ -72,7 +72,7 @@ Declaring variables and defining them as portions of a larger object helps us cr
 
 ###Quick Challenge
 - Make a copy of `data.js` and rename it to `enhancedData.js`
-- Add some properties that logically fit into an object describing our class (address, floor number, and a list of instructors.
+- Add some properties that logically fit into an object describing our class (address, floor number, and a list of instructors).
 - Try to access your new data properties from the console to make sure they work.
 
 If everything worked out, you should have a fully functioning data object, only now with even MORE properties with us to play with!  
@@ -102,7 +102,7 @@ var flower = {
  }
  ```
 
-The Literal definition of an object creates one single objected called flower.  There are no other flowers, just that one single object we created.  The constructor method is actually a function that creates a unique object every time it is called.  Below we will create a new variable `rose` that will use the constructor method to create a new object.
+The Literal definition of an object creates one single object called flower.  There are no other flowers, just that one single object we created.  The constructor method is actually a function that creates a unique object every time it is called.  Below we will create a new variable `rose` that will use the constructor method to create a new object.
 
 ```javascript
 var rose = new Flower();
@@ -118,9 +118,9 @@ Let us break down a couple concepts introduced with this new line of code:
 Accessing the properties of our new `rose` object is the same as accessing our properties from data: we use dot or bracket notation.
 
 ```javascript
-var color = rose.color // red
-var petalCount = rose.petals // 32
-var smellsNice = rose.smellsPretty //true
+var color = rose.color; // red
+var petalCount = rose.petals; // 32
+var smellsNice = rose.smellsPretty; //true
 ```
 
 If we wanted to create yet ANOTHER flower, all we have to do is call our function just like we did above.  This time, lets make an object called `lily`.
@@ -132,9 +132,9 @@ var lily = new Flower();
 We can access the properties of `lily` in the same manner as we did with `rose`.
 
 ```javascript
-var color = lily.color // red
-var petalCount = lily.petals // 32
-var smellsNice = lily.smellsPretty //true
+var color = lily.color; // red
+var petalCount = lily.petals; // 32
+var smellsNice = lily.smellsPretty; //true
 ```
 
 ##Changing an Object's properties
@@ -151,7 +151,7 @@ That's more like it!  To change the value of the lily object properties. we simp
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
 ##Object Methods
-One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love the array Methods `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates from an Array constructor without us having to instantiate them like we did above with the flowers.  Thanks, Javascript!
+One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love the array Methods `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them like we did above with the flowers.  Thanks, Javascript!
 
 Lets make a simple method in the flower object that outputs to the console whenever we call it.
 
@@ -162,7 +162,7 @@ function Flower(){
     this.petals = 32;
     this.smellsPretty= true;
     // Demonstrates a simple method in an object
-    this.sniff = function(){
+    this.sniff = function() {
         console.log("Sniff Sniff Sniff!");
     };
 }
@@ -178,7 +178,7 @@ function Flower(){
     this.petals = 32;
     this.smellsPretty= true;
     // Demonstrates a simple method in an object
-    this.sniff = function(){
+    this.sniff = function() {
         console.log("Sniff Sniff Sniff!");
     };
     // Demonstrates use of arguments with methods
@@ -191,7 +191,7 @@ function Flower(){
     };
 }
 ```
-Methods can also access properties within the object with the `this` identifier then using dot or bracket notation.  Check out the method `describe()` below for an example.
+Methods can also access properties within the object with the `this` identifier rather than using dot or bracket notation.  Check out the method `describe()` below for an example.
 
 ```javascript
 function Flower(){
@@ -229,14 +229,14 @@ PS. Here is the Literal equivalent of the flower constructor with all of the met
 
 ```javascript
 var flower = {
-    color :"red",
-	petals : 32,
-	smellsPretty: true,
-    sniff : function(){
+    color: "red",
+    petals: 32,
+    smellsPretty: true,
+    sniff: function(){
         console.log("Sniff Sniff Sniff!");
     },
     // Demonstrates use of arguments with methods
-    smellsGood : function(answer) {
+    smellsGood: function(answer) {
         if (answer) {
             return 'This flower smells amazing!';
         } else {
@@ -244,7 +244,7 @@ var flower = {
         }
     },
     // Demonstrates use of local object variables
-    describe : function(answer) {
+    describe: function(answer) {
         alert("This flower is " + this.color + ".");    
     }
 }
