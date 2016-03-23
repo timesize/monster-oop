@@ -17,7 +17,7 @@ An Application Program Interface (API) is the way in which you interact with a p
 A **GUI** exists to make an application more convenient for the user. An **API** does the same for its users, but with a lexical rather than a graphical interface.
 
 #### Some useful APIs
-Instagram, Food2Fork, Twitter, Spotify, Google Books, Google Maps, Weather, etc.
+Instagram, Food2Fork, Twitter, Spotify, Google Books, Google Maps, WeatherUnderground, etc.
 
 #### Breakout
 With a partner, spend 10 minutes
@@ -49,7 +49,7 @@ You may also hear the term `XMLHttpRequest`. This is the same thing as AJAX! In 
 
 #### How do we use it?
 
-jQuery gives us [several methods](https://api.jquery.com/category/AJAX) for making AJAX requests. We're going to stick to using the `$.ajax()` method [available here](https://api.jquery.com/jQuery.aJAX/).
+jQuery gives us [several methods](https://api.jquery.com/category/AJAX) for making AJAX requests. We're going to stick to using the `$.ajax()` method [available here](https://api.jquery.com/jQuery.ajax/).
 
 ## GET and POST
 
@@ -62,13 +62,13 @@ The HTTP protocol was designed specifically for web browsers and servers to comm
 
 Conveniently can use AJAX to make both `GET` and `POST` requests to servers. From the perspective of the server, it is just another request.
 
-jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.aJAX) method, which will allow us to perform any AJAX request.
+jQuery gives us the [`$.ajax()`](https://api.jquery.com/jQuery.ajax) method, which will allow us to perform any AJAX request.
 
 ## AJAX Setup
 
 Using jQuery's `$.ajax()` method, we can specify several parameters, including:
 
-* type of request
+* What kind of request
 * request URL
 * data type
 * callback function (which will run on successful completion of the AJAX request)
@@ -77,19 +77,29 @@ Let's try sending a `GET` request to [Spotify's API](https://developer.spotify.c
 
 ```js
 $.ajax({
-  type: 'GET',
+  // What kind of request
+  method: 'GET',
+
+  // The URL for the request
   url: 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT',
+
+  // The type of data we want back
   dataType: 'json',
+
+  // Code to run if the request succeeds; the HTTP
+  // response is passed to the function as an argument.
   success: onSuccess
 });
 
+// defining the callback function that will happen
+// if the request succeeds.
 function onSuccess(data) {
     console.log(data);
     // celebrate!
 };
 ```
 <!--
-If we're doing a simple `GET` request, we can (and should) avoid the `$.aJAX()` method and use the helper method `$.get()` instead. Here, we only need to pass in the request URL and callback function for the same AJAX request as the example above.
+If we're doing a simple `GET` request, we can (and should) avoid the `$.ajax()` method and use the helper method `$.get()` instead. Here, we only need to pass in the request URL and callback function for the same AJAX request as the example above.
 
 ```js
 var endpoint = 'https://api.spotify.com/v1/artists/1jTAvg7eLZQFonjWIXHiiT';
@@ -109,7 +119,7 @@ var book_data = {
 };
 
 $.ajax({
-  type: "POST",
+  method: "POST",
   url: "/books", // this is a "relative" link
   data: book_data,
   dataType: "json",
