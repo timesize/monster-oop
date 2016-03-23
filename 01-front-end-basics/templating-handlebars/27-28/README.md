@@ -90,7 +90,7 @@
 
   **Note:** The example above uses the Spotify API. We use `{{each}}` to iterate through the tracks that come back from Spotify. Each track has a `name` and an array of `artists`. Notice the extra `.` we need when accessing a value from an array (this syntax is specific to Handlebars). `artists.[0]` gives us the first artist from the array.
 
-4. Compile your template in `js/app.js`. Handlebars has a function called `Handlebars.compile(source)`. The source is takes in is the html from inside your template script. Handlebars' `compile` function returns a function, which we'll save to a variable called `template`. This isn't a special varible name; it just reminds us what the function does. Later, we'll use the `template` function to  pass in data to render in the template part of the page.
+4. Compile your template in `js/app.js`. Handlebars has a function called `Handlebars.compile(source)`. The source it takes in is the html from inside your template script. Handlebars' `compile` function returns a function, which we'll save to a variable called `template`. This isn't a special varible name; it just reminds us what the function does. Later, we'll use the `template` function to  pass in data to render in the template part of the page.
 
   ```js
   // compile handlebars template
