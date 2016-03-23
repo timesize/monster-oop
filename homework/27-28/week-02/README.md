@@ -29,14 +29,12 @@ Please use any remaining time to complete and review the morning/afternoon exerc
 Please use any remaining time to complete and review the exercises from dawn & dusk.  You can find those on the class schedules. [27](https://github.com/sf-wdi-27-28/schedule-27) [28](https://github.com/sf-wdi-27-28/schedule-28)
 
 
-<!-- 
+
 ## Day 3
 
-1. Reading
-2. Bonus/Stretch
+1. Prepare yourself for Object Oriented Programming!  This is a monumental cornestone in modern development patterns.  What better way to familiarize yourself with a new topic than to watch a video?  Today's homework is to watch [this](https://www.youtube.com/watch?v=SS-9y0H3Si8) video over and over and over until you can safely and comfortably discuss differences between a Class/Object and a attribute/method.  
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
--->
+Please use any remaining time to complete and review the exercises from dawn & dusk.  Do something awesome with Handlebars! 
 
 <!-- 
 ## Day 4
