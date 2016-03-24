@@ -8,9 +8,9 @@
 
 ## What is an Object?
 
-As of today, we have been writing our Javascript code mainly using only functions, Strings, ints, and Arrays.   This has allowed us to parse through data objects given to us, reach out and pull data from the internet, and even make a pretty neat racing game!  These are all great accomplishments, but like everything else in the world of programming, there is always a more efficient way of implementing what we have done.
+As of today, we have been writing our Javascript code using mainly functions, Strings, numbers, and Arrays.   This has allowed us to parse through data objects given to us, reach out and pull data from the internet, and display it all on a web page!  These are all great accomplishments, but like everything else in the world of programming, there is always a more efficient way of implementing what we have done.
 
-Here's a truncated version of the data we have been using for our gitHub user website drill.  Take some time to study the structure and the data types within the data object.
+Here's a truncated version of the cohort data we have been using.  Take some time to study the structure and the data types within the data object.
 
 ```javascript
 var data = {
@@ -43,7 +43,7 @@ var data = {
 -  Based on our experience in class so far and your familiarity with the above object, consider the following as you read further:
 	- How many of the properties in `data` are Strings? 
  	- How many of the properties are Arrays?
- 	- If there is an array, what is the array data type?
+ 	- If there is an array, what data type(s) are the elements inside?
 
 The `data` object is a grouping of key & value pairs (known as properties) that describe our class.  
   
@@ -52,10 +52,10 @@ school: "General Assembly"
 ```
 In the line above, `school` is the **key** and `"General Assembly"` is the **value**.
  
-To access this property, we can use dot-notation or bracket-notation on the key to have the corresponding value returned.
+To access a property, we can use dot-notation or bracket-notation on the key to have the corresponding value returned.
  
  ```javascript
- var GA = data.school //General Assembly
+ var GA = data.school; //General Assembly
  ```
  
 `GA` has the value `General Assembly`.  
@@ -63,23 +63,24 @@ To access this property, we can use dot-notation or bracket-notation on the key 
 To access an array within an object,  the method is similar to accessing any other property.  The property `students` is an array of Objects.  To access that array and assign it to a variable, we simply perform the following:
  
  ```javascript
- var studentArray = data.students //students
+ var studentArray = data.students; //students
  ```
-The `data.students` array is now accessible  by using `studentArray` instead.
+The `data.students` array is now accessible by using `studentArray` instead.
 Declaring variables and defining them as portions of a larger object helps us create readable and followable code.  
 
 *We can assume that an Object is a collection of properties (key & value pairs) that all have some sort of relationship and are connected logically to one another.*  
 
 ###Quick Challenge
-- Make a copy of `data.js` and rename it to `enhancedData.js`
-- Add some properties that logically fit into an object describing our class (address, floor number, and a list of instructors).
+<!--- Make a copy of `data.js` and rename it to `enhancedData.js`-->
+- Make a copy of the cohort data
+- Add some more properties that logically fit into an object describing our class (address, floor number, and a list of instructors).
 - Try to access your new data properties from the console to make sure they work.
 
 If everything worked out, you should have a fully functioning data object, only now with even MORE properties with us to play with!  
 
 
 ##Creating an object
-For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with `data.js` and `enhancedData.js`.  This is known as a *Literal* object definition.  
+For relatively straightforward and small objects, it is perfectly fine to declare them as a variable and define them, as we did with the data about a cohort.  This is known as a *Literal* object definition.  
 Here. I'll make you a flower using the *Literal* method:
 
 ```javascript
@@ -88,7 +89,7 @@ var flower = {
 	color : "red",
 	petals : 32,
 	smellsPretty : true
-}
+};
 ``` 
 
  Now let me make you a flower using the preferred *Constructor* method:
@@ -115,7 +116,7 @@ Let us break down a couple concepts introduced with this new line of code:
 
 <img src = http://www.mzephotos.com/wallpapers/roses/red-rose-1024x768.jpg width = 75%>
 
-Accessing the properties of our new `rose` object is the same as accessing our properties from data: we use dot or bracket notation.
+Accessing the properties of our new `rose` object is the same as accessing our properties from any other object: we use dot or bracket notation.
 
 ```javascript
 var color = rose.color; // red
@@ -151,7 +152,7 @@ That's more like it!  To change the value of the lily object properties. we simp
 <img src = https://seniorhikerphotos.files.wordpress.com/2012/06/lilysarina12052301.jpg width = 75%>
 
 ##Object Methods
-One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love the array Methods `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them like we did above with the flowers.  Thanks, Javascript!
+One of the most powerful features of Javascript Objects are Methods.  Methods are *"functions"* that are predefined and built into an object.  We all know and love array Methods like `forEach()`, `map()`, `filter()`, and `reduce()`; these are all Methods of the Array object.  We use arrays so much that Javascript automagically creates them from an Array constructor without us having to instantiate them with `new` like we did above with the flowers.  Thanks, Javascript!
 
 Lets make a simple method in the flower object that outputs to the console whenever we call it.
 
@@ -210,7 +211,7 @@ function Flower(){
     	}
     };
     // Demonstrates use of local object variables
-    this.describe = function(answer) {
+    this.describe = function() {
         alert("This flower is " + this.color + ".");    
 	}
 }
@@ -223,7 +224,7 @@ Create an object method for flower that will play the age old game ['He loves me
 - Display the final phrase with an exclamation; that's the end of the game!
 
 
-There are many more aspects to objects that we will discover tomorrow.  For now, play with objects and think up some great object examples that we might use in class.
+There are many more aspects to objects that we will discover soon.  For now, play with objects and think up some great object examples that we might use in class.
 
 PS. Here is the Literal equivalent of the flower constructor with all of the methods intact:
 
