@@ -19,7 +19,7 @@ function Flower(){
     	}
     };
     // Demonstrates use of local object variables
-    this.describe = function(answer) {
+    this.describe = function() {
         alert("This flower is " + this.color + ".");    
 	}
 }
@@ -37,7 +37,7 @@ passing into object methods entire *other* objects or *other* object properties.
   };
 ```
 
-Notice the parameter used with the `compare` method.  `other-` is used to denote 
+Notice the parameter used with the `compare` method.  The `other-` prefix is used to denote 
 the parameter as a similar but foreign object.  This convention helps with knowing
 which object is which.    
 
@@ -71,6 +71,7 @@ function Flower(color, petals, smellsPretty){
         return("My " + this.color + " flower is much prettier than your " +
           otherFlower.color + " flower :P");
     };
+    // Demonstrates adding flower to the DOM with html strings
     this.render = function() {
         $('body').append("<p>My pretty flower is " + this.color +
           " and has " + this.petals + " pristine petals.</p>");
@@ -94,7 +95,7 @@ made.  The main difference is that they can be customized with specific properti
 at the time of object instantiation.
 
 <h3>Group Challenge</h3>
-Create a custom Flower object based on the flower on your table.  Decided amongst your
+Create a custom Flower object based on the flower on your table.  Decide amongst your
 tablemates the type of flower, the flower's main color, number of petals, and whether or not it smells pretty.
 Think up some other possible properties.  We need more properties!  Properties are great!  
 
@@ -107,11 +108,11 @@ Lets find the best new properties and integrate them into our class-wide Flower 
 Now that we are awesome Flower experts, lets try our hand at cross-pollinating two flower objects to create an
 entirely **NEW** Flower object!  
 
-- Create a method called crossPollinate
-- The method will have another Flower object as a parameter.  
+Create a method called `crossPollinate`  
+- The method will have another Flower object as a parameter.    
 - Return a new Flower. Make the Flower's color a mix of both 'parent' colors. (i.e. red, yellow = "red-yellow") We don't care about the color wheel. 
 - Make the new petal count an average between the two parents' petal counts.
-- The smellPretty gene is recessive unfortunately. This means that a flower will smell pretty IF and only IF both flowers smell pretty.  
+- The smellPretty gene is recessive, unfortunately. This means that a flower will smell pretty IF and only IF both flowers smell pretty.  
 
 *Thought experiment: Could we create an intermediary object, maybe called Bee, that could facilitate cross-pollination and return a new flower? Flowers don't just bash their heads together and make new flowers in the real world!  They need bees!  What are some methods we could assign to a Bee object?*
 
