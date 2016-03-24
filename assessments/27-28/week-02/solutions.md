@@ -180,15 +180,19 @@ Use this HTML for the following questions:
   Give a jQuery code example of how a front-end developer would request the top 5 juggling supply products. **Bonus:** Use the response data to render a list of product names to the body of the page.
 
   ```js
-  $.get('http://jugglersupply.co/api/supplies/top?limit=5', function(data) {
-    console.log(data);
-  });
+  $.ajax({
+    method: "GET",
+    url: 'http://jugglersupply.co/api/supplies/top?limit=5',
+    success: function onSuccess(response){
+    	console.log(response)
+    }
+  })
 
   // bonus
-  $.get('http://jugglersupply.co/api/supplies/top?limit=5', function(data) {
-    var products = data.data;
+  function onSuccess(response){
+    var products = response.data;
     products.forEach(function(product) {
       $('body').append(product.name);
     });
-  });
+  }
   ```
