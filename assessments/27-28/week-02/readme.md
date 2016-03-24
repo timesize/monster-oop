@@ -25,7 +25,7 @@ Use this HTML for the following questions:
     <p>Words and <a href="/">links</a></p>
   </div>
   <div class="footer">
-    <small>Copyright 2015 WDI 24</small>
+    <small>Copyright General Assembly</small>
   </div>
 </body>
 </html>
