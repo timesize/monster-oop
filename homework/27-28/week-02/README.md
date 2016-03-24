@@ -42,7 +42,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 1. Complete the weekly pulse check by 5pm today! Here are the links to the forms for  [27](https://docs.google.com/forms/d/1T_hslq10E362HJ6a_qU_qq-23izCZmwQ9NrYAdxDrlI/viewform) and [28](https://docs.google.com/forms/d/1-Sxe_a5Zwlh2ifkd5fjwJKTl7GOIlR7WvC5xCWkS7ls/viewform).
 1. Prepare for your weekend project!
-    - You are going to be making a game. Read through [the project description](https://github.com/SF-WDI-LABS/browser-game). Pick the game that you will be working on for the weekend.
+    - You are going to be making a game. Read through [the project description](https://github.com/sf-wdi-27-28/project-00). 
     - Using the concepts of Object Oriented Programming you encountered today, we want you to model the game that you'll be building over the weekend.
       - Write out a list of all of the objects that the game will require to run.
       - Name all of the properties and methods that each of those objects will require for the game to run properly. What properties will the objects need to describe them? What will the objects need to do?
