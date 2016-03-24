@@ -129,4 +129,4 @@ entirely **NEW** Flower object!
 
 
 **Stretch Goal**
-Like everything that contains repeated data, this site could definitely benefit from some Underscore!  
+Like everything that contains repeated data, this site could definitely benefit from some client-side templating!  
