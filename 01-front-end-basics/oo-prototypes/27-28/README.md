@@ -100,7 +100,7 @@ tablemates the type of flower, the flower's main color, number of petals, and wh
 Think up some other possible properties.  We need more properties!  Properties are great!  
 
 
-Now we should have at least six individual and unique Flower objects we can use.
+Now we should have at least four individual and unique Flower objects we can use.
 Lets find the best new properties and integrate them into our class-wide Flower object.
 
 ###Cross-Pollination Challenge
