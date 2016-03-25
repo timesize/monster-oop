@@ -129,7 +129,7 @@ Use this HTML for the following questions:
     };
     this.placedLived = function() {
       this.states.forEach(function(state) {
-      console.log(state);
+        console.log(state);
       });
     };
   };
