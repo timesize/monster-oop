@@ -99,9 +99,15 @@ Use this HTML for the following questions:
 2.2 Using your `Person` constructor, create a `greet` method that returns a string, e.g. "Hi, my name is Steve Wozniak and I have 3 siblings!"
 
   ```js
-  Person.prototype.greet = function() {
-    return "Hi, my name is " + this.firstName + " " + this.lastName + " and I have " + this.numSiblings + " siblings!";
-  };
+  function Person(firstName, lastName, numSiblings, statesLived) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.numSiblings = numSiblings;
+    this.statesLived = statesLived;
+    this.greet = function() {
+      return "Hi, my name is " + this.firstName + " " + this.lastName + " and I have " + this.numSiblings + " siblings!";
+    };
+  }
   ```
 
 2.3 Create a new instance of `Person`, and demonstrate how you would call the `greet` method.
@@ -113,10 +119,19 @@ Use this HTML for the following questions:
 2.4 Create a method called `placesLived` that prints all the states a person has lived in, one per line.
 
   ```js
-  Person.prototype.placesLived = function() {
-    this.states.forEach(function(state) {
+  function Person(firstName, lastName, numSiblings, statesLived) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.numSiblings = numSiblings;
+    this.statesLived = statesLived;
+    this.greet = function() {
+      return "Hi, my name is " + this.firstName + " " + this.lastName + " and I have " + this.numSiblings + " siblings!";
+    };
+    this.placedLived = function() {
+      this.states.forEach(function(state) {
       console.log(state);
-    });
+      });
+    };
   };
   ```
 
