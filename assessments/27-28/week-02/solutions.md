@@ -42,6 +42,8 @@ Use this HTML for the following questions:
 1.2 Replace the current image with this image: "earth.jpg"
 
   ```js
+  $('div.section').html('<h1>Welcome to my site!</h1><img src="cheese.jpg"><p>Words and <a href="/">links</a></p>');
+  //or a better way that you haven't seen yet
   $('img').attr('src', 'earth.jpg');
   ```
 
