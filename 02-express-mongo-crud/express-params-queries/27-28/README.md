@@ -53,7 +53,7 @@ Let's start with a simple **Express** application.
   ```bash
   npm init
   npm install --save express
-  subl .
+  atom .
   ```
 The folder structure will be as follows:
 
