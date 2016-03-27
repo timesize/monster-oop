@@ -59,6 +59,9 @@ Let's start with a simple **Express** application.
   ```
 The folder structure will be as follows:
 
+**What just happpened?**
+NPM (Node Package Manager) keeps track of the various libraries and third-party packages of code that we use.  In the above instance, `npm init` initializes a JSON file that stores important information about our project.  `npm install --save express` tells the Node Package Manager to dowload and install the Express library for this particular project.  the `--save` flag lets NPM know that we will be downloading and using `express` only for this project.  The above two `npm` commands will be called every time you create a new web application using express.  You will install other packages as we introduce them in such a manner.
+
 ```
 quick_example
   ├── node_modules/
