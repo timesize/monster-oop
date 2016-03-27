@@ -242,8 +242,8 @@ $.ajax({
   method: "POST",
   url: "https://localhost:3000/cities",
   data: {
-    cityName: "City of Oz",
-    cityDesc: "Capitol city of the Land of Oz and seat of the ruling wizard of Oz",
+    name: "City of Oz",
+    description: "Capitol city of the Land of Oz and seat of the ruling wizard of Oz",
   },
   success: function handleCityCreateResponse(data) {
     console.log("city was successfully created!")
@@ -263,10 +263,10 @@ Let's look at some routes for the cities **resource**.
 | HTTP Verb | Route       | RESTful description | Purpose |
 | :-------- | ----------- | ------------------- | --------------------|
 | GET       | /cities     | citiesIndex         | Listing all cities. |
-| GET       | /cities/:id | citiesShow          | Listing details of one city. |
+| GET       | /cities/:id | citiesShow          | Details of one city. |
 | POST      | /cities     | citiesCreate        | Create a new city.
 
-**REST** combines an **HTTP verb**, with an **endpoint** (route) in a standard way to make working with **resources** standard across the web.
+**REST** combines an **HTTP verb**, with an **endpoint** (route) in a standard way to make working with **resources** easier across the web.  We'll talk more about this, and it'll become very important in the next few days.  :eyes:
 
 
 
@@ -274,7 +274,9 @@ Let's look at some routes for the cities **resource**.
 
 Middleware allows us to make changes to the request or response objects; injecting code before the actual route handler.
 
-We're going to use body-parser to make handling POST requests easier.  You can add the body-parser middleware to your app by:
+POST requests don't use query-parameters like GET requests do.  Instead they submit data in the body of the request.  We'll use middleware called **body-parser** to help us parse and make-use-of that data.
+
+You can add the body-parser middleware to your app by:
 1. Installing the body parser module `npm install --save body-parser`
 1. Including the middleware in the app using `app.use`.
 
@@ -289,9 +291,16 @@ In any routes receiving post data you can now access that data using `req.body`.
 app.post('/cities', function citiesCreate(req, res) {
   var city;
   var name = req.body.name;
+  var desc = req.body.description;
+  var newCity = { name: name, description: desc };
+  // assuming that cities is an array in our app:
+  cities.push(newCity);
+});
 ```
 
 You can [read more about middleware here](middleware_reading.md).
+
+> Note: for most of our Express apps we'll just include bodyParser as part of the _boiler-plate_ of the app.
 
 
 ## Summary
