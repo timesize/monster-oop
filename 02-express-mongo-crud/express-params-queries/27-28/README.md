@@ -276,7 +276,7 @@ Middleware allows us to make changes to the request or response objects; injecti
 
 POST requests don't use query-parameters like GET requests do.  Instead they submit data in the body of the request.  We'll use middleware called **body-parser** to help us parse and make-use-of that data.
 
-You can add the body-parser middleware to your app by:
+You can add the body-parser middleware to your app by:  
 1. Installing the body parser module `npm install --save body-parser`  
 2. Including the middleware in the app using `app.use`.
 
