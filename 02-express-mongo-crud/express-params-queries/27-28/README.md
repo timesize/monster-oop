@@ -170,13 +170,13 @@ Here we are seeing the first introduction to parameters that the application can
 
 ## Query Parameters
 
-Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
+Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in a route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
 
 Let's see query params in action. Go to <a href="https://google.com/search?q=kittens&tbm=isch" target="_blank">https://google.com/search?q=kittens&tbm=isch</a>
 
 * `?` denotes the beginning of the query parameters.
-* `=` indicates an assignment; anything to the left is the key, while the right represents the value.
-* `&` allows for the input of multiple parameters, separating each.
+* `=` indicates a key-value-pair assignment; anything to the left is the key, while the right represents the value.
+* `&` allows for the input of multiple parameters, separating each parameter.
 
 Let's add our first route to practice query params.
 
@@ -191,7 +191,7 @@ Reset your server and go to <a href="localhost:3000/thank?name=jane" target="_bl
 
 ## Choosing between request params and query params
 
-* **request params:** `http://localhost:3000/icecream/flavors/:flavor`
+* **request params:** `http://localhost:3000/icecream/:flavor`
 
 * **query params:** `http://localhost:3000/icecream?flavor=SOMEFLAVOR`
 
