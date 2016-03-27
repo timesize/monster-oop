@@ -1,4 +1,4 @@
-**Express Routing** -- Solutions
+## Express Routing -- Solutions
 
 The following solutions assume that the following boiler-plate is present in the `index.js` server code:
 
