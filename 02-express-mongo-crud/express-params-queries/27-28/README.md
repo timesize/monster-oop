@@ -144,7 +144,7 @@ app.listen(3000, function () {
 
 ```
 
-## Request (Url) Parameters
+## Request (URL) Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
 
@@ -163,7 +163,7 @@ Here we are seeing the first introduction to parameters that the application can
 | `GET` | `/greet/:name` | `Hello, :name` |
 
 
-## Query Params
+## Query Parameters
 
 Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
 
@@ -192,19 +192,19 @@ Reset your server and go to <a href="localhost:3000/thank?name=jane" target="_bl
 
 Generally if the parameter is identifying a specific _entity_ or _resource_ on it's own, you most likely want request params.  If it is an optional param for this route, you generally should use query params.
 
-Common cases for Request Params:
-* database/item IDs            -  GET /contacts/348
-* major components of the app  -  GET /posts/33
+Common cases for **Request Params**:
+* **database/item IDs**            -  GET `/contacts/348`
+* **major components of the app**  -  GET `/posts/33`
   * resources!
-* expressing hierarchies       -  GET /departments/44/employees/2  
+* **expressing hierarchies**       -  GET `/departments/44/employees/2`
 
 > Request Params are not always IDs either; names can be used in some systems: `/departments/accounting/employees/LiuJanice`
 
-Common cases for Query Params:
-* searches             -  GET /?q=kittens
-* optional selections  -  GET /calculator?lang=en
-* pagination           -  GET /posts?start=1&size=10
-* other limits         -  GET /posts?since=2015-11-29
+Common cases for **Query Params**:
+* **searches**             -  GET `/?q=kittens`
+* **optional selections**  -  GET `/calculator?lang=en`
+* **pagination**           -  GET `/posts?start=1&size=10`
+* **other limits**         -  GET `/posts?since=2015-11-29`
 
 Finally you might use them both together in some cases: `/posts/33/comments?limit=50`
 
@@ -254,7 +254,7 @@ app.post('/cities', parseUrlencoded, function (request, response) {
 });
 ```
 
-### including middleware on all routes
+### Including middleware on all routes
 
 Another way to include middleware is via `app.use`.  This will include it on *all* routes.
 
@@ -287,10 +287,10 @@ app.post('/cities', function (request, response) {
 
 ```
 
-*Is there something missing from this code?
-  *We haven't installed the `body-parser` package.
-*What will the client see when it GETs /cities?
-*How can we post to this?
+* Is there something missing from this code?
+  * We haven't installed the `body-parser` package.
+* What will the client see when it GETs /cities?
+* How can we post to this?
   * postman
   * HTML form
 
