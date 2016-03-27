@@ -1,4 +1,4 @@
-**Express Routing** -- Exercises
+## Express Routing  Exercises
 
 ### Pick A Color -- [solution](solutions.md)
 Create a route that responds with "You picked: blue" or "You picked: green" depending on the path. For instance, if I visit: `localhost:3000/pick-a-color/orange` I should see the the color I chose (orange) named in the response.
