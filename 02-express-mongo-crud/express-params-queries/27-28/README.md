@@ -6,7 +6,7 @@
 | :---- |
 | Explain parsing URL params and using query string params. |
 | Apply routing knowledge to build an Express application with dynamic routes. |
-| Explain the usefulness of middleware (e.g., `body-parser`). |
+| Understand POST and how it is used to instruct the server to save data. |
 
 ## Pre-reading
 
@@ -18,8 +18,10 @@
 * Resource path
 * Query string
 * HTTP verb
+  * POST
 * Status code
 * Middleware
+
 
 ## Outline
 
@@ -208,6 +210,85 @@ Common cases for **Query Params**:
 
 Finally you might use them both together in some cases: `/posts/33/comments?limit=50`
 
+## POST
+
+Up until now we've used (the HTTP verb) GET to retrieve data from APIs.  
+_But what if we want to let our users store data?_
+When one wants to store data - or **create new resources** on a server, the standard is to use the HTTP verb POST.
+
+You can use POST directly from an HTML form:
+
+```html
+<html>
+<body>
+  <form method="POST" action="http://localhost:3000/cities">
+    <label for"cityName">city</label>
+    <input id="cityName" name="name" type="text" />
+    <label for"cityDesc">description</label>
+    <input id="cityDesc" name="description" type="text" />
+    <input type="submit" />
+  </form>
+</body>
+</html>
+```
+
+Or with AJAX:
+
+```js
+$.ajax({
+  method: "POST",
+  url: "https://localhost:3000/cities",
+  data: {
+    cityName: "City of Oz",
+    cityDesc: "Capitol city of the Land of Oz and seat of the ruling wizard of Oz",
+  },
+  success: function handleCityCreateResponse(data) {
+    console.log("city was successfully created!")
+    console.log("the ID of the new city is", data._id)
+    // render book to page
+  },
+  error: function handleErrorCityCreateResponse() {
+    console.error("uh oh... failed to create")
+  }
+});
+```
+
+### RESTful routing introduction
+
+Let's look at some routes for the cities **resource**.  
+
+| HTTP Verb | Route       | RESTful description | Purpose |
+| :-------- | ----------- | ------------------- | --------------------|
+| GET       | /cities     | citiesIndex         | Listing all cities. |
+| GET       | /cities/:id | citiesShow          | Listing details of one city. |
+| POST      | /cities     | citiesCreate        | Create a new city.
+
+**REST** combines an **HTTP verb**, with an **endpoint** (route) in a standard way to make working with **resources** standard across the web.
+
+
+
+### Middleware and body-parser
+
+Middleware allows us to make changes to the request or response objects; injecting code before the actual route handler.
+
+We're going to use body-parser to make handling POST requests easier.  You can add the body-parser middleware to your app by:
+1. Installing the body parser module `npm install --save body-parser`
+1. Including the middleware in the app using `app.use`.
+
+
+```js
+app.use(bodyParser.urlencoded({ extended: false }));
+```
+
+In any routes receiving post data you can now access that data using `req.body`.
+
+```js
+app.post('/cities', function citiesCreate(req, res) {
+  var city;
+  var name = req.body.name;
+```
+
+You can [read more about middleware here](middleware_reading.md).
 
 
 ## Summary

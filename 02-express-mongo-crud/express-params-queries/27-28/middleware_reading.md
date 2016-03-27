@@ -130,3 +130,7 @@ app.get("/greet/:name", function (req, res) {
 ```
 
 Now every name is capitalized.
+
+## Resources
+
+1. [body-parser](https://github.com/expressjs/body-parser) on Github.
