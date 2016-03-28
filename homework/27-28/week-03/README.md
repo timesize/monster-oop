@@ -9,6 +9,10 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 ## Day 1
 
+### Afternoon exercises
+
+Complete the [afternoon exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/02-express-mongo-crud/express-params-queries/27-28/exercises.md).
+
 ### REST API homework
 
 1. Read [the top comment in this discussion](http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming) about what REST is (and the rest of the discussion if you're curious). We do not expect you to deeply understand all of the terminology here, we want this to serve as an introduction.
@@ -26,6 +30,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 * [This morning's notes](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/intro-express/27-28)
 * [This morning's express practice exercise](https://github.com/SF-WDI-LABS/express-intro)
 * [This afternoon's notes](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/express-params-queries/27-28)
+* [This afternoon's exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/02-express-mongo-crud/express-params-queries/27-28/exercises.md)
 
 <!--
 ## Day 2
