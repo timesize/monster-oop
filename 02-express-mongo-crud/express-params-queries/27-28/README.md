@@ -288,7 +288,6 @@ In any routes receiving post data you can now access that data using `req.body`.
 
 ```js
 app.post('/cities', function citiesCreate(req, res) {
-  var city;
   var name = req.body.name;
   var desc = req.body.description;
   var newCity = { name: name, description: desc };
