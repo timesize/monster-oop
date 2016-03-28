@@ -105,8 +105,8 @@ Building an application will require us to have a firm grasp of something we cal
 | Request Type | Request Path | Response
 | :--- | :--- | :--- |
 | `GET` | `/` | `Hello World` |
-| `GET` | `/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` |
-| `GET` | `/tacos` | `Soft Taco`, `Crunchy Taco`, `Super Taco` |
+| `GET` | `/api/burgers` | `Hamburger`, `Cheese Burger`, `Dble Cheese Burger` |
+| `GET` | `/api/tacos` | `Soft Taco`, `Crunchy Taco`, `Super Taco` |
 
 
 Let's build these into our application:
