@@ -237,6 +237,7 @@ You can use POST directly from an HTML form:
 Or with AJAX:
 
 ```js
+// app.js
 $.ajax({
   method: "POST",
   url: "https://localhost:3000/cities",
@@ -253,6 +254,15 @@ $.ajax({
     console.error("uh oh... failed to create")
   }
 });
+```
+
+
+In our Express server we'll use `app.post` rather than `app.get` to handle `POST` requests.  We can have both an `app.get` and an `app.post` that use the same route; Express will call the correct callback based on the HTTP verb.  
+In other words, **both the request-type and request-path must match**.
+
+```js
+// server.js
+app.post('/cities', function citiesCreate(req, res) { // save the posted data
 ```
 
 ### RESTful routing introduction
