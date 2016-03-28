@@ -247,7 +247,7 @@ $.ajax({
   },
   success: function handleCityCreateResponse(data) {
     console.log("city was successfully created!")
-    console.log("the ID of the new city is", data._id)
+    console.log("the name of the new city entered is ", data.name)
     // render book to page
   },
   error: function handleErrorCityCreateResponse() {
