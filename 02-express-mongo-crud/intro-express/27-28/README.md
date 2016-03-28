@@ -92,7 +92,7 @@ Let's look at a basic `get` method in an express app.
   });
 ```
 
-Note that the `app` object has a method called `.get()` which takes two arguments: a url and a callback function. The callback takes two arguments. The `req`, and `res`. These stand for "Request" and "Response" from the request response cycle. We'll be console logging these objects in the exercises.
+Note that the `app` object has a method called `.get()` which takes two arguments: a url and a callback function. The callback takes two arguments: `req` and `res`. These stand for "Request" and "Response" from the request response cycle. We'll be console logging these objects in the exercises.
 
 ### Game Plan
 
