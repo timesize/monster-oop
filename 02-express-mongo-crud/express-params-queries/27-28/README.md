@@ -132,18 +132,18 @@ app.get("/", function (req, res) {
   res.send("Hello World");
 });
 
-app.get("/burgers", function (req, res) {
+app.get("/api/burgers", function (req, res) {
   //send all the burgers     
   res.send(burgers.join(", "));
 });
 
-app.get("/tacos", function (req, res) {
+app.get("/api/tacos", function (req, res) {
   //send all the tacos       
   res.send(tacos.join(", "));
 });
 
 app.listen(3000, function () {
-  console.log("Go to localhost:3000/");
+  console.log("Go to localhost:3000");
 });
 
 ```
@@ -223,7 +223,7 @@ You can use POST directly from an HTML form:
 ```html
 <html>
 <body>
-  <form method="POST" action="http://localhost:3000/cities">
+  <form method="POST" action="http://localhost:3000/api/cities">
     <label for"cityName">city</label>
     <input id="cityName" name="name" type="text" />
     <label for"cityDesc">description</label>
@@ -240,7 +240,7 @@ Or with AJAX:
 // app.js
 $.ajax({
   method: "POST",
-  url: "https://localhost:3000/cities",
+  url: "https://localhost:3000/api/cities",
   data: {
     name: "City of Oz",
     description: "Capitol city of the Land of Oz and seat of the ruling wizard of Oz",
@@ -297,7 +297,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 In any routes receiving post data you can now access that data using `req.body`.
 
 ```js
-app.post('/cities', function citiesCreate(req, res) {
+app.post('/api/cities', function citiesCreate(req, res) {
   var name = req.body.name;
   var desc = req.body.description;
   var newCity = { name: name, description: desc };
@@ -316,8 +316,8 @@ You can [read more about middleware here](middleware_reading.md).
 
 We learned about:
 
-* Routing to different resources, i.e. `/burgers` and `/tacos`.
-* Using dynamic parameters, i.e. `/burgers/:index` and `/tacos/:index` to request specific data.
+* Routing to different resources, i.e. `/api/burgers` and `/api/tacos`.
+* Using dynamic parameters, i.e. `/api/burgers/:index` and `/api/tacos/:index` to request specific data.
 * Using query parameters for dynamic requests to serve up dynamic responses.
 * Using POST to send data to our Express app.
 
