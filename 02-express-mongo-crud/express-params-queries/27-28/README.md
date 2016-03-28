@@ -271,9 +271,9 @@ Let's look at some routes for the cities **resource**.
 
 | HTTP Verb | Route       | RESTful description | Purpose |
 | :-------- | ----------- | ------------------- | --------------------|
-| GET       | /cities     | citiesIndex         | Listing all cities. |
-| GET       | /cities/:id | citiesShow          | Details of one city. |
-| POST      | /cities     | citiesCreate        | Create a new city.
+| GET       | /api/cities     | citiesIndex         | Listing all cities. |
+| GET       | /api/cities/:id | citiesShow          | Details of one city. |
+| POST      | /api/cities     | citiesCreate        | Create a new city.
 
 **REST** combines an **HTTP verb**, with an **endpoint** (route) in a standard way to make working with **resources** easier across the web.  We'll talk more about this, and it'll become very important in the next few days.  :eyes:
 
