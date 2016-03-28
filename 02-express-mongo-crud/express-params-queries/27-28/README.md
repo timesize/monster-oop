@@ -6,7 +6,7 @@
 | :---- |
 | Explain parsing URL params and using query string params. |
 | Apply routing knowledge to build an Express application with dynamic routes. |
-| Explain the usefulness of middleware (e.g., `body-parser`). |
+| Understand POST and how it is used to instruct the server to save data. |
 
 ## Pre-reading
 
@@ -18,8 +18,10 @@
 * Resource path
 * Query string
 * HTTP verb
+  * POST
 * Status code
 * Middleware
+
 
 ## Outline
 
@@ -56,6 +58,9 @@ Let's start with a simple **Express** application.
   atom .
   ```
 The folder structure will be as follows:
+
+**What just happpened?**
+NPM (Node Package Manager) keeps track of the various libraries and third-party packages of code that we use.  In the above instance, `npm init` initializes a JSON file that stores important information about our project.  `npm install --save express` tells the Node Package Manager to dowload and install the Express library for this particular project.  the `--save` flag lets NPM know that we will be downloading and using `express` only for this project.  The above two `npm` commands will be called every time you create a new web application using express.  You will install other packages as we introduce them in such a manner.
 
 ```
 quick_example
@@ -165,13 +170,13 @@ Here we are seeing the first introduction to parameters that the application can
 
 ## Query Parameters
 
-Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
+Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in a route. Or maybe we don't care about getting the order of the parameters correct. Luckily, there are **query parameters** you can include with each request.
 
 Let's see query params in action. Go to <a href="https://google.com/search?q=kittens&tbm=isch" target="_blank">https://google.com/search?q=kittens&tbm=isch</a>
 
 * `?` denotes the beginning of the query parameters.
-* `=` indicates an assignment; anything to the left is the key, while the right represents the value.
-* `&` allows for the input of multiple parameters, separating each.
+* `=` indicates a key-value-pair assignment; anything to the left is the key, while the right represents the value.
+* `&` allows for the input of multiple parameters, separating each parameter.
 
 Let's add our first route to practice query params.
 
@@ -186,7 +191,7 @@ Reset your server and go to <a href="localhost:3000/thank?name=jane" target="_bl
 
 ## Choosing between request params and query params
 
-* **request params:** `http://localhost:3000/icecream/flavors/:flavor`
+* **request params:** `http://localhost:3000/icecream/:flavor`
 
 * **query params:** `http://localhost:3000/icecream?flavor=SOMEFLAVOR`
 
@@ -208,131 +213,94 @@ Common cases for **Query Params**:
 
 Finally you might use them both together in some cases: `/posts/33/comments?limit=50`
 
-## Middleware
+## POST
 
-What is middleware? <a href="http://expressjs.com/guide/using-middleware.html" target="_blank">In terms of Express</a>, middleware is a function with access to the request object (req), the response object (res), and the next middleware in the application’s request-response cycle, commonly denoted by a variable named next.
+Up until now we've used (the HTTP verb) GET to retrieve data from APIs.  
+_But what if we want to let our users store data?_
+When one wants to store data - or **create new resources** on a server, the standard is to use the HTTP verb POST.
 
-Middleware can:
+You can use POST directly from an HTML form:
 
-* Execute any code.
-* Make changes to the request and the response objects.
-* End the request-response cycle.
-* Call the next middleware in the stack.
+```html
+<html>
+<body>
+  <form method="POST" action="http://localhost:3000/cities">
+    <label for"cityName">city</label>
+    <input id="cityName" name="name" type="text" />
+    <label for"cityDesc">description</label>
+    <input id="cityDesc" name="description" type="text" />
+    <input type="submit" />
+  </form>
+</body>
+</html>
+```
 
-You can create your own middleware, or use third-party modules. That's right, there are tons of useful middleware modules that are already out there which you can use to handle common challenges like authentication, validation, and parsing.
+Or with AJAX:
 
-The <a href="https://github.com/expressjs/body-parser" target="_blank">`body-parser`</a> module is an example of some middleware that makes Express awesome. You can use it to parse out params from the POST'd form. This provides a different way to collect data instead of relying on URL or query params.
-
-`server.js`
 ```js
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-
-// bodyParser.urlencoded() returns a function that will be called later in the app.post() route
-var parseUrlencoded = bodyParser.urlencoded({extended: false});
-
-// store for cities in memory (as long as server is running)
-var cities = [];
-
-app.get('/cities', function(req, res) {
-  res.json({cities: cities});
-})
-
-// passing multiple middleware functions to this route; they are executed sequentially.
-// NOTE does it matter what we call the request and response parameter for our callback?
-app.post('/cities', parseUrlencoded, function (request, response) {
-  //                ^- middleware -^
-  var city;
-  var name = request.body.name;
-  var description = request.body.description;
-  city = { name: name, description: description}
-  cities.push(city);
-
-  // sending json
-  response.json({ cities: cities});
+$.ajax({
+  method: "POST",
+  url: "https://localhost:3000/cities",
+  data: {
+    name: "City of Oz",
+    description: "Capitol city of the Land of Oz and seat of the ruling wizard of Oz",
+  },
+  success: function handleCityCreateResponse(data) {
+    console.log("city was successfully created!")
+    console.log("the ID of the new city is", data._id)
+    // render book to page
+  },
+  error: function handleErrorCityCreateResponse() {
+    console.error("uh oh... failed to create")
+  }
 });
 ```
 
-### Including middleware on all routes
+### RESTful routing introduction
 
-Another way to include middleware is via `app.use`.  This will include it on *all* routes.
+Let's look at some routes for the cities **resource**.  
+
+| HTTP Verb | Route       | RESTful description | Purpose |
+| :-------- | ----------- | ------------------- | --------------------|
+| GET       | /cities     | citiesIndex         | Listing all cities. |
+| GET       | /cities/:id | citiesShow          | Details of one city. |
+| POST      | /cities     | citiesCreate        | Create a new city.
+
+**REST** combines an **HTTP verb**, with an **endpoint** (route) in a standard way to make working with **resources** easier across the web.  We'll talk more about this, and it'll become very important in the next few days.  :eyes:
+
+
+
+### Middleware and body-parser
+
+Middleware allows us to make changes to the request or response objects; injecting code before the actual route handler.
+
+POST requests don't use query-parameters like GET requests do.  Instead they submit data in the body of the request.  We'll use middleware called **body-parser** to help us parse and make-use-of that data.
+
+You can add the body-parser middleware to your app by:  
+1. Installing the body parser module `npm install --save body-parser`  
+2. Including the middleware in the app using `app.use`.
+
 
 ```js
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-
-// store for cities in memory (as long as server is running)
-var cities = [];
-
-// body parser config for all routes
 app.use(bodyParser.urlencoded({ extended: false }));
-//    ^              middleware            ^
-
-app.get('/cities', function(req, res) {
-  res.json({cities: cities});
-})
-
-app.post('/cities', function (request, response) {
-  var city;
-  var name = request.body.name;
-  var description = request.body.description;
-  city = { name: name, description: description}
-  cities.push(city);
-
-  // sending json
-  response.json({ cities: cities});
-});
-
 ```
 
-* Is there something missing from this code?
-  * We haven't installed the `body-parser` package.
-* What will the client see when it GETs /cities?
-* How can we post to this?
-  * postman
-  * HTML form
-
-
-  ```html
-  <html>
-  <body>
-    <form method="POST" action="http://localhost:3000/cities">
-      <label for"cityName">city</label>
-      <input id="cityName" name="name" type="text" />
-      <label for"cityDesc">description</label>
-      <input id="cityDesc" name="description" type="text" />
-      <input type="submit" />
-    </form>
-  </body>
-  </html>
-  ```
-
-### Writing our own middleware
-
-How can we write our own middleware?  Let's say we want to make some alteration to the params so that further down the chain those alterations can be used.  
-
+In any routes receiving post data you can now access that data using `req.body`.
 
 ```js
-// call this function on every route with the param of 'name'
-app.param('name', function(request, response, next) {
-  // get name from params
-  var name = request.params.name;
-  // capitalize the name
-  var capitalizedName = name[0].toUpperCase() + name.slice(1).toLowerCase();
-  // set the value of the name to the capitalized version
-  request.params.name = capitalizedName;
-  // pass control to the next middleware function
-  next();
-})
-
-app.get("/greet/:name", function (req, res) {
-  res.send( "Hello, " + req.params.name );
+app.post('/cities', function citiesCreate(req, res) {
+  var city;
+  var name = req.body.name;
+  var desc = req.body.description;
+  var newCity = { name: name, description: desc };
+  // assuming that cities is an array in our app:
+  cities.push(newCity);
 });
 ```
 
-Now every name is capitalized.
+You can [read more about middleware here](middleware_reading.md).
+
+> Note: for most of our Express apps we'll just include bodyParser as part of the _boiler-plate_ of the app.
 
 
 ## Summary
@@ -342,8 +310,7 @@ We learned about:
 * Routing to different resources, i.e. `/burgers` and `/tacos`.
 * Using dynamic parameters, i.e. `/burgers/:index` and `/tacos/:index` to request specific data.
 * Using query parameters for dynamic requests to serve up dynamic responses.
-* What middleware is and why it is helpful.
-
+* Using POST to send data to our Express app.
 
 This will be essential knowledge for building and interacting with applications that contain multiple resources, such as users, posts, comments, etc.
 
