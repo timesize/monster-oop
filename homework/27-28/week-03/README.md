@@ -11,9 +11,9 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 ### REST API homework
 
-1. Read [the top comment in this discussion](http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming) about what REST is (and the rest of the discussion if you're curious).
+1. Read [the top comment in this discussion](http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming) about what REST is (and the rest of the discussion if you're curious). We do not expect you to deeply understand all of the terminology here, we want this to serve as an introduction.
 
-1. Read [this blog](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/) about best practices for REST
+1. Read [practices 1-4 and 9 on this blog post](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/) about best practices for REST.
 
 1. Fork and clone [this RESTful API exercise](https://github.com/sf-wdi-27-28/restful-api-exercises) and make a pull request to submit it.
 
