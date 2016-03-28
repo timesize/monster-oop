@@ -15,7 +15,7 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 1. Read [this blog](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/) about best practices for REST
 
-1. Fork and clone [this RESTful API exercise]() and make a pull request to submit it.
+1. Fork and clone [this RESTful API exercise](https://github.com/sf-wdi-27-28/restful-api-exercises) and make a pull request to submit it.
 
 ### Middleware homework
 
