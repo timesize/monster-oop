@@ -294,6 +294,7 @@ app.post('/cities', function citiesCreate(req, res) {
   var newCity = { name: name, description: desc };
   // assuming that cities is an array in our app:
   cities.push(newCity);
+  res.json(cities);
 });
 ```
 
