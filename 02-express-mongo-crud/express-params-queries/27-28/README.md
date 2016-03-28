@@ -80,7 +80,6 @@ var express = require('express'),
     app = express();
 
 // a "GET" request to "/" will run the function below
-// NOTE anyone know how we can better comment this code? *cough* jsdoc *cough*
 app.get("/", function (req, res) {
   // send back the response: 'Hello World'
   res.send("Hello World");
