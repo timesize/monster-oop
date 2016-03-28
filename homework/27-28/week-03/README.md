@@ -6,39 +6,46 @@ If you have any remaining time, please complete/review the exercises from dawn a
 
 Please refer to the [Instructions for Submitting Homework](/how-to/homework-submission.md).
 
-<!--
+
 ## Day 1
 
-1. Reading
-    * [Example](#example)
-2. Bonus/Stretch
-    * [Example](#example)
+### REST API homework
+
+1. Read [the top comment in this discussion](http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming) about what REST is (and the rest of the discussion if you're curious). We do not expect you to deeply understand all of the terminology here, we want this to serve as an introduction.
+
+1. Read [practices 1-4 and 9 on this blog post](http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/) about best practices for REST.
+
+1. Fork and clone [this RESTful API exercise](https://github.com/sf-wdi-27-28/restful-api-exercises) and make a pull request to submit it.
+
+### Middleware homework
+
+1. Read [these notes](https://github.com/SF-WDI-LABS/shared_modules/blob/master/02-express-mongo-crud/express-params-queries/27-28/middleware_reading.md) introducing the concept of middleware.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk:
 
-* [Example](#example)
-* [Example](#example)
--->
+* [This morning's notes](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/intro-express/27-28)
+* [This morning's express practice exercise](https://github.com/SF-WDI-LABS/express-intro)
+* [This afternoon's notes](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/express-params-queries/27-28)
 
-<!-- 
+<!--
 ## Day 2
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 3
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 4
 
 1. Reading
@@ -46,10 +53,10 @@ Please use any remaining time to complete and review the exercises from dawn & d
     - Complete the [Week 3 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w3-review
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 5 - Weekend Homework
 
 1. Reading
