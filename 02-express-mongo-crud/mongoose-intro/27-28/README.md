@@ -31,7 +31,7 @@ Since Mongo is the first database we've worked with it's hard for us to discuss 
 
 Let's do a quick activity and get Mongoose and Mongo setup on our machines.
 
-1. Assuming you already have MongoDB installed <sub>(you did this at installfest)<sub>, to get started using mongoose in a project, we have to install it in our `package.json`:
+1. Assuming you already have MongoDB installed <sub>(you did this at installfest)</sub>, to get started using mongoose in a project, we have to install it in our `package.json`:
 
 ```bash
   npm install --save mongoose
