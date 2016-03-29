@@ -47,9 +47,9 @@ var Contact = mongoose.model('Contact', ContactSchema);
 
 ## Mongo & Mongoose setup
 
-Let's do a quick activity and try to get Mongoose and Mongo setup on our machines.
+Let's do a quick activity and get Mongoose and Mongo setup on our machines.
 
-1. Assuming you already have MongoDB installed, to get started using mongoose in a project, we have to install it in our `package.json`:
+1. Assuming you already have MongoDB installed <sub>(you did this at installfest)<sub>, to get started using mongoose in a project, we have to install it in our `package.json`:
 
 ```bash
   npm install --save mongoose
@@ -83,20 +83,20 @@ Once you've finished the above steps, here's how you would set up an Express app
 1. In your Express application, create a folder called `models` with a file for your first model. In the example, we have a `Todo` model, so the filename is `todo.js`. Your folder structure should look similar to this:
 
   ```
-  | your-app-name
-    | models
-      - todo.js
-    | public
-      | scripts
-        - main.js
-      | styles
-        - main.css
-    | views
-      - index.html
-    - .gitignore
-    - package.json
-    - README.md
-    - server.js
+  your-app-name
+  ├── models
+  │   └── todo.js
+  ├── public
+  │   ├── scripts
+  │   │   └── main.js
+  │   └── styles
+  │       └── main.css
+  ├── views
+  │   └── index.html
+  ├── .gitignore
+  ├── package.json
+  ├── README.md
+  └── server.js
   ```
 
 2. <details>
@@ -126,9 +126,53 @@ Once you've finished the above steps, here's how you would set up an Express app
 </details>
 
 
-#### Database IDs
+#### Database IDs and data-types
 
-** T B D **
+Everything we store in the database is assigned an ID.  In mongo that actually means an `_id`.  We can use this ID later to look up a particular record.  Later on we'll look at how we can use those IDs can help us form relationships in the database.
+
+Most databases also require that we specify the data-type for each attribute.  In mongoose we can use data-types from javascript such as String, Number, and even Array.
+
+Let's look at this example:
+
+```js
+// models/console.js
+var mongoose = require('mongoose'),
+  Schema = mongoose.Schema;
+
+var consoleSchema = new mongoose.Schema({
+    name: String,
+    manufacturer: String,
+    released: Date,
+    colors: [String],
+
+});
+
+var Console = mongoose.model('Console', ConsoleSchema);
+
+module.exports = Console;
+```
+
+In the above note how we've assigned **String**, **Date** and even an **array of strings** as the data-types for this Schema.
+Let's create a model.
+
+```js
+// server.js
+var console = require('./models/console')
+
+var nin64 = new Console ({
+  name: 'Nintendo 64',
+  manufacturer: 'Nintendo',
+  released: 'September 29, 1996',  // will be converted to string - try it in your browser
+  colors: ['blue', 'black', 'yellow']
+});
+
+nin64.save(function(err, newConsole){
+  if(err) {return console.log(err);}
+  console.log("saved new console: ", newConsole);
+});
+```
+
+
 
 ## CRUD Operations with Mongoose
 
@@ -152,7 +196,8 @@ Once you've finished the above steps, here's how you would set up an Express app
 #### Create new todo: `new` and `.save()`
 
 <details>
-  <summary>We've seen the `new` keyword before! It creates new instances of an object. We use it here to create new instances of our `Todo` model. We then call `.save()` to store the new todo in our database.</summary>
+  <summary>
+  We've seen the `new` keyword before! It creates new instances of an object. We use it here to create new instances of our `Todo` model. We then call `.save()` to store the new todo in our database.</summary>
   ```js
   // create new todo
   app.post('/api/todos', function todosCreate(req, res) {
