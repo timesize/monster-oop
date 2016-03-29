@@ -32,14 +32,16 @@ Please use any remaining time to complete and review the exercises from dawn & d
 * [This afternoon's notes](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/express-params-queries/27-28)
 * [This afternoon's exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/02-express-mongo-crud/express-params-queries/27-28/exercises.md)
 
-<!--
 ## Day 2
 
-1. Reading
-2. Bonus/Stretch
+1. [Continue today's lab](https://github.com/sf-wdi-27-28/test-driven-todo-api).  If you are showing all todos on the index, creating new todos, and deleting todos, you've done great!  Regardless of how far you get submit with a pull request, and remember comments to let us know comfort, and completeness.
+2. Looking forward: Read over [mongoose's getting started guide](http://mongoosejs.com/docs/).
+  * Also read the first few sections of Mongoose's [guide](http://mongoosejs.com/docs/guide.html), up through the section on creating a model. Figure out a brief summary of what a mongoose _schema_ is, what a mongoose _model_ is, and how they're different.   
+  * Get a feel for the basic syntax mongoose uses to make a new document, save the document, and find documents later.
+
+
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
 
 <!--
 ## Day 3
