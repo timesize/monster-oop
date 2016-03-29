@@ -21,7 +21,33 @@ Since Mongo is the first database we've worked with it's hard for us to discuss 
 
 `MongoDB` is a no-SQL database. `Mongoose` is a library or "wrapper" that gives us a bunch of convenience methods for working with MongoDB records (kind of like jQuery's convenience methods for manipulating the DOM). Generally we will not be interacting _directly_ with MongoDB, instead we'll be working with `mongoose`.
 
+## Terminology
+
+**Schema**: Similar to an object constructor, a Schema is a diagram or blueprint for what every object in the noSQL database will contain. Here's an example of a simple Address Book noSQL database schema:
+
+```js
+    var ContactSchema = new Schema({
+        firstName: String,
+        lastName: String,
+        address: String
+        phoneNumber: Number,
+        email: String
+        professionalContact: Boolean
+    });
+```
+
+With the above Schema, we can expect all of our Address Book entries would have a first name, last name, address, and email address in the form of Strings. We can count on the phoneNumber to always be accepted, stored, and returned as a number. Lastly, the boolean value of Professional Contact will always be a true or false
+
+**Model**: A model is a Schema that has been 'activated' with real data and is performing actions such as reading, saving, updating, etc.
+
+```js
+var Contact = mongoose.model('Contact', ContactSchema);
+```
+
+
 ## Mongo & Mongoose setup
+
+Let's do a quick activity and try to get Mongoose and Mongo setup on our machines.
 
 1. Assuming you already have MongoDB installed, to get started using mongoose in a project, we have to install it in our `package.json`:
 
@@ -69,12 +95,12 @@ Once you've finished the above steps, here's how you would set up an Express app
       - index.html
     - .gitignore
     - package.json
-    - readme.md
+    - README.md
     - server.js
   ```
 
 2. <details>
-  <summary>In your model file (e.g. `todo.js`), create the model schema, and export it so that you can require it in other parts of your app.</summary>
+  <summary>In your model file (e.g. `todo.js`), create the model **schema**, and export it so that you can require it in other parts of your app.</summary>
   ```js
   var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
@@ -93,9 +119,16 @@ Once you've finished the above steps, here's how you would set up an Express app
 3. <details>
   <summary>In `server.js`, require your model.</summary>
   ```js
+  // server.js
+  // Note without requiring your models you can't use them in server.js!
   var Todo = require('./models/todo');
   ```
 </details>
+
+
+#### Database IDs
+
+** T B D **
 
 ## CRUD Operations with Mongoose
 
@@ -105,9 +138,9 @@ Once you've finished the above steps, here's how you would set up an Express app
   <summary>We can use <a href="http://mongoosejs.com/docs/api.html#model_Model.find"  target="_blank">.find()</a> to get all documents in the collection.</summary>
   ```js
   // get all todos
-  app.get('/api/todos', function (req, res) {
+  app.get('/api/todos', function todosIndex(req, res) {
     // find all todos in db
-    Todo.find(function (err, allTodos) {
+    Todo.find(function handleDBTodosListed(err, allTodos) {
       res.json({ todos: allTodos });
     });
   });
@@ -122,12 +155,12 @@ Once you've finished the above steps, here's how you would set up an Express app
   <summary>We've seen the `new` keyword before! It creates new instances of an object. We use it here to create new instances of our `Todo` model. We then call `.save()` to store the new todo in our database.</summary>
   ```js
   // create new todo
-  app.post('/api/todos', function (req, res) {
+  app.post('/api/todos', function todosCreate(req, res) {
     // create new todo with form data (`req.body`)
     var newTodo = new Todo(req.body);
 
     // save new todo in db
-    newTodo.save(function (err, savedTodo) {
+    newTodo.save(function handleDBTodoSaved(err, savedTodo) {
       res.json(savedTodo);
     });
   });
