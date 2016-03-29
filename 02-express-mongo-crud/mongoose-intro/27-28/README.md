@@ -307,7 +307,7 @@ Exploring your databases with the MongoDB shell can be a chore. Robomongo is a f
 
 ## Challenges
 
-
+See your class schedule or Instructor for today's challenges!
 
 ## Resources
 
