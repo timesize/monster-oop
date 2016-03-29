@@ -117,9 +117,9 @@ Once you've finished the above steps, here's how you would set up an Express app
     var ContactSchema = new Schema({
         firstName: String,
         lastName: String,
-        address: String
+        address: String,
         phoneNumber: Number,
-        email: String
+        email: String,
         professionalContact: Boolean
     });
 ```
