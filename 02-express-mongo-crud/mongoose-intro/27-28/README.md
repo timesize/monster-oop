@@ -21,29 +21,6 @@ Since Mongo is the first database we've worked with it's hard for us to discuss 
 
 `MongoDB` is a no-SQL database. `Mongoose` is a library or "wrapper" that gives us a bunch of convenience methods for working with MongoDB records (kind of like jQuery's convenience methods for manipulating the DOM). Generally we will not be interacting _directly_ with MongoDB, instead we'll be working with `mongoose`.
 
-## Terminology
-
-**Schema**: Similar to an object constructor, a Schema is a diagram or blueprint for what every object in the noSQL database will contain. Here's an example of a simple Address Book noSQL database schema:
-
-```js
-    var ContactSchema = new Schema({
-        firstName: String,
-        lastName: String,
-        address: String
-        phoneNumber: Number,
-        email: String
-        professionalContact: Boolean
-    });
-```
-
-With the above Schema, we can expect all of our Address Book entries would have a first name, last name, address, and email address in the form of Strings. We can count on the phoneNumber to always be accepted, stored, and returned as a number. Lastly, the boolean value of Professional Contact will always be a true or false
-
-**Model**: A model is a Schema that has been 'activated' with real data and is performing actions such as reading, saving, updating, etc.
-
-```js
-var Contact = mongoose.model('Contact', ContactSchema);
-```
-
 
 ## Mongo & Mongoose setup
 
@@ -126,9 +103,33 @@ Once you've finished the above steps, here's how you would set up an Express app
 </details>
 
 
+
+## Terminology
+
+**Schema**: Similar to an object constructor, a Schema is a diagram or blueprint for what every object in the noSQL database will contain. Here's an example of a simple Address Book noSQL database schema:
+
+```js
+    var ContactSchema = new Schema({
+        firstName: String,
+        lastName: String,
+        address: String
+        phoneNumber: Number,
+        email: String
+        professionalContact: Boolean
+    });
+```
+
+With the above Schema, we can expect that all of our Address Book entries would have a first name, last name, address, and email address in the form of Strings. We can count on the phoneNumber to always be accepted, stored, and returned as a number. Lastly, the boolean value of Professional Contact will always be a true or false
+
+**Model**: A model is a Schema that has been 'activated' with real data and is performing actions such as reading, saving, updating, etc.
+
+```js
+var Contact = mongoose.model('Contact', ContactSchema);
+```
+
 #### Database IDs and data-types
 
-Everything we store in the database is assigned an ID.  In mongo that actually means an `_id`.  We can use this ID later to look up a particular record.  Later on we'll look at how we can use those IDs can help us form relationships in the database.
+Every model instance that we store in the database is assigned an ID.  In mongo that actually means an `_id`.  We can use this ID later to look up a particular record.  Later on we'll look at how we can use those IDs can help us form relationships in the database.
 
 Most databases also require that we specify the data-type for each attribute.  In mongoose we can use data-types from javascript such as String, Number, and even Array.
 
@@ -147,19 +148,20 @@ var consoleSchema = new mongoose.Schema({
 
 });
 
-var Console = mongoose.model('Console', ConsoleSchema);
+var Console = mongoose.model('Console', consoleSchema);
 
 module.exports = Console;
 ```
 
 In the above note how we've assigned **String**, **Date** and even an **array of strings** as the data-types for this Schema.
-Let's create a model.
+
+Let's create an instance of this model.
 
 ```js
 // server.js
 var console = require('./models/console')
 
-var nin64 = new Console ({
+var nin64 = new Console ({  // you've seen `new` before ;-)
   name: 'Nintendo 64',
   manufacturer: 'Nintendo',
   released: 'September 29, 1996',  // will be converted to string - try it in your browser
@@ -171,6 +173,23 @@ nin64.save(function(err, newConsole){
   console.log("saved new console: ", newConsole);
 });
 ```
+
+The above gives us a model instance that looks like:
+
+```js
+// nin64
+{
+  colors: [ 'blue', 'black', 'yellow' ],
+  _id: '56faff4f06ae92b764a11c3a',
+  released: "Sun Sep 29 1996 00:00:00 GMT-0700 (PDT)",
+  manufacturer: 'Nintendo',
+  name: 'Nintendo 64',
+  __v: 0
+}
+```
+
+Notice that mongo has added an `_id` and `__v` attributes.
+
 
 
 
