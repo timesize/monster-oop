@@ -1,8 +1,9 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10423298/ea833a68-7079-11e5-84f8-0a925ab96893.png" width="60">  Mongo & Mongoose
 | Objectives |
 | :--- |
-| Traverse a MongoDB using the command line interface (CLI). |
-| Connect to MongoDB using Mongoose within your application. |
+| Create Mongoose schemas & models |
+| Integrate Mongoose with Express |
+| Make use of Mongoose model instances |
 
 ## Review: What are Mongo and Mongoose?
 
