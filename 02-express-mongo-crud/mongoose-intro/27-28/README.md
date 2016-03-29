@@ -232,78 +232,13 @@ Once you've finished the above steps, here's how you would set up an Express app
 </details>
 
 
-## Exploring the MongoDB Shell
-
-In addition to the Javascript methods for using MongoDB, MongoDB also comes with a Command Line Interface (CLI), "console", or "shell" that allows us to explore our databases and data. You can launch the shell by typing:
-
-```bash
-  mongo
-```
-
-You can close the shell by typing:
-
-```bash
-exit
-```
-
-You can learn more about shell commands by typing `help`.
-
-Some common commands are:
-
-```bash
-show dbs        # List All Databases
-db              # Show Current Databse
-use db_name     # Select a Database
-```
-
-
-## MongoDB Shell Methods
-The MongoDB shell also comes with its own set of commands for CRUDing database records.
-
-Assuming that our database has a `Users` model or a `Users` resource, we can:
-
-#### Create
-``` js
-// save one user
-$ db.users.save({ name: 'Chris' });
-
-// save multiple users
-$ db.users.save([{ name: 'Chris'}, { name: 'Holly' }]);
-```
-
-#### Read
-``` js
-// show all users
-$ db.users.find();
-
-// find a specific user
-$ db.users.find({ name: 'Holly' });
-```
-
-#### Update
-``` js
-db.users.update({ name: 'Holly' }, { name: 'Holly Lloyd' });
-```
-
-#### Delete
-``` js
-// remove all
-db.users.remove({});
-
-// remove one
-db.users.remove({ name: 'Holly' });
-```
-
-More Shell Methods:
-https://docs.mongodb.org/manual/reference/method/
-
 #### Robomongo: The MongoDB GUI
 Exploring your databases with the MongoDB shell can be a chore. Robomongo is a free application that can make it a little easier on you: [Setting up Robomongo](https://scotch.io/tutorials/an-introduction-to-mongodb#gui-tool:-robomongo).
 
 
 ## Challenges
 
-Please head on over to the [Mongo TV Drills Lab](https://github.com/sf-wdi-25/mongo_tv_drills) - [solution] (https://github.com/sf-wdi-25/mongo_tv_drills/tree/solution)
+
 
 ## Resources
 
