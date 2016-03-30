@@ -411,3 +411,6 @@ app.post('/api/games/', function (req, res) {
   });
 });
 ```
+
+## Exercises
+Sprint 2 of [Mongoose Books app](https://github.com/SF-WDI-LABS/mongoose-books-app)
