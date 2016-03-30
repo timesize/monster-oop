@@ -32,30 +32,30 @@ Since Mongo is the first database we've worked with it's hard for us to discuss 
 Let's do a quick activity and get Mongoose and Mongo setup on our machines.
 
 1. Assuming you already have MongoDB installed <sub>(you did this at installfest)</sub>, to get started using mongoose in a project, we have to install it in our `package.json`:
-
-```bash
-  npm install --save mongoose
-```
+  
+  ```bash
+    npm install --save mongoose
+  ```
 
 2. Next we need to `require` Mongoose in our project and `connect` to the MongoDB service (it could be local or hosted). We can do this in `server.js` for now. Later we'll do it in `models/index.js`.
 
-```js
-  var mongoose = require('mongoose');
-  mongoose.connect('mongodb://localhost/todo-app-demo');
-```
-
-  <details>
-    <summary>What's a connection string?</summary>
-    `mongodb://localhost/todo-app-demo` is a string formatted by specifications provided by the Mongoose package in order to connect to a MongoDB database on your local system named `todo-app-demo`. You can name it whatever you like and it will be created as soon as you save some data to it.
-  </details>
+  ```js
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/todo-app-demo');
+  ```
+  
+    <details>
+      <summary>What's a connection string?</summary>
+      `mongodb://localhost/todo-app-demo` is a string formatted by specifications provided by the Mongoose package in order to connect to a MongoDB database on your local system named `todo-app-demo`. You can name it whatever you like and it will be created as soon as you save some data to it.
+    </details>
 
 3. Finally, we need to run the MongodDB service. Generally you will want it open in a separate tab, running in the background.
 
-```bash
-  mongod
-```
-
-  **Note:** If you already have an instance of MongoDB running, you'll get an error at this step. If that's the case, you can move on to the next step, since MongoDB is already running!
+  ```bash
+    mongod
+  ```
+  
+    **Note:** If you already have an instance of MongoDB running, you'll get an error at this step. If that's the case, you can move on to the next step, since MongoDB is already running!
 
 Running your MongoDB service is no different from running your Express Server!
 
