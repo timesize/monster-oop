@@ -378,4 +378,34 @@ app.get('/api/games/', function (req, res) {
 });
 ```
 
-But would we always want to populate all the game information before sending it back? Many APIs don't. For instance, the Spotify API is riddled with ids you could use to make a second request.
+But would we always want to populate all the game information before sending it back? Many APIs don't. For instance, the Spotify API is riddled with ids that developers can use to make a second request if they want more of the information.
+
+```js
+// create a game, given the name of a console it can run on
+app.post('/api/games/', function (req, res) {
+  var newGame = new Game({
+    name: req.body.title,
+    developer: req.body.developer,
+    release: new Date(req.body.releaseDate),
+    consoles: []
+  });
+
+  Console.findOne({ name: req.body.console }, function (err, foundConsole) {
+    if (err) {
+      res.status(500).send(err);
+      return console.log(err);
+    } else if (foundConsole){
+      newGame.consoles.push(foundConsole);
+    } else {
+      console.log('console not found: ' + req.body.console + ' - leaving consoles array empty');
+    }
+    newGame.save(function (err, savedGame){
+      if (err) {
+        res.status(500).send(err);
+        return console.log(err);
+      }
+      res.send(newGame);
+    });
+  });
+});
+```
