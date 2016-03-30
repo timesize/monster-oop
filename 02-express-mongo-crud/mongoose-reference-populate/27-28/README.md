@@ -332,14 +332,14 @@ Remember to always make "RESTful" routes. RESTful routes are the most popular mo
 
 | **HTTP Verb** | **Path** | **Description** |
 |---|---|---|
-| GET | /api/store | Get all stores |
-| POST | /api/store | Create a store |
-| GET | /api/store/:id | Get a store |
-| DELETE | /api/store/:id | Delete a store |
-| GET | /api/store/:store_id/items | Get all items from a store |
-| POST | /api/store/:store_id/items | Create an item for a store |
-| GET | /api/store/:store_id/items/:item_id | Get an item from a store |
-| DELETE | /api/store/:store_id/items/:item_id | Delete an item from a store |
+| GET | /api/stores | Get all stores |
+| POST | /api/stores | Create a store |
+| GET | /api/stores/:id | Get a store |
+| DELETE | /api/stores/:id | Delete a store |
+| GET | /api/stores/:store_id/items | Get all items from a store |
+| POST | /api/stores/:store_id/items | Create an item for a store |
+| GET | /api/stores/:store_id/items/:item_id | Get an item from a store |
+| DELETE | /api/stores/:store_id/items/:item_id | Delete an item from a store |
 
 *In routes, avoid nesting resources deeper than shown above.*
 
