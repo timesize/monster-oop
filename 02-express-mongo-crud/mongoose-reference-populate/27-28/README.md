@@ -87,7 +87,6 @@ How would you design the following?
 ```js
 // pull in mongoose module with require
 var mongoose = require('mongoose');
-
 ```
 
 The above code is the standard boilerplate mongoose setup that you will see in any seed.js or Model file.
@@ -95,8 +94,8 @@ The above code is the standard boilerplate mongoose setup that you will see in a
 This next snippet only needs to happen once in your server-side code or models. It will usually be in your main server code (`server.js`) or in your models index (`/models/index.js`) if you have one.
 
 ```js
-// connect to the mongoose database, `console` collection
-mongoose.connect('mongodb://localhost/console');
+// connect to the mongoose `test` database on this computer
+mongoose.connect('mongodb://localhost/test');
 ```
 
 ### Structure Data with Schemas
@@ -140,12 +139,16 @@ var gameSchema = new Schema({
 	developer: String,
 	released: Date,
 	// I'm telling consoles to EXPECT references to Console documents
-	consoles: [{type: Schema.Types.ObjectId, ref: 'Console'}]
+	consoles: [ {
+    type: Schema.Types.ObjectId,
+    ref: 'Console'
+  } ]
 });
 ```
+
 The `Game Schema` above describes an actual videogame such as Super Mario Bros., MegaMan, Final Fantasy, and Skyrim.
 
-Note the specific code on line 7 within the `[]` brackets. With the brackets, we're letting the Game Schema know that each game will have an array called `consoles` in it. Inside the `[]`, we're describing what kind of data will go inside a game's `consoles` array as we work with the database. In this case we are telling the Game Schema that we will be filling the `consoles` array with ObjectIds, which is the type of that big beautiful `_id` that Mongo automatically generates for us.
+Note the specific code on line 7 within the `[]` brackets. With the brackets, we're letting the Game Schema know that each game will have an array called `consoles` in it. Inside the `[]`, we're describing what kind of elements will go inside a game's `consoles` array as we work with the database. In this case we are telling the Game Schema that we will be filling the `consoles` array with ObjectIds, which is the type of that big beautiful `_id` that Mongo automatically generates for us.
 
 If you forgot, it looks like this: `55e4ce4ae83df339ba2478c6`. That's what's going on with `type: Schema.Types.Objectid`.
 
@@ -188,14 +191,20 @@ Now we'll save our work.
 
 ```js
 nin64.save(function(err, nintendo64) {
- if(err) {return console.error(err);}
- else console.log('nintendo 64 saved successfully');
+  if (err) {
+    return console.log(err);
+  } else {
+    console.log('nintendo 64 saved successfully');
+  }
 });
 
 zelda.consoles.push(nin64);
 zelda.save(function(err, zeldaGame) {
- if(err) {return console.error(err);}
- else console.log('zelda game is ', zeldaGame);
+  if (err) {
+    return console.log(err);
+  } else {
+    console.log('zelda game is ', zeldaGame);
+  }
 });
 ```
 
@@ -207,15 +216,16 @@ Note that we push the `nin64` console document into the `zelda` consoles array. 
 This is the log text after executing the code we've written thus far:
 
 ```
-
-nintendo 64 saved successfully
 zelda game is { __v: 0,
   name: 'The Legend of Zelda: Ocarina of Time',
   developer: 'Nintendo',
   _id: 55e4eb857d6157f4d41a2981,
   consoles: [ 55e4eb857d6157f4d41a2980 ] }
 
+nintendo 64 saved successfully
+
 ```
+
 
 What are we looking at?
 
@@ -232,8 +242,10 @@ What are we looking at?
 Let's print out the Console Document `nintendo64` to make sure the `ObjectId` in consoles matches the `_id` we see for this game:
 
 ```js
-Console.findOne({_id: "55e4eb857d6157f4d41a2980"}, function (err, foundConsole){
- if(err) {return console.error(err);}
+Console.findOne({_id: "55e4eb857d6157f4d41a2980"}, function (err, foundConsole) {
+ if (err) {
+   return console.log(err);
+ }
  console.log('found console: ', foundConsole);
 });
 ```
@@ -257,7 +269,9 @@ When we want to get full information from a Console Document we have inside the 
 Game.findOne({ name: 'The Legend of Zelda: Ocarina of Time' })
   .populate('consoles')
   .exec(function(err, game) {
-    if(err){return console.error(err);}
+    if (err){
+      return console.log(err);
+    }
     if (game.consoles.length > 0) {
       for (var i=0; i<game.consoles.length; i++) {
         console.log("/nI love " + game.name + " for the " + game.consoles[0].name);
@@ -266,7 +280,7 @@ Game.findOne({ name: 'The Legend of Zelda: Ocarina of Time' })
     else {
       console.log('Game has no consoles.');
     }
-    console.log(game);
+    console.log('what was that game?', game);
   });
 ```
 
@@ -283,9 +297,9 @@ Let's go over this method call line by line:
 1. Line 13 demonstrates that we are able to access both data from the original Game Document we found **and** the referenced Console Document we summoned.
 
 <details>
-  <summary>What is the actual output from the above `findOne()` method call with populate?</summary>
+  <summary>What is the actual game output from the above `findOne()` method call with `populate`?</summary>
 
-  ```js
+  ```
   { _id: 55e4eb857d6157f4d41a2981,
     name: 'The Legend of Zelda: Ocarina of Time',
     developer: 'Nintendo',
@@ -335,10 +349,13 @@ Most of your routes for creating each piece of data will be the same, since game
 ```js
 // send all information for a single game
 app.get('/api/games/:gameId/', function (req, res) {
-  Game.findOne({ id: req.params.gameId })
+  Game.findOne({ _id: req.params.gameId })
     .populate('consoles')
     .exec(function(err, game) {
-      if (err) { res.status(500).send(err); }
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
       console.log('found and populated game: ', game);
       res.json(game);
     });
@@ -351,9 +368,14 @@ app.get('/api/games/', function (req, res) {
   Game.find({ })
     .populate('consoles')
     .exec(function(err, games) {
-      if (err) { res.status(500).send(err); }
+      if (err) {
+        res.status(500).send(err);
+        return;
+      }
       console.log('found and populated all games: ', games);
       res.json(games);
     });
 });
 ```
+
+But would we always want to populate all the game information before sending it back? Many APIs don't. For instance, the Spotify API is riddled with ids you could use to make a second request.
