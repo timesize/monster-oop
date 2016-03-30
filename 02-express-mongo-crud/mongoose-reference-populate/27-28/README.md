@@ -139,16 +139,18 @@ var gameSchema = new Schema({
 	developer: String,
 	released: Date,
 	// I'm telling consoles to EXPECT references to Console documents
-	consoles: [ {
-    type: Schema.Types.ObjectId,
-    ref: 'Console'
-  } ]
+	consoles: [ 
+	    {
+                type: Schema.Types.ObjectId,
+                ref: 'Console'
+            } 
+        ] 
 });
 ```
 
 The `Game Schema` above describes an actual videogame such as Super Mario Bros., MegaMan, Final Fantasy, and Skyrim.
 
-Note the specific code on line 7 within the `[]` brackets. With the brackets, we're letting the Game Schema know that each game will have an array called `consoles` in it. Inside the `[]`, we're describing what kind of elements will go inside a game's `consoles` array as we work with the database. In this case we are telling the Game Schema that we will be filling the `consoles` array with ObjectIds, which is the type of that big beautiful `_id` that Mongo automatically generates for us.
+Note the specific code starting on line 7 within the `[]` brackets. With the brackets, we're letting the Game Schema know that each game will have an array called `consoles` in it. Inside the `[]`, we're describing what kind of elements will go inside a game's `consoles` array as we work with the database. In this case we are telling the Game Schema that we will be filling the `consoles` array with ObjectIds, which is the type of that big beautiful `_id` that Mongo automatically generates for us.
 
 If you forgot, it looks like this: `55e4ce4ae83df339ba2478c6`. That's what's going on with `type: Schema.Types.Objectid`.
 
@@ -292,9 +294,9 @@ Let's go over this method call line by line:
 
 1. Line 3: When we use `find` without a callback, then `populate`, like here, we can put a callback inside an `.exec()` method call. Technically we have made a query with `find`, but only executed it when we call `.exec()`.
 
-1. Lines 4-12: If we have any errors, we will log them.  Otherwise, we can display the entire Game Document **including** the populated consoles array.
+1. Lines 4-15: If we have any errors, we will log them.  Otherwise, we can display the entire Game Document **including** the populated consoles array.
 
-1. Line 13 demonstrates that we are able to access both data from the original Game Document we found **and** the referenced Console Document we summoned.
+1. Lines 9 and 15 demonstrate that we are able to access both data from the original Game Document we found **and** the referenced Console Document we summoned.
 
 <details>
   <summary>What is the actual game output from the above `findOne()` method call with `populate`?</summary>
