@@ -43,14 +43,12 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
 
-<!--
+
 ## Day 3
 
-1. Reading
-2. Bonus/Stretch
+1. Continue working on [the lab](https://github.com/sf-wdi-27-28/mongoose-books-app) from today and complete sprints 1 and 2.
+1. Reading: Take a look at the documentation for all of the mongoose methods [listed in the morning module](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/mongoose-intro/27-28#crud-operations-with-mongoose), as well as [`populate()`](http://mongoosejs.com/docs/populate.html). Also read the [models page](http://mongoosejs.com/docs/models.html#constructing-documents), which goes over using the function `create()` instead of `new` and `save()` for making documents.
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
 
 <!--
 ## Day 4
