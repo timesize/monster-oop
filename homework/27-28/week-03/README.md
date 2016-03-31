@@ -57,8 +57,6 @@ Please use any remaining time to complete and review the exercises from dawn & d
     - Complete the [Week 3 Self-Assessment](https://docs.google.com/forms/d/13KoUAJCiAXOiMXByPfgPhj0YyYmuE6ij3ZMxRSGi3t8/viewform) and identify 2 topics you want to review tomorrow
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w3-review
 
-Please use any remaining time to complete and review the exercises from dawn & dusk.
-
 <!--
 ## Day 5 - Weekend Homework
 
