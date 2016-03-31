@@ -6,6 +6,7 @@
 | Objectives |
 | :---- |
 | Describe one-to-one, one-to-many, and many-to-many data relationships |
+| Describe when to use embedded vs. reference data relationships |
 | Build the appropriate queries for nested data relationships |
 | Use an "Embedded" pattern to associate resources with Mongoose |
 | Create, update, and delete data for the nested resource |
