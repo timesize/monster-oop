@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Week 3 Assessment
 
-1. A user fills out a form and hits "submit". List at least 3 things that might happen next.
+1. A user fills out a form and hits the "submit" button. List at least 3 things that will happen in the next few moments.
 
   <br>
   <br>
@@ -26,9 +26,9 @@
   <br>
   <br>
 
-3. Fill in the following grid (assume that it’s for an ordering system):
+3. Fill in the following grid of RESTful Routes (assume that it’s for an ordering system):
 
-  | CRUD Action | HTTP Verb / Method | REST Route / Endpoint |
+  | CRUD Action | HTTP Verb (Method) | URL Path (Endpoint) |
   | :--- | :--- | :--- |
   | READ (all) |  |  |
   | CREATE |  | `/api/orders` |
@@ -68,7 +68,7 @@
   <br>
   <br>
 
-  **public/js/main.js**
+  **public/scripts/app.js**
 
   <br>
   <br>
@@ -76,7 +76,7 @@
   <br>
   <br>
 
-  **views/index.hbs**
+  **views/index.html**
 
   <br>
   <br>
@@ -84,7 +84,7 @@
   <br>
   <br>
 
-5. Jimmy has an awesome Node/Express app running his site at http://www.jimmysworld.com. Now Jimmy wants his site to include an API that exposes his contact information to developers. His `/api/contacts/jimmy` endpoint should respond with a JSON object containing his name, phone number, and email address. Help Jimmy add a route to his server-side application code that responds with the desired data:
+5. Jimmy has an awesome Express app running his business at http://www.jimmysworld.com. Now Jimmy wants his site to include an API that exposes his employee's contact information to developers. For example, a request to `/api/employees/2` should respond with a JSON object containing the contact information for Suzy the Sales Manager (id, name, email address, title). Help Jimmy add a route to his server-side application code that responds with the desired data:
 
   app.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, function (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) {
 
