@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Week 3 Assessment
 
-1. A user fills out a form and hits "submit". List at least 3 things that might happen next.
+**1.** A user fills out a form and hits the "submit" button. List at least 3 things that will happen in the browser and/or server in the next few moments.
 
   <br>
   <br>
@@ -13,7 +13,7 @@
   <br>
   <br>
 
-2. Give two examples of HTTP status codes and what they mean.
+**2.** Give two examples of HTTP status codes and what they mean.
 
   <br>
   <br>
@@ -26,15 +26,15 @@
   <br>
   <br>
 
-3. Fill in the following grid (assume that it’s for an ordering system):
+**3.** Fill in the following grid of RESTful Routes (assume that it’s for an ordering system):
 
-  | CRUD Action | HTTP Verb / Method | REST Route / Endpoint |
-  | :--- | :--- | :--- |
-  | READ (all) |  |  |
-  | CREATE |  | `/api/orders` |
-  | READ (one) |  |  |
-  | UPDATE | PATCH or PUT |  |
-  | DELETE |  |  |
+| CRUD Action | HTTP Verb (Method) | URL Path (Endpoint) |
+| :--- | :--- | :--- |
+| READ (all) |  |  |
+| CREATE |  | `/api/orders` |
+| READ (one) |  |  |
+| UPDATE | PATCH or PUT |  |
+| DELETE |  |  |
 
   <br>
   <br>
@@ -42,7 +42,7 @@
   <br>
   <br>
 
-4. Briefly describe the purpose of each of the following files/directories in our Express projects:
+**4.** Briefly describe the purpose of each of the following files/directories in our Express projects:
 
   **server.js**
 
@@ -68,7 +68,7 @@
   <br>
   <br>
 
-  **public/js/main.js**
+  **models/food_truck.js**
 
   <br>
   <br>
@@ -76,7 +76,7 @@
   <br>
   <br>
 
-  **views/index.hbs**
+  **public/scripts/app.js**
 
   <br>
   <br>
@@ -84,38 +84,65 @@
   <br>
   <br>
 
-5. Jimmy has an awesome Node/Express app running his site at http://www.jimmysworld.com. Now Jimmy wants his site to include an API that exposes his contact information to developers. His `/api/contacts/jimmy` endpoint should respond with a JSON object containing his name, phone number, and email address. Help Jimmy add a route to his server-side application code that responds with the desired data:
+  **views/index.html**
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+**5.** Jimmy has an awesome Express app running his business at http://www.jimmysworld.com. Now Jimmy wants his site to include an API that exposes his employee's contact information to developers. For example, a request to `/api/employees/2` should respond with a JSON object containing the contact information for Suzy the Sales Manager (id, name, email address, title). Help Jimmy add a route to his server-side application code that responds with the desired data:
 
   app.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, function (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) {
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
   });
-
-6. Write a function called `wordToPigLatin()` that takes a single word as an argument and returns the Pig Latin translation. Here are some examples to get you started:
 
-  ```js
-  wordToPigLatin('happy');
-  //=> 'appyhay'
 
-  wordToPigLatin('duck');
-  //=> 'uckday'
+**6.** Sales of Dr. Fritz's Glorious Creature Classification Machine are through the roof. Now Dr. Fritz has a problem -- he doesn't know how to program the machine!
 
-  wordToPigLatin('banana')
-  //=> 'ananabay'
+  Given the following list of unknown creatures:
+
+  ``` js
+  var unknown_creatures = [
+    {
+      appendages: 4,
+      eyes: 2,
+      isSoggy: true
+    },
+    {
+      appendages: 8,
+      eyes: 4,
+      isSoggy: false
+    },
+    {
+      appendages: 60,
+      eyes: 24,
+      isSoggy: true
+    }
+  ];
   ```
 
-  **Bonus:** If a capitalized word is passed as an argument into `wordToPigLatin`, ensure that the returned string is also capitalized properly (e.g. `wordToPigLatin('Banana') //=> 'Ananabay'`)
+  Dr. Fritz can tell the creatures (above) are a Tetrapod, an Arachnid, and a Jellyfish (He's an expert!). But he needs for his machine to produce the following readout (an array of strings): 
 
+  ``` js
+  classify(unknown_creatures);
+  // ["Tetrapod", "Arachnid", "Jellyfish"]
+  ```
+
+**6.1**: Can you write a `classify` function that will correctly classify any array of creature data? Assume all the data will be for Tetrapods, Arachnids, or Jellyfish with the same features as those above. Return an array of classification strings in the correct order based on the input data.
+  
   <br>
   <br>
   <br>
@@ -126,3 +153,10 @@
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+**6.2 (Bonus)**: Dr. Fritz is pretty sure that there's no such thing as a creature with an odd number of eyes. Can you update the classification algorithm to output "Impossible" in that case?
