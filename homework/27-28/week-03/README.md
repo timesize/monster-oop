@@ -50,12 +50,11 @@ Please use any remaining time to complete and review the exercises from dawn & d
 1. Reading: Take a look at the documentation for all of the mongoose methods [listed in the morning module](https://github.com/SF-WDI-LABS/shared_modules/tree/master/02-express-mongo-crud/mongoose-intro/27-28#crud-operations-with-mongoose), as well as [`populate()`](http://mongoosejs.com/docs/populate.html). Also read the [models page](http://mongoosejs.com/docs/models.html#constructing-documents), which goes over using the function `create()` instead of `new` and `save()` for making documents.
 
 
-<!--
 ## Day 4
 
-1. Reading
+1. It's been a big week! Please continue working on the express/mongoose lab of your choice. If you're done, start over again, and see if you can do it without looking at your notes.
 2. Friday Review Prep
-    - Complete the [Week 3 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
+    - Complete the [Week 3 Self-Assessment](https://docs.google.com/forms/d/13KoUAJCiAXOiMXByPfgPhj0YyYmuE6ij3ZMxRSGi3t8/viewform) and identify 2 topics you want to review tomorrow
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w3-review
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
