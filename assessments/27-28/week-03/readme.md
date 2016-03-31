@@ -109,21 +109,39 @@
 
   });
 
-6. Write a function called `wordToPigLatin()` that takes a single word as an argument and returns the Pig Latin translation. Here are some examples to get you started:
+6. Sales of Dr. Fritz's Glorious Creature Classification Machine are through the roof. Now Dr. Fritz has a problem -- he doesn't know how to program the machine!
 
-  ```js
-  wordToPigLatin('happy');
-  //=> 'appyhay'
+Given the following list of unknown creatures:
 
-  wordToPigLatin('duck');
-  //=> 'uckday'
-
-  wordToPigLatin('banana')
-  //=> 'ananabay'
+  ``` js
+  var unknown_creatures = [
+    {
+      appendages: 4,
+      eyes: 2,
+      isSoggy: true
+    },
+    {
+      appendages: 8,
+      eyes: 4,
+      isSoggy: false
+    },
+    {
+      appendages: 60,
+      eyes: 24,
+      isSoggy: true
+    }
+  ];
   ```
 
-  **Bonus:** If a capitalized word is passed as an argument into `wordToPigLatin`, ensure that the returned string is also capitalized properly (e.g. `wordToPigLatin('Banana') //=> 'Ananabay'`)
+Dr. Fritz can tell the creatures (above) are a Tetrapod, an Arachnid, and a Jellyfish (He's an expert!). But he needs for his machine to produce the following readout (an array of strings): 
 
+  ``` js
+  classify(unknown_creatures);
+  // ["Tetrapod", "Arachnid", "Jellyfish"]
+  ```
+
+**6.1**: Can you write a `classify` function that will correctly classify any array of creature data? Assume all the data will be for Tetrapods, Arachnids, or Jellyfish with the same features as those above. Return an array of classification strings in the correct order based on the input data.
+  
   <br>
   <br>
   <br>
@@ -134,3 +152,10 @@
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+**6.2 (Bonus)**: Dr. Fritz is pretty sure that there's no such thing as a creature with an odd number of eyes. Can you update the classification algorithm to output "Impossible" in that case?
