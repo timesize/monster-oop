@@ -28,13 +28,13 @@
 
 **3.** Fill in the following grid of RESTful Routes (assume that it’s for an ordering system):
 
-  | CRUD Action | HTTP Verb (Method) | URL Path (Endpoint) |
-  | :--- | :--- | :--- |
-  | READ (all) |  |  |
-  | CREATE |  | `/api/orders` |
-  | READ (one) |  |  |
-  | UPDATE | PATCH or PUT |  |
-  | DELETE |  |  |
+| CRUD Action | HTTP Verb (Method) | URL Path (Endpoint) |
+| :--- | :--- | :--- |
+| READ (all) |  |  |
+| CREATE |  | `/api/orders` |
+| READ (one) |  |  |
+| UPDATE | PATCH or PUT |  |
+| DELETE |  |  |
 
   <br>
   <br>
@@ -96,19 +96,20 @@
 
   app.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, function (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) {
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
   });
-
+
+
 **6.** Sales of Dr. Fritz's Glorious Creature Classification Machine are through the roof. Now Dr. Fritz has a problem -- he doesn't know how to program the machine!
 
   Given the following list of unknown creatures:
