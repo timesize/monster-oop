@@ -58,7 +58,6 @@ Please use any remaining time to complete and review the exercises from dawn & d
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w3-review
 
 Please use any remaining time to complete and review the exercises from dawn & dusk.
--->
 
 <!--
 ## Day 5 - Weekend Homework
