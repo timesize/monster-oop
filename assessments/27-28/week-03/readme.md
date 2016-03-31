@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Week 3 Assessment
 
-1. A user fills out a form and hits the "submit" button. List at least 3 things that will happen in the next few moments.
+1. A user fills out a form and hits the "submit" button. List at least 3 things that will happen in the browser and/or server in the next few moments.
 
   <br>
   <br>
