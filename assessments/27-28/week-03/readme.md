@@ -68,6 +68,14 @@
   <br>
   <br>
 
+  **models/food_truck.js**
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
   **public/scripts/app.js**
 
   <br>
