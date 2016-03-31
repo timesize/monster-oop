@@ -19,7 +19,7 @@
 ```js
 var someArray = new Array("zero", "one", "two", "etc");
 for (var i = 0; i < someArray.length; i++) {
-    console.log("The object at index " + [i] + " is " + someArray[i]);
+  console.log("The object at index " + i + " is " + someArray[i]);
 }
 ```
 
@@ -29,22 +29,28 @@ for (var i = 0; i < someArray.length; i++) {
 ####The for...in statement shows us how to loop through an Object literal:
 
 ```js
-for (name in object){
-    // Douglas Crockford recommends wrapping every internal statement in an if()
-    // to filter out unwanted parts of the inheritance chain:
-    if (object.hasOwnProperty(name)){
-        //...
-    }
+for (name in object) {
+  // Douglas Crockford recommends wrapping every internal statement in an if()
+  // to filter out unwanted parts of the inheritance chain:
+  if (object.hasOwnProperty(name)) {
+    //...
+  }
 }
 ```
 
 It is very common to see for...in like this:
 
 ```js
-var randomHomeDetailsObject = {"style": "Eichler", "sqft": 1800, "oven": "electric", "date built": 1952, "garage": false}
+var randomHomeDetailsObject = {
+  "style": "Eichler",
+  "sqft": 1800,
+  "oven": "electric",
+  "date built": 1952,
+  "garage": false
+}
 
-for (var key in randomHomeDetailsObject){
-        console.log("My house " + key + " is " + randomHomeDetailsObject[key]);
+for (var key in randomHomeDetailsObject) {
+  console.log("My house " + key + " is " + randomHomeDetailsObject[key]);
 }
 
 ```
@@ -53,19 +59,19 @@ for (var key in randomHomeDetailsObject){
 ```js
 var i = 0;
 do {
-   i += 1;
-   console.log(i);
+  i += 1;
+  console.log(i);
 } while (i < 5);
 
 // or...
 
 var i = 99;
 do {
-   console.log( i + ' bottles of beer on the wall, ' +
-                    i + ' bottles of beer! Take one down, pass it around, ' +
-                   (i-1) + ' bottles of beer on the wall!');
-   i -= 1;
-} while (i >80);
+  console.log(i + ' bottles of beer on the wall, ' +
+    i + ' bottles of beer! Take one down, pass it around, ' +
+    (i - 1) + ' bottles of beer on the wall!');
+  i -= 1;
+} while (i > 80);
 
 ```
 
@@ -75,27 +81,35 @@ You can traverse complex JSON data structures by combining array and object loop
 
 ```js
 var myFirstJSON =
-	{"language basics":
-		[{"Spanish":
-			{
-                                    "letters":["a", "b", "c","ch","d","e","f","g","h","i","j","k","l","ll","m","n","&ntilde;","o","p",
-                                    "q","r","rr","s","t","u","v","w","x","y","z"],
-                                    "numbers":["uno","dos","tres","quatro","cinco","seis","siete","ocho","nueve","diez",
-                                    "once","doce","trece","catorce","quince","dieciseis","diecisiete","dieciocho",
-                                    "diecinueve","veinte"]
-			}
-                      },
-		{"Japanese":
-			{
-                                    "letters":["a","i","u","e","o","ka","ki","ku","ke","ko","sa","shi","su","se","so",
-                                    "ta","chi","tsu","te","to","na","ni","nu","ne","no","ha","hi","hu","he","ho","ma",
-                                    "mi","mu","me","mo","ya","yu","yo","ra","ri","ru","re","ro","wa","n"],
-                                    "numbers": ["ichi","ni","san","shi","go","roku","shichi","hachi","kyuu","jyuu",
-                                    "jyuui chi","jyuu ni","jyuu san","jyuu yon","jyuu go","jyuu roku","jyuu nana",
-                                    "jyuu hachi","jyuu kyuu","ni jyuu"]
-			}
-		}]
-	};
+  {
+  "language basics": [{
+    "Spanish": {
+      "letters": [
+        "a", "b", "c", "ch", "d", "e", "f", "g", "h", "i", "j", "k", "l", "ll", "m", "n", "&ntilde;", "o", "p",
+        "q", "r", "rr", "s", "t", "u", "v", "w", "x", "y", "z"
+      ],
+      "numbers": [
+        "uno", "dos", "tres", "quatro", "cinco", "seis", "siete", "ocho", "nueve", "diez",
+        "once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete", "dieciocho",
+        "diecinueve", "veinte"
+      ]
+    }
+  }, 
+  {
+    "Japanese": {
+      "letters": [
+        "a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so",
+        "ta", "chi", "tsu", "te", "to", "na", "ni", "nu", "ne", "no", "ha", "hi", "hu", "he", "ho", "ma",
+        "mi", "mu", "me", "mo", "ya", "yu", "yo", "ra", "ri", "ru", "re", "ro", "wa", "n"
+      ],
+      "numbers": [
+        "ichi", "ni", "san", "shi", "go", "roku", "shichi", "hachi", "kyuu", "jyuu",
+        "jyuui chi", "jyuu ni", "jyuu san", "jyuu yon", "jyuu go", "jyuu roku", "jyuu nana",
+        "jyuu hachi", "jyuu kyuu", "ni jyuu"
+      ]
+    }
+  }]
+};
 ```
 
 We already practiced something similar this morning, but it bears repeating. _(These exercises may add 10 - 20 minutes to the lecture.)_
@@ -126,12 +140,12 @@ Last week we talked about *global* versus *local* scope. Here it is again:
 // Block scope
 var inBlock = false;
 
-for(var i = 0; i < 1; i++){
-    var inBlock = true;
+for (var i = 0; i < 1; i++) {
+  var inBlock = true;
 }
 
-if(inBlock){
-    console.log("inBlock must be true.");
+if (inBlock) {
+  console.log("inBlock must be true.");
 }
 
 ```
@@ -146,9 +160,9 @@ Which alert will show first?
 var g = "global";
 
 function go() {
-    var l = "local";
-    var g = "in here!";
-    alert(g, " inside go");
+  var l = "local";
+  var g = "in here!";
+  alert(g, " inside go");
 }
 go();
 alert(g, " outside go");
@@ -159,13 +173,13 @@ alert(g, " outside go");
 In the function bugHunter(), what value do you expect to be returned? Run it to find out
 
 ```js
-var bugHunter = function(){
-    var butterfly = 1;
-    var bees = 5;
-    var wasps = 3;
-    wasps = wasps * bees;
-    console.log(wasps);
-    bees = bees * bees;
+var bugHunter = function() {
+  var butterfly = 1;
+  var bees = 5;
+  var wasps = 3;
+  wasps = wasps * bees;
+  console.log(wasps);
+  bees = bees * bees;
 };
 ```
 Next move the last line ```bees = bees * bees;``` up two lines. What is the expected result?
@@ -174,22 +188,22 @@ Next move the last line ```bees = bees * bees;``` up two lines. What is the expe
 Is a technique where a function calls itself to do the same repetitive task on smaller versions of the original argument. This is an important concept to understand the power of callbacks.
 
 ```js
-var bottles = function(c){
-    if (c > 0){
-        console.log( c + ' bottles of beer on the wall, ' + c + ' bottles of beer! Take one down, pass it around, ' + (c-1) + ' bottles of beer on the wall!');
-        c--;
-        bottles(c);
-    } else {
-        console.log("That's enough!");
-    }
+var bottles = function(c) {
+  if (c > 0) {
+    console.log(c + ' bottles of beer on the wall, ' + c + ' bottles of beer! Take one down, pass it around, ' + (c - 1) + ' bottles of beer on the wall!');
+    c--;
+    bottles(c);
+  } else {
+    console.log("That's enough!");
+  }
 }
 ```
 How does this compare with writing the same function in a do...while loop?
 
 ```js
-var countR = function(num){
-    console.log(num);
-    if(num > 0)countR(num-1);
+var countR = function(num) {
+  console.log(num);
+  if (num > 0) countR(num - 1);
 };
 ```
 
@@ -204,29 +218,29 @@ A closure happens when you nest one function inside another function. This creat
 
 
 ```js
-var makeStopwatch = function(n){
-    console.log('initialized');
-    var elapsed = 0;
-    console.log(elapsed);
+var makeStopwatch = function(n) {
+  console.log('initialized');
+  var elapsed = 0;
+  console.log(elapsed);
 
-    var stopwatch = function(){  
-        console.log('stopwatch');
-        if(elapsed < n){
-            return elapsed;
-        } else {
-            console.log(elapsed + ' seconds elapsed');
-            return;
-        }
-    };
+  var stopwatch = function() {
+    console.log('stopwatch');
+    if (elapsed < n) {
+      return elapsed;
+    } else {
+      console.log(elapsed + ' seconds elapsed');
+      return;
+    }
+  };
 
-    var increase  = function(){
-        if(elapsed < n){
-            elapsed++;
-        }
-    };
+  var increase = function() {
+    if (elapsed < n) {
+      elapsed++;
+    }
+  };
 
-    setInterval(increase, 1000);
-    return stopwatch;
+  setInterval(increase, 1000);
+  return stopwatch;
 };
 
 var x = makeStopwatch(n);
@@ -241,11 +255,15 @@ Closure is also very useful for embuing Objects with
 
 ```js
 function counter() {
-    var n = 0;
-    return {
-        count: function() { return n++; },
-        reset: function() { n = 0; }
-    };
+  var n = 0;
+  return {
+    count: function() {
+      return n++;
+    },
+    reset: function() {
+      n = 0;
+    }
+  };
 }
 
 var c, d = counter();
@@ -255,7 +273,6 @@ d.count();
 c.reset();
 c.count();
 d.count();
-
 ```
 
 This week's theme is working with Objects, so if you only learn one new approach, make it closure.
