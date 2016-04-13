@@ -269,9 +269,9 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 </details>
 
-**In Angular, how do we get form data when it's submitted and serialize it?**  Getting the data is a simple application of `ng-model`, with an object waiting in the controller to track form data. To enable submit, we'll need a submit button inside the form, an `ng-submit` attribute in the form tag, and a function in the controller to handle the submit event.
+<details><summary>**In Angular, how do we get form data when it's submitted and serialize it?**  Getting the data is a simple application of `ng-model`, with an object waiting in the controller to track form data. To enable submit, we'll need a submit button inside the form, an `ng-submit` attribute in the form tag, and a function in the controller to handle the submit event. Click for sample code!</summary>
 
-<details><summary>click to see sample code...</summary>  
+ 
   ```html
   <!-- html -->
   <form ng-submit="projectCtrl.createProject();">
@@ -357,3 +357,5 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 ## Your Turn
 
 We've gone over how to build forms and work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API. 
+
+
