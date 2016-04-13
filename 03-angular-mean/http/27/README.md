@@ -51,17 +51,16 @@ You must be able to answer these questions.
 
 Here are a few examples of how we'd use `$http` to access an API that describes a man named Jon Snow and his projects. Let's assume the base URL is `http://www.jonsnow-portfolio.com`, and that Jon has his site configured to allow cross-origin requests. (Just like with `$.ajax`, we can leave this part out when we're serving our front-end from the same computer as our back-end.)
 
-#### Projects Index
+### Projects Index
 
 <details>
-  <summary><h4>Get all projects with an `$http` request to `GET /api/projects`.</h4></summary>
+  <summary><h4>Get all projects -- with an `$http` request to `GET /api/projects`.</h4></summary>
   ```js
   $http({
     method: 'GET',
     url: baseUrl + '/api/projects'
   }).then(function successCallback(response) {
-    // what is vm? remember we're in a controller
-    vm.projects = response.data;
+    console.log('response for all projects:', response);
   }, function errorCallback(error) {
     console.log('There was an error getting the data', error);
   });
@@ -71,24 +70,22 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
   <details><summary>click to see full response</summary>
   ```js
   {
-    "data": {
-      [
-         {
-            _id: 2,
-            name: 'Defeat the wildlings',
-            type: 'quest',
-            opponents: [ 'Mance Rayder', 'Lord of Bones'],
-            status: 'resolved'
-         },
-         {
-            _id: 3,
-            name: 'Save the wildlings',
-            type: 'campaign',
-            opponents: ['the Night Watch', 'the Others'],
-            status: 'pending'
-         }
-      ]
-    },
+    "data": [
+       {
+          _id: 2,
+          name: 'Defeat the wildlings',
+          type: 'quest',
+          opponents: [ 'Mance Rayder', 'Lord of Bones'],
+          status: 'resolved'
+       },
+       {
+          _id: 3,
+          name: 'Save the wildlings',
+          type: 'campaign',
+          opponents: ['the Night Watch', 'the Others'],
+          status: 'pending'
+       }
+    ],
     "status": 200,
     "config": {
       "method": "GET",
@@ -98,7 +95,7 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
       "transformResponse": [
         null
       ],
-      "url": "http://www.jonsnow-portfolio.com/api/projects/",
+      "url": "http://www.jonsnow-portfolio.com/api/projects",
       "headers": {
         "Accept": "application/json, text/plain, */*"
       }
@@ -111,52 +108,206 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 </details>
 
 
-Projects Index
 
+### Search Projects
+
+<details>
+  <summary><h4>Search projects -- with an `$http` request to `GET /api/projects/search?type=quest`.</h4></summary>
+  ```js
+  $http({
+    method: 'GET',
+    url: baseUrl + '/api/projects',
+    params: {
+      type: "quest"
+    },
+  }).then(function successCallback(response) {
+    console.log('response for "quest" project search:', response);
+  }, function errorCallback(error) {
+    console.log('There was an error getting the data', error);
+  });
+  ```
+
+  ... and a sample response:
+  <details><summary>click to see full response</summary>
+  ```js
+  {
+    "data": [
+       {
+          _id: 2,
+          name: 'Defeat the wildlings',
+          type: 'quest',
+          opponents: [ 'Mance Rayder', 'Lord of Bones'],
+          status: 'resolved'
+       }
+    ],
+    "status": 200,
+    "config": {
+      "method": "GET",
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "params": {
+        "type": "quest"
+      },
+      "url": "http://www.jonsnow-portfolio.com/api/projects/search",
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      }
+    },
+    "statusText": "OK"
+  }
+  ```  
+  </details>
+
+</details>
+
+
+
+### Create Project
+
+<details>
+  <summary><h4>Create project -- with an example `$http` request to `POST /api/projects`.</h4></summary>
+  ```js
+  $http({
+    method: 'POST',
+    url: baseUrl + '/api/projects',
+    data: {
+      name: 'Mentor new members of the Night\'s Watch',
+      type: 'volunteering',
+      opponents: [ ],
+      status: 'ongoing'
+    },
+  }).then(function successCallback(response) {
+    console.log('response for create project:', response);
+  }, function errorCallback(error) {
+    console.log('There was an error getting the data', error);
+  });
+  ```
+
+  ... and a sample response:
+  <details><summary>click to see full response</summary>
+  ```js
+  {
+    "data": {
+      _id: 4,
+      name: "Mentor new members of the Night's Watch",
+      type: "volunteering",
+      opponents: [ ],
+      status: "ongoing"
+    },
+    "status": 200,
+    "config": {
+      "method": "POST",
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "data": {
+        name: "Mentor new members of the Night's Watch",
+        type: "volunteering",
+        opponents: [ ],
+        status: "ongoing"
+      },
+      "url": "http://www.jonsnow-portfolio.com/api/projects",
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      }
+    },
+    "statusText": "OK"
+  }
+  ```  
+  </details>
+
+</details>
+
+**In Angular, how do we get form data when it's submitted and serialize it?**  Getting the data is a simple application of `ng-model`, with an object waiting in the controller to track form data.
+
+To enable submit, we'll need a submit button inside the form, an `ng-submit` attribute in the form tag, and a function in the controller to handle the submit event.
+
+```html
+<!-- html -->
+<form ng-submit="projectCtrl.createProject();">
+  <input type="text" class="form-control" placeholder="project type" ng-model="projectCtrl.newProject.type"></textarea>
+  <!-- other inputs here -->
+  <input type="submit">
+</form>
 ```
-JSON API Endpoint           Response JSON
-=============               =============
 
-GET /api/profile            {
-                              name: "Jon Snow",
-                              github_link: "http://github.com/u-know-nothing-jon-snow",
-                              current_city: "The Wall",
-                              is_awake: false,
-                              family_members: [
-                                { name: 'Arya Stark', relationship: 'sister' },
-                                { name: 'Bran Stark', relationship: 'brother' }
-                              ]
-                            }
-
-GET /api/projects           [
-                             {
-                                _id: 2,
-                                name: 'Defeat the wildlings',
-                                type: 'quest',
-                                opponents: [ 'Mance Rayder', 'Lord of Bones'],
-                                status: 'resolved'
-                             },
-                             {
-                                _id: 3,
-                                name: 'Save the wildlings',
-                                type: 'campaign',
-                                opponents: ['the Night Watch', 'the Others'],
-                                status: 'pending'
-                             }
-                            ]
-
-GET /api/projects?limit=1   [ { _id: 2, name:'Defeat...' } ]
-
-GET /api/projects?status=pending
-                            [ { _id: 3, name:'Save...' } ]                                
-GET /api/projects/2         { _id: 2, name:'Defeat...' }
-
-POST /api/projects          etc
-PUT /api/projects/2         etc
-DELETE /api/projects/2      etc
+```js
+// inside ProjectController
+vm.createProject = function(){
+  console.log('creating project!');
+  // make the http request!
+  // remember to use the data you have from two-way binding
+}
 ```
 
+
+### Update Project
+
+<details>
+  <summary><h4>Update a project -- with an example `$http` request to `PUT /api/projects/4`.</h4></summary>
+  ```js
+  $http({
+    method: 'PUT',
+    url: baseUrl + '/api/projects/4',
+    data: {
+      name: 'Mentor new members of the Night\'s Watch',
+      type: 'volunteering',
+      // new opponents
+      opponents: [ 'criminal backgrounds', 'lack of trust' ],
+      status: 'ongoing'
+    },
+  }).then(function successCallback(response) {
+    console.log('response for update project:', response);
+  }, function errorCallback(error) {
+    console.log('There was an error', error);
+  });
+  ```
+
+  ... and a sample response:
+  <details><summary>click to see full response</summary>
+  ```js
+  {
+    "data": {
+      _id: 4,
+      name: "Mentor new members of the Night's Watch",
+      type: "volunteering",
+      opponents: [ "criminal backgrounds", "lack of trust" ],
+      status: "ongoing"
+    },
+    "status": 200,
+    "config": {
+      "method": "PUT",
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "data": {
+        name: "Mentor new members of the Night's Watch",
+        type: "volunteering",
+        opponents: [ "criminal backgrounds", "lack of trust" ],
+        status: "ongoing"
+      },
+      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      }
+    },
+    "statusText": "OK"
+  }
+  ```  
+  </details>
+
+</details>
 
 ## Your Turn
 
-We've gone over how to work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API.  Start Tunely Sprint 2!
+We've gone over how to build forms and work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API.  Start Tunely Sprint 2!
