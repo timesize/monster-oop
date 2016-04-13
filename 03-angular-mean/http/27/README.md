@@ -8,7 +8,6 @@
 
 ## Angular `$http`
 
-![Docs](https://cloud.githubusercontent.com/assets/1329385/12429176/b05c7eea-be9d-11e5-8da4-18b968e8cd72.gif)
 
 We **should** know jQuery's `$.ajax` by now.
 
@@ -27,9 +26,9 @@ We can use `$http` from directly within a controller, so we'll try that to get s
 
 Let's look at an example of how `$http` is used and walk over the separate components.
 
-[Echo App](https://jsfiddle.net/9L7wae3g/)
+### Echo App
 
-You must be able to answer these questions.
+The popular front-end code sharing website jsfiddle has an "echo" api that responds with information about the requests it gets. This simple [Echo App](https://jsfiddle.net/9L7wae3g/) uses the echo api to show off Angular's `$http`.  You should be able to answer these questions. If not, ask!
 
 * Where is `echoApp` defined?
 * What is the name of the `ng-app` used on this page?
@@ -37,24 +36,21 @@ You must be able to answer these questions.
 * What is the name of the `ng-controller` used on the page?
 * How did we inject (include) required libraries for a controller?
 * How did we make a GET request to an API?
-* How did we set the API's URL?
+* How did we set the API endpoint URL?
 * How did we send query parameters to the API?
 * How did we send data to the API?
 * Where is the success callback defined?
-* How do we use promises in our code?
 * Where is the error callback defined?
 * How do we set `results` to be the response from an API?
-* What part of the response carries the data the API sent back?
 
 ## CRUD operations with `$http`
-
 
 Here are a few examples of how we'd use `$http` to access an API that describes a man named Jon Snow and his projects. Let's assume the base URL is `http://www.jonsnow-portfolio.com`, and that Jon has his site configured to allow cross-origin requests. (Just like with `$.ajax`, we can leave this part out when we're serving our front-end from the same computer as our back-end.)
 
 ### Projects Index
 
 <details>
-  <summary><h4>Get all projects -- with an `$http` request to `GET /api/projects`.</h4></summary>
+  <summary>**Get all projects -- with an `$http` request to `GET /api/projects`.**</summary>
   ```js
   $http({
     method: 'GET',
@@ -112,7 +108,7 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 ### Search Projects
 
 <details>
-  <summary><h4>Search projects -- with an `$http` request to `GET /api/projects/search?type=quest`.</h4></summary>
+  <summary>**Search projects -- with an `$http` request to `GET /api/projects/search?type=quest`.**</summary>
   ```js
   $http({
     method: 'GET',
@@ -169,7 +165,7 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 ### Create Project
 
 <details>
-  <summary><h4>Create project -- with an example `$http` request to `POST /api/projects`.</h4></summary>
+  <summary>**Create project -- with an example `$http` request to `POST /api/projects`.**</summary>
   ```js
   $http({
     method: 'POST',
@@ -251,7 +247,7 @@ vm.createProject = function(){
 ### Update Project
 
 <details>
-  <summary><h4>Update a project -- with an example `$http` request to `PUT /api/projects/4`.</h4></summary>
+  <summary>**Bonus/Looking Ahead: Update a project -- with an example `$http` request to `PUT /api/projects/4`.**</summary>
   ```js
   $http({
     method: 'PUT',
@@ -310,4 +306,4 @@ vm.createProject = function(){
 
 ## Your Turn
 
-We've gone over how to build forms and work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API.  Start Tunely Sprint 2!
+We've gone over how to build forms and work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API. 
