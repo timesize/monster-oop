@@ -25,7 +25,7 @@
 
 ## Refresher
 
-#### HTML attributes
+### HTML attributes
 In `HTML` when you can add additional information to tags by using attributes like: `src`, `href`, `type`, `name`, `placeholder`, etc.
 
 ```html
@@ -50,9 +50,9 @@ Sometimes it's helpful to attach additional information to an element so that yo
 ```
 
 We'll discover that Angular uses lots of new custom attributes or `directives`.
-Literally ever single attribute we might want to use in plain-old html has an equivalent angular attribute. These are always prefixed with `ng-*` or `data-ng-*`. For instance, an angular-style href is called `ng-href` or `data-ng-href`, and in the docs it's called [ngHref](https://docs.angularjs.org/api/ng/directive/ngHref).
+Literally ever single attribute we might want to use in plain-old html has an equivalent angular attribute. These are always prefixed with `ng-*` or `data-ng-*` (we're going to stick with `ng-*`). For instance, an angular-style href is called `ng-href` or `data-ng-href`, and in the docs it's called [ngHref](https://docs.angularjs.org/api/ng/directive/ngHref).
 
-#### Event Binding
+### Event Binding
 We learned about event-binding using jQuery. Here's how we might bind to a `button` tag being clicked (the "click event").
 
 ```html
@@ -69,7 +69,7 @@ $("button").click(function(event){
 });
 ```
 
-It turns out you can do the same thing using inline click-listeners (long considered a Bad Thing TM).
+It turns out you can do the same thing using inline click-listeners (long considered bad practice):
 
 ```html
 <button onclick="alert('Holy moly!')">Pick Me!</button>
@@ -87,18 +87,24 @@ eval("alert('Holy moly!')")
 eval("alert(1+1)")
 ```
 
-We'll discover that Angular has come full circle, and is doing something quite similar in our views!
+We'll discover that Angular has come full circle, and does something quite similar in our views! To make the same button alert us on click, Angular would do it this way:
+
+```html
+<button ng-click="$window.alert('Holy moly!')">Pick Me!</button>
+```
+or to trigger an event on hover:
 
 ```html
 <img ng-src="/cute-cat-{{cat.id}}.gif"
     ng-hover="$window.alert('{{cat.name}} says Meow!')">
 ```
+With Angular, this is considered acceptable practice!
 
 > Pro-Tip: You should never use jQuery in Angular applications! You'll need to learn to do it the "angular" way.
 
-#### [Directives](https://docs.angularjs.org/guide/directive#what-are-directives-)
+### [Directives](https://docs.angularjs.org/guide/directive#what-are-directives-)
 
-In Angular, we **add behavior to HTML** through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already used several!
+In Angular, we **add behavior to HTML** through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already seen several!
 
 Angular directives start with the prefix `ng-`
 
@@ -106,15 +112,15 @@ A few that will be important to know:
 
 `ng-app` turns ordinary HTML into an Angular application.
 
-`ng-controller` registers a controller for a section of our application.
+`ng-controller` connects a controller (a JavaScript file containing logic) to a section of our application.
 
 `ng-model` ties together (*binds*) values in HTML and data in the controller.
 
-`ng-repeat` iterates over a collection.
+`ng-repeat` iterates over a collection and can display a chunk of html once for each element in the collection.
 
-#### ng-controller
+### `ng-controller`
 
-Controllers contain all the business logic for our application.
+Controllers contain the business logic for our application. They're the place that we're going to be writing our JavaScript.
 
 This is typically what it looks like to define a controller:
 
@@ -126,67 +132,51 @@ angular
   .controller('AlbumsIndexController', AlbumsIndexController);
 
   function AlbumsIndexController() {
-	//logic here
+	   var vc = this;
+     vc.thing = {};
+     vc.func = function(){};
+     // more logic here
   }
 ```
 
+Notice that we give a controller a name `'AlbumsIndexController'` and then pass a function that defines all of the logic within that controller, `AlbumsIndexController`.
+
 Most applications will have several controllers. Each controller controls a different part of the application.
 
-To use our controller in our View we have to declare it somewhere. You must
+To use our controller in our View we have to declare it somewhere.
 
 index.html
-
 ```html
-<div ng-controller="PokemonCtrl">
+<div ng-controller="AlbumsIndexController as aiCtrl">
 	<!--placeholder for now-->
 </div>
 ```
 
-In order to pass data or behavior to our HTMl view we need to use the object `$scope`. It is the interface to pass data and behavior into our views. Both the View and Controller share access to the $scope object.
+Using this `as` syntax, we have specified an abbreviated name,`aiCtrl`, for referring to our controller. Now if we want to refer to any of the logic defined in the controller, we can use `aiCtrl.thing` or `aiCtrl.func()`.
 
 
-#### ng-model
+### `ng-model`
 
-Our user wants to be able to input their name in a field, so that the application acknowledges them as the trainer for these Pokemon.
+If a user wants to use an input element to create a piece of accessible data, `ng-model` is the directive for the job!
 
-Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
+Within our controller `div` tag, let's create an input field for our name. We can then use `ng-model` to attach the input value to a variable name `myName`. Using an angular *expression* (anything within the `{{}}`, just like Handlebars syntax) we can then display the current value of that `myName` variable as it changes.
 
 ```html
-  <div ng-controller="PokemonCtrl">
+  <div ng-controller="SampleCtrl">
 
     <span>Enter your name:</span>
-    <input/>
+    <input type="text" ng-model="myName">
 
-    <pre>{{ pokemon | json }}</pre>
+    <h1>{{ myName }}</h1>
 
   </div>
 ```
 
-If we want our input field to map its value to an attribute `name` on a `trainer` object we could add an `ng-model` directive to it.
-
-```html
-<input ng-model="trainer.name"/>
-```
-
-Additionally if we want the value of the `trainer.name` variable to be printed onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
-
-```html
-  <div ng-controller="PokemonCtrl">
-
-    <h1>Trainer: {{trainer.name}}</h1>
-
-    <span>Enter your name:</span>
-    <input ng-model="trainer.name"/>
-
-    <pre>{{ pokemon | json }}</pre>
-
-  </div>
-```
 
 ## Exercises
 The best way to learn is to dive right in!
 
-1. [pokemonFun](exercises.md) - [solution](solution.md)
-    * Build a simple, searchable index of pokemon characters
+1. [tunely-angular sprint 1](https://github.com/SF-WDI-LABS/tunely-angular) - [solution branch sprint 1](https://github.com/SF-WDI-LABS/tunely-angular/tree/solutions_sprint_1)
+    * Begin the journey toward building an Angular front end for the app that we've already created.
 2. [3 Angular Challenges Lab](https://github.com/sf-wdi-25/intro_angular_challenges) - [solution](https://github.com/sf-wdi-25/intro_angular_challenges/tree/solution)
     * Play with rendering expressions, and using controllers & view-models
