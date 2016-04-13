@@ -46,7 +46,7 @@ This is like saying `checked=true` and `disabled=true`. [x]
 Sometimes it's helpful to attach additional information to an element so that you can reference it in your javascript or stylesheet. We can do this using the `data-*` attribute
 
 ```html
-<h1 data-wdi-number="25">Welcome to WDI!</h1>
+<h1 data-wdi-number="27">Welcome to WDI!</h1>
 ```
 
 We'll discover that Angular uses lots of new custom attributes or `directives`.
@@ -90,13 +90,96 @@ eval("alert(1+1)")
 We'll discover that Angular has come full circle, and is doing something quite similar in our views!
 
 ```html
-<img data-ng-src="/cute-cat-{{cat.id}}.gif"
-    data-ng-hover="$window.alert('{{cat.name}} says Meow!')">
+<img ng-src="/cute-cat-{{cat.id}}.gif"
+    ng-hover="$window.alert('{{cat.name}} says Meow!')">
 ```
 
 > Pro-Tip: You should never use jQuery in Angular applications! You'll need to learn to do it the "angular" way.
 
-##Exercises
+#### [Directives](https://docs.angularjs.org/guide/directive#what-are-directives-)
+
+In Angular, we **add behavior to HTML** through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already used several!
+
+Angular directives start with the prefix `ng-`
+
+A few that will be important to know:
+
+`ng-app` turns ordinary HTML into an Angular application.
+
+`ng-controller` registers a controller for a section of our application.
+
+`ng-model` ties together (*binds*) values in HTML and data in the controller.
+
+`ng-repeat` iterates over a collection.
+
+#### ng-controller
+
+Controllers contain all the business logic for our application.
+
+We can seed our application with some data, but first we have to create a controller.
+
+app.js
+
+```js
+app.controller("PokemonCtrl", function() {
+	//logic here
+});
+```
+
+Most applications will have several controllers that map to a particular resource. In this case we're using Pokemon.
+
+To use our controller in our View we have to declare it somewhere. Create a new `div` tag that will house our Pokemon Controller.
+
+index.html
+
+```html
+<div ng-controller="PokemonCtrl">
+	<!--placeholder for now-->
+</div>
+```
+
+In order to pass data or behavior to our HTMl view we need to use the object `$scope`. It is the interface to pass data and behavior into our views. Both the View and Controller share access to the $scope object.
+
+
+#### ng-model
+
+Our user wants to be able to input their name in a field, so that the application acknowledges them as the trainer for these Pokemon.
+
+Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
+
+```html
+  <div ng-controller="PokemonCtrl">
+
+    <span>Enter your name:</span>
+    <input/>
+
+    <pre>{{ pokemon | json }}</pre>
+
+  </div>
+```
+
+If we want our input field to map its value to an attribute `name` on a `trainer` object we could add an `ng-model` directive to it.
+
+```html
+<input ng-model="trainer.name"/>
+```
+
+Additionally if we want the value of the `trainer.name` variable to be printed onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
+
+```html
+  <div ng-controller="PokemonCtrl">
+
+    <h1>Trainer: {{trainer.name}}</h1>
+
+    <span>Enter your name:</span>
+    <input ng-model="trainer.name"/>
+
+    <pre>{{ pokemon | json }}</pre>
+
+  </div>
+```
+
+## Exercises
 The best way to learn is to dive right in!
 
 1. [pokemonFun](exercises.md) - [solution](solution.md)
