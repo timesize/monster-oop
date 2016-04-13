@@ -14,17 +14,16 @@ We **should** know jQuery's `$.ajax` by now.
 <details>
   <summary>What does this method do?</summary>
 
-  It makes HTTP calls asynchronously from our browser and allows us to request information over HTTP without interrupting the front-end or causing page reloads.
+  > It makes HTTP calls asynchronously from our browser and allows us to request information over HTTP without interrupting the front-end or causing page reloads.
 </details>
 
-In our projects, we've used this method often, and we've seen the `$.get` and `$.post` shorthand versions. Angular has a stand-in for `$.ajax`, called `$http`.
+In our projects, we've used this method often, and we've seen the `$.get` and `$.post` shorthand versions. Angular has a stand-in for `$.ajax` called `$http`.
 
 `$http` is an Angular service.
 
 
 We can use `$http` from directly within a controller, so we'll try that to get started. When we talk more about services, we'll look at another option.
 
-Let's look at an example of how `$http` is used and walk over the separate components.
 
 ### Echo App
 
@@ -92,6 +91,55 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
         null
       ],
       "url": "http://www.jonsnow-portfolio.com/api/projects",
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      }
+    },
+    "statusText": "OK"
+  }
+  ```  
+  </details>
+
+</details>
+
+
+
+### Show one Project
+
+<details>
+  <summary>**Show a project -- with an example `$http` request to `GET /api/projects/3`.**</summary>
+  ```js
+  $http({
+    method: 'GET',
+    url: baseUrl + '/api/projects/3',
+  }).then(function successCallback(response) {
+    console.log('response for show project 3:', response);
+  }, function errorCallback(error) {
+    console.log('There was an error', error);
+  });
+  ```
+
+  ... and a sample response:
+  <details><summary>click to see full response</summary>
+  ```js
+  {
+    "data": {
+      _id: 3,
+      name: 'Save the wildlings',
+      type: 'campaign',
+      opponents: ['the Night Watch', 'the Others'],
+      status: 'pending'
+       },
+    "status": 200,
+    "config": {
+      "method": "GET",
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
       "headers": {
         "Accept": "application/json, text/plain, */*"
       }
@@ -221,74 +269,26 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 </details>
 
-**In Angular, how do we get form data when it's submitted and serialize it?**  Getting the data is a simple application of `ng-model`, with an object waiting in the controller to track form data.
+**In Angular, how do we get form data when it's submitted and serialize it?**  Getting the data is a simple application of `ng-model`, with an object waiting in the controller to track form data. To enable submit, we'll need a submit button inside the form, an `ng-submit` attribute in the form tag, and a function in the controller to handle the submit event.
 
-To enable submit, we'll need a submit button inside the form, an `ng-submit` attribute in the form tag, and a function in the controller to handle the submit event.
-
-```html
-<!-- html -->
-<form ng-submit="projectCtrl.createProject();">
-  <input type="text" class="form-control" placeholder="project type" ng-model="projectCtrl.newProject.type"></textarea>
-  <!-- other inputs here -->
-  <input type="submit">
-</form>
-```
-
-```js
-// inside ProjectController
-vm.createProject = function(){
-  console.log('creating project!');
-  // make the http request!
-  // remember to use the data you have from two-way binding
-}
-```
-
-
-### Show one Project
-
-<details>
-  <summary>**Show a project -- with an example `$http` request to `GET /api/projects/3`.**</summary>
-  ```js
-  $http({
-    method: 'GET',
-    url: baseUrl + '/api/projects/3',
-  }).then(function successCallback(response) {
-    console.log('response for show project 3:', response);
-  }, function errorCallback(error) {
-    console.log('There was an error', error);
-  });
+<details><summary>click to see sample code...</summary>  
+  ```html
+  <!-- html -->
+  <form ng-submit="projectCtrl.createProject();">
+    <input type="text" class="form-control" placeholder="project type" ng-model="projectCtrl.newProject.type"></textarea>
+    <!-- other inputs here -->
+    <input type="submit">
+  </form>
   ```
-
-  ... and a sample response:
-  <details><summary>click to see full response</summary>
+  
   ```js
-  {
-    "data": {
-      _id: 3,
-      name: 'Save the wildlings',
-      type: 'campaign',
-      opponents: ['the Night Watch', 'the Others'],
-      status: 'pending'
-       },
-    "status": 200,
-    "config": {
-      "method": "GET",
-      "transformRequest": [
-        null
-      ],
-      "transformResponse": [
-        null
-      ],
-      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
-      "headers": {
-        "Accept": "application/json, text/plain, */*"
-      }
-    },
-    "statusText": "OK"
+  // inside ProjectController
+  vm.createProject = function(){
+    console.log('creating project!');
+    // make the http request!
+    // remember to use the data you have from two-way binding
   }
-  ```  
-  </details>
-
+  ```
 </details>
 
 
