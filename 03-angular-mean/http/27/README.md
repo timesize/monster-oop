@@ -3,7 +3,7 @@
 | Objectives |
 | :--- |
 | Make API requests with `$http`. |
-| Send form data with requests. |
+| When a form is submitted, send data from its input fields in a request. |
 | Send query string parameters with requests. |
 
 ## Angular `$http`
@@ -242,6 +242,56 @@ vm.createProject = function(){
   // remember to use the data you have from two-way binding
 }
 ```
+
+
+### Show one Project
+
+<details>
+  <summary>**Show a project -- with an example `$http` request to `GET /api/projects/3`.**</summary>
+  ```js
+  $http({
+    method: 'GET',
+    url: baseUrl + '/api/projects/3',
+  }).then(function successCallback(response) {
+    console.log('response for show project 3:', response);
+  }, function errorCallback(error) {
+    console.log('There was an error', error);
+  });
+  ```
+
+  ... and a sample response:
+  <details><summary>click to see full response</summary>
+  ```js
+  {
+    "data": {
+      _id: 3,
+      name: 'Save the wildlings',
+      type: 'campaign',
+      opponents: ['the Night Watch', 'the Others'],
+      status: 'pending'
+       },
+    "status": 200,
+    "config": {
+      "method": "GET",
+      "transformRequest": [
+        null
+      ],
+      "transformResponse": [
+        null
+      ],
+      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      }
+    },
+    "statusText": "OK"
+  }
+  ```  
+  </details>
+
+</details>
+
+
 
 
 ### Update Project
