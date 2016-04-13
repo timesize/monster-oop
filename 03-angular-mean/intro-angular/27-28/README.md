@@ -116,19 +116,23 @@ A few that will be important to know:
 
 Controllers contain all the business logic for our application.
 
-We can seed our application with some data, but first we have to create a controller.
+This is typically what it looks like to define a controller:
 
 app.js
 
 ```js
-app.controller("PokemonCtrl", function() {
+angular
+  .module('tunely',[])
+  .controller('AlbumsIndexController', AlbumsIndexController);
+
+  function AlbumsIndexController() {
 	//logic here
-});
+  }
 ```
 
-Most applications will have several controllers that map to a particular resource. In this case we're using Pokemon.
+Most applications will have several controllers. Each controller controls a different part of the application.
 
-To use our controller in our View we have to declare it somewhere. Create a new `div` tag that will house our Pokemon Controller.
+To use our controller in our View we have to declare it somewhere. You must
 
 index.html
 
