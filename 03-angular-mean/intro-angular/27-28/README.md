@@ -2,17 +2,16 @@
 
 | **Learning Objectives** |
 | :---- |
-| Grok Angular's philosophy |
-| Initialize Angular in an HTML view |
-| Experiment with templating & expressions |
-| Organize your code with controllers |
-| Pass data between the View & Controller with `this`|
-| Implement 2-way data binding |
+| *Students will be able to:* |
+| Explain some of the benefits of using Angular and begin to describe the problems Angular aims to solve. |
+| Initialize Angular in an HTML view, and begin to use expressions and templates to impact the DOM. |
+| Describe the benefits of organizing the code into controllers and write the connection between the View & Controller using `this`. |
+| Implement 2-way data binding. |
 
 
 ## Highlights of AngularJS
 
-<a href="https://docs.angularjs.org/guide/introduction" target="_blank">Angular Guide Introduction</a>
+[Angular Guide Introduction](https://docs.angularjs.org/guide/introduction)
 
 * A "framework for dynamic web apps"
 * "Lets you use HTML as your template language"
