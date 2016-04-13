@@ -48,6 +48,8 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 ### Projects Index
 
+Remember, we use index to mean getting all of a resource! And remember your RESTful routes.
+
 <details>
   <summary>**Get all projects -- with an `$http` request to `GET /api/projects`.**</summary>
   ```js
@@ -56,6 +58,7 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
     url: baseUrl + '/api/projects'
   }).then(function successCallback(response) {
     console.log('response for all projects:', response);
+    // probably do something with the response data
   }, function errorCallback(error) {
     console.log('There was an error getting the data', error);
   });
@@ -106,6 +109,8 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 ### Show one Project
 
+Showing just one instance of a resource often requires an id.  With `$http`, we'll just add that to the `url`.
+
 <details>
   <summary>**Show a project -- with an example `$http` request to `GET /api/projects/3`.**</summary>
   ```js
@@ -154,6 +159,8 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 
 ### Search Projects
+
+Searching often uses query string parameters, which we can send through `$http` with an option called `params`.
 
 <details>
   <summary>**Search projects -- with an `$http` request to `GET /api/projects/search?type=quest`.**</summary>
@@ -211,6 +218,8 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 
 
 ### Create Project
+
+To create an instance of a resource, we almost always need to send along some data. The data usually comes from a form.
 
 <details>
   <summary>**Create project -- with an example `$http` request to `POST /api/projects`.**</summary>
@@ -292,70 +301,18 @@ Here are a few examples of how we'd use `$http` to access an API that describes 
 </details>
 
 
+### And so on!
+
+With these examples, you have all the tools you need to figure out how to make requests to update or delete data, too! But we'll take a closer look soon.
 
 
-### Update Project
-
-<details>
-  <summary>**Bonus/Looking Ahead: Update a project -- with an example `$http` request to `PUT /api/projects/4`.**</summary>
-  ```js
-  $http({
-    method: 'PUT',
-    url: baseUrl + '/api/projects/4',
-    data: {
-      name: 'Mentor new members of the Night\'s Watch',
-      type: 'volunteering',
-      // new opponents
-      opponents: [ 'criminal backgrounds', 'lack of trust' ],
-      status: 'ongoing'
-    },
-  }).then(function successCallback(response) {
-    console.log('response for update project:', response);
-  }, function errorCallback(error) {
-    console.log('There was an error', error);
-  });
-  ```
-
-  ... and a sample response:
-  <details><summary>click to see full response</summary>
-  ```js
-  {
-    "data": {
-      _id: 4,
-      name: "Mentor new members of the Night's Watch",
-      type: "volunteering",
-      opponents: [ "criminal backgrounds", "lack of trust" ],
-      status: "ongoing"
-    },
-    "status": 200,
-    "config": {
-      "method": "PUT",
-      "transformRequest": [
-        null
-      ],
-      "transformResponse": [
-        null
-      ],
-      "data": {
-        name: "Mentor new members of the Night's Watch",
-        type: "volunteering",
-        opponents: [ "criminal backgrounds", "lack of trust" ],
-        status: "ongoing"
-      },
-      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
-      "headers": {
-        "Accept": "application/json, text/plain, */*"
-      }
-    },
-    "statusText": "OK"
-  }
-  ```  
-  </details>
-
-</details>
 
 ## Your Turn
 
 We've gone over how to build forms and work with remote servers using Angular. Now it is your turn to connect an angular front-end to an API. 
+
+Tackle [Tunely Sprint 2](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/sprint2.md)!
+
+If you finish early, try one of these **extra challenge ideas:** Use Angular's `$http` to retreive data from giphy or get and set data in your personal api!
 
 
