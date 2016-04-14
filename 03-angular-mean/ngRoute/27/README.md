@@ -250,7 +250,7 @@ What if you want to link to another route in your router.  Maybe you'd like user
 	<!-- templates/books/index.html -->
 	<div ng-repeat="book in booksIndexCtrl.books">
 	
-		<span ng-href="/books/{{book.id}}">{{book.name}}</span>
+		<a ng-href="/books/{{book.id}}">{{book.name}}</a>
 	
 	</div>
 	```
