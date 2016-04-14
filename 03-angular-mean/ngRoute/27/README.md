@@ -37,7 +37,37 @@ In the S.P.A.s you've built before, you've mostly stuck to just one URL: `localh
 
 **Now you can!**
 
-Take a look at the URLs in the goat-app above.  Notice how they indicate where we're at?  We're going to use **ngRoute** to add this feature today.
+Take a look at the URLs in the goat-app above.  Notice how they indicate where we're at?  We're going to use a front-end/client-side router to add this feature today.  
+
+#### What does a client-side router do?
+
+1. It ties the URL in the browser to the **state** of the current page.
+ 
+   If a user comes back to the same URL, they get to see the same **view**(s).
+1. It lets us use **views** and **layouts**.  
+
+
+#### Views & Layouts
+
+Most apps have a certain amount of content that appears on every page.  It might be:
+
+* a menu
+* a header
+* a sidebar
+* a footer
+
+![http://www.funnyant.com/angularjs-ui-router/](http://www.funnyant.com/wp-content/uploads/2014/12/multiple-views-sketch-1024x768.jpg)  - [image credit](http://www.funnyant.com/wp-content/uploads/2014/12/multiple-views-sketch-1024x768.jpg)
+
+
+Using a **view template** we can keep the content that *changes* in each page separate from the static content.
+
+The content that stays the same will live in our **layout**.  In other words, maybe our *sidebar*, *footer*, and *title* all stay the same.  We keep that in the layout.  The content that we change, depending on the URL, goes into a **view template**.  
+
+In our goat-app above we have a **"Goat Tracker"** title on each page.  That can be in our main layout.  Then we just apply a different **view** when viewing the list of goats or a goat *show* page.  The goat **index** template or **show** template is *injected* into the layout.
+
+> Note: Some client-side routers allow you to have multiple views per layout. (ui-router, Component Router)
+> Others do not (ngRoute)
+
 
 ## ngRoute background
 
