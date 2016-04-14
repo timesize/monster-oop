@@ -2,12 +2,44 @@
 
 | Objectives |
 | :--- |
-| Discuss the differences between server-side and client-side routing  |
+| Explain the advantages of client-side routing  |
 | Implement client-side routing in a single-page app using Angular's `ngRoute` module |
 
 In a client-side framework like Angular, routing is not managed by the server, but by the client itself. Angular detects the path of your URL and maps that URL to a controller and template.
 
-## Background
+## Client-side routing?
+
+What? Why?
+
+Imagine that you're a goat-herder.  You have an app to keep track of your :goat:s.  Such an app might have
+
+* An **index** route that displays the list of goats.    
+* A **show** page that displays details about a specific goat.
+
+OK, maybe it looks a little like this:
+
+![](goats_app.png)
+
+That seems alright, we can track each goat and we can click it to see more info about the goat.  
+
+##### but wait...what if I want to share a goat?
+
+In the S.P.A.s you've built before, you've mostly stuck to just one URL: `localhost:3000` or maybe `http://dismal-bog.herokuapp.com`  That didn't make it very easy for users to bookmark or share URLs from your site.  There was no way for your user to share their favorite page on your site because when they sent the URL `http://mysite.herokuapp.com` it just showed the default homepage.  
+
+> S.P.A.s??  Single Page Apps.
+
+##### Enter client-side routing
+
+* What if each view in your app changed the browser URL?
+* What if that URL was unique depending on what the user was looking at?
+* What if it looked-like it was working just like a non-SPA/multi-page app without rendering an entirely new page everytime?
+* What if the **state** of the page was reflected in the **state** of the URL?
+
+**Now you can!**
+
+Take a look at the URLs in the goat-app above.  Notice how they indicate where we're at?  We're going to use **ngRoute** to add this feature today.
+
+## ngRoute background
 
 Angular first shipped with a simple routing module that let you connect one URL with one controller and one template. Very quickly developers in the Angular community wanted to go beyond this simple coupling and leverage Angular's ability to nest controllers, views, and scopes together to make more complex and modular client-side applications. The Angular community decided to extract the standard Angular routing module into its own separate module called `ngRoute`.
 
@@ -16,7 +48,6 @@ Angular's built-in `ngRoute` will most likely have all the routing features you 
 <a href="http://stackoverflow.com/questions/21023763/angularjs-difference-between-angular-route-and-angular-ui-router" target="_blank">Difference between angular-route and angular-ui-router</a> [Stack Overflow]
 
 Note that there is also another way to do routing in Angular 1.5 and 2.0 using components.  We won't be talking about this.
-
 
 
 ## ngRoute Setup
