@@ -99,7 +99,7 @@
 <details>
   <summary>**Delete a project -- with an example `$http` request to `DELETE /api/projects/4`.**</summary>
   ```js
-  vm.deleteBook = function(){
+  vm.deleteBook = function(book){
     $http({
       method: 'DELETE',
       url: '/api/books/' + book._id,
@@ -117,11 +117,10 @@
   ```js
   {
     "data": {
-      _id: 4,
-      name: "Mentor new members of the Night's Watch",
-      type: "volunteering",
-      opponents: [ "criminal backgrounds", "lack of trust" ],
-      status: "ongoing"
+      _id: "56fd8372m098ok2u89uclwm09",
+      title: "Harry Potter and the Sorcerer's Stone",
+      author: "J.K. Rowling",
+      characters: [ "Harry Potter", "Ron Weasley", "Hermione Granger", "Hagrid", "Dumbledore"]
     },
     "status": 200,
     "config": {
@@ -132,7 +131,7 @@
       "transformResponse": [
         null
       ],
-      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
+      "url": "http://www.cf-books.com/api/books/56fd8372m098ok2u89uclwm0",
       "headers": {
         "Accept": "application/json, text/plain, */*"
       }
@@ -143,3 +142,7 @@
   </details>
 
 </details>
+
+### Exercises
+
+[Sprint 3 of tunely-angular](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/sprint3.md) - Don't forget to checkout `solutions_sprint_2` and follow the [branching instructions](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/starting_with_a_branch.md#subsequent-sprints);
