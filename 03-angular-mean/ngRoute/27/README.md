@@ -24,7 +24,7 @@ That seems alright, we can track each goat and we can click it to see more info 
 
 ##### but wait...what if I want to share a goat?
 
-In the S.P.A.s you've built before, you've mostly stuck to just one URL: `localhost:3000` or maybe `http://dismal-bog.herokuapp.com`  That didn't make it very easy for users to bookmark or share URLs from your site.  There was no way for your user to share their favorite page on your site because when they sent the URL `http://mysite.herokuapp.com` it just showed the default homepage.  
+In the S.P.A.s you've built before, you've mostly stuck to just one URL: `localhost:3000` or maybe `http://pathetically-dismal-bog.herokuapp.com`  That didn't make it very easy for users to bookmark or share URLs from your site.  There was no way for your user to share their favorite page on your site because when they sent the URL `http://pathetically-dismal-bog.herokuapp.com` to their friend it just showed the default homepage.  
 
 > S.P.A.s??  Single Page Apps.
 
@@ -44,7 +44,7 @@ Take a look at the URLs in the goat-app above.  Notice how they indicate where w
 1. It ties the URL in the browser to the **state** of the current page.
  
    If a user comes back to the same URL, they get to see the same **view**(s).
-1. It lets us use **views** and **layouts**.  
+1. It lets us have front-end **views** that are injected inside of **layouts**.
 
 
 #### Views & Layouts
@@ -61,7 +61,9 @@ Most apps have a certain amount of content that appears on every page.  It might
 
 Using a **view template** we can keep the content that *changes* in each page separate from the static content.
 
-The content that stays the same will live in our **layout**.  In other words, maybe our *sidebar*, *footer*, and *title* all stay the same.  We keep that in the layout.  The content that we change, depending on the URL, goes into a **view template**.  
+The content that stays the same will live in our **layout**.  In other words, maybe our *sidebar*, *footer*, and *header* all stay the same.  We keep that in the layout.  The *content* that we change, depending on the URL, goes into a **view template**.  
+
+##### back to goats...
 
 In our goat-app above we have a **"Goat Tracker"** title on each page.  That can be in our main layout.  Then we just apply a different **view** when viewing the list of goats or a goat *show* page.  The goat **index** template or **show** template is *injected* into the layout.
 
