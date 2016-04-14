@@ -23,7 +23,7 @@
 </details>
 <br>
 <details>
-  <summary> **Update a project -- with an example `$http` request to `PUT /api/projects/4`.** </summary>
+  <summary> **Update a resource -- with an example `$http` request to `PUT /api/books/:id`.** </summary>
 
 
   ```js
@@ -95,9 +95,8 @@
   5. If an error response comes back, log the error, optionally, notify the user of the error, and do not update the data in the view.
 </details>
 <br>
-
 <details>
-  <summary>**Delete a project -- with an example `$http` request to `DELETE /api/projects/4`.**</summary>
+  <summary>**Delete a resource -- with an example `$http` request to `DELETE /api/books/:id`.**</summary>
   ```js
   vm.deleteBook = function(book){
     $http({
