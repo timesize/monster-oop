@@ -41,16 +41,15 @@ Please use any remaining time to complete and review the exercises from dawn & d
 >  Create any necessary html needed to support the above methods  
 
 
-<!-- 
 ## Day 4
 
-1. Reading
-2. Friday Review Prep
-    - Complete the [Week 5 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
-    - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w5-review
+1. Re-read the [lecture notes for ngRoute](https://github.com/SF-WDI-LABS/shared_modules/tree/master/03-angular-mean/ngRoute/27) especially ngRoute setup instructions.
+   * make a note to yourself about what each of the following is for: [ng-href, ng-view, $routeParams] 
+2. Tunely Sprint 4!
+    - Make sure you follow the instructions about branching and checkout the sprint3 solutions.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk. 
--->
+
 
 <!-- 
 ## Day 5 - Weekend Homework
