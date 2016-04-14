@@ -139,8 +139,7 @@ As your app grows, your single `index.html` file is going to get very big and me
   ➜  touch templates/about.html
   ```
 
-3. In `index.html`, add the `ng-view` directive inside the `<body>` tag (`ng-view` acts just like the `<%= yield %>` block in the Rails application layout).
-
+3. In `index.html`, add the `ng-view` directive inside the `<body>` tag.  The `ng-view` is where our template html will go when the template is rendered.
   ```html
   <!-- index.html -->
 
