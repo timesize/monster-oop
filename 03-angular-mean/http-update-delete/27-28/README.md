@@ -1,30 +1,47 @@
-# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Angular $http
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Angular `$http` Update and Delete
 
 | Objectives |
 | :--- |
-| Make requests to edit and delete data with `$http`. |
+| *Students will be able to:* |
+| Make requests to update and delete data in the DB using `$http`. |
+| Successfully update and delete data in the view once we receive a success message from the DB. |
 
 
-### Update Project
+
+### Update a database using `$http`
 
 <details>
-  <summary>**Update a project -- with an example `$http` request to `PUT /api/projects/4`.**</summary>
+  <summary>
+  **Pseudocode an update function on the client side**
+  </summary>
+  1. Gather the proper resources to send the request
+    1. Specify the proper endpoint on the API to update the proper resource.
+    2. Select the proper data to send in this PUT request.
+  3. Make the PUT request with all of the proper data.
+  4. If a successful response comes back, update the data in your view.
+  5. If an error response comes back, log the error, optionally, notify the user of the error, and do not update the data in the view.
+</details>
+<br>
+<details>
+  <summary> **Update a project -- with an example `$http` request to `PUT /api/projects/4`.** </summary>
+
+
   ```js
-  $http({
-    method: 'PUT',
-    url: baseUrl + '/api/projects/4',
-    data: {
-      name: 'Mentor new members of the Night\'s Watch',
-      type: 'volunteering',
-      // new opponents
-      opponents: [ 'criminal backgrounds', 'lack of trust' ],
-      status: 'ongoing'
-    },
-  }).then(function successCallback(response) {
-    console.log('response for update project:', response);
-  }, function errorCallback(error) {
-    console.log('There was an error', error);
-  });
+  vm.sendUpdate = function(book){
+    $http({
+      method: 'PUT',
+      url: '/api/books/'+book._id,
+      data: {
+        title: book.title,
+        author: book.author,
+        characters: book.characters
+      },
+    }).then(function successCallback(response) {
+      // update the data that's bound to the view.
+    }, function errorCallback(error) {
+      console.log('There was an error', error);
+    })
+  };
   ```
 
   ... and a sample response:
@@ -32,11 +49,10 @@
   ```js
   {
     "data": {
-      _id: 4,
-      name: "Mentor new members of the Night's Watch",
-      type: "volunteering",
-      opponents: [ "criminal backgrounds", "lack of trust" ],
-      status: "ongoing"
+      _id: "56fd8372m098ok2u89uclwm09",
+      title: "Harry Potter and the Sorcerer's Stone",
+      author: "J.K. Rowling",
+      characters: [ "Harry Potter", "Ron Weasley", "Hermione Granger", "Hagrid", "Dumbledore"]
     },
     "status": 200,
     "config": {
@@ -48,12 +64,12 @@
         null
       ],
       "data": {
-        name: "Mentor new members of the Night's Watch",
-        type: "volunteering",
-        opponents: [ "criminal backgrounds", "lack of trust" ],
-        status: "ongoing"
+        _id: "56fd8372m098ok2u89uclwm09",
+        title: "Harry Potter and the Sorcerer's Stone",
+        author: "J.K. Rowling",
+        characters: [ "Harry Potter", "Ron Weasley", "Hermione Granger", "Hagrid", "Dumbledore"]
       },
-      "url": "http://www.jonsnow-portfolio.com/api/projects/4",
+      "url": "http://www.cf-books.com/api/books/56fd8372m098ok2u89uclwm09",
       "headers": {
         "Accept": "application/json, text/plain, */*"
       }
@@ -66,19 +82,34 @@
 </details>
 
 
-### Delete Project
+### Delete an entry in the database using `$http`
+
+<details>
+  <summary>
+  **Pseudocode an update function on the client side**
+  </summary>
+  1. Gather the proper resources to send the request
+    1. Get the proper endpoint on the API to update the proper resource. Make sure you know the way you are supposed to identify a specific item to delete (by id? by name?). For example, `/api/albums/:id`.
+  3. Make the DELETE request to the proper endpoint.
+  4. If a successful response comes back, update the data in your view.
+  5. If an error response comes back, log the error, optionally, notify the user of the error, and do not update the data in the view.
+</details>
+<br>
 
 <details>
   <summary>**Delete a project -- with an example `$http` request to `DELETE /api/projects/4`.**</summary>
   ```js
-  $http({
-    method: 'DELETE',
-    url: baseUrl + '/api/projects/4',
-  }).then(function successCallback(response) {
-    console.log('response for delete project:', response);
-  }, function errorCallback(error) {
-    console.log('There was an error', error);
-  });
+  vm.deleteBook = function(){
+    $http({
+      method: 'DELETE',
+      url: '/api/books/' + book._id,
+    }).then(function successCallback(response) {
+      // delete the entry from the data that's bound to the view.
+    }, function errorCallback(error) {
+      console.log('There was an error', error);
+      // Possibly, display to the user that you were unable to delete.
+    });
+  };
   ```
 
   ... and a sample response:
