@@ -65,6 +65,8 @@ The content that stays the same will live in our **layout**.  In other words, ma
 
 ##### back to goats...
 
+![view and layout](views_layouts_malcolm.png)
+
 In our goat-app above we have a **"Goat Tracker"** title on each page.  That can be in our main layout.  Then we just apply a different **view** when viewing the list of goats or a goat *show* page.  The goat **index** template or **show** template is *injected* into the layout.
 
 > Note: Some client-side routers allow you to have multiple views per layout. (ui-router, Component Router)
