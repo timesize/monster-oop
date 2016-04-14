@@ -4,6 +4,7 @@
 | :--- |
 | Explain the advantages of client-side routing  |
 | Implement client-side routing in a single-page app using Angular's `ngRoute` module |
+| Be aware of `ng-view` and `ng-href` |
 
 In a client-side framework like Angular, routing is not managed by the server, but by the client itself. Angular detects the path of your URL and maps that URL to a controller and template.
 
@@ -238,6 +239,23 @@ function BooksShowController(   $routeParams   ) {
   // use `bookId` to find specific book
 };
 ```
+
+#### Linking to other routes
+
+What if you want to link to another route in your router.  Maybe you'd like users to be able to click a book in the BooksIndexController's view and be taken to the right page. 
+
+1. In your HTML for each book you could make use of `ng-href`.
+
+	```html
+	<!-- templates/books/index.html -->
+	<div ng-repeat="book in booksIndexCtrl.books">
+	
+		<span ng-href="/books/{{book.id}}">{{book.name}}</span>
+	
+	</div>
+	```
+	
+	The `ng-href="/books/{{book.id}}"` attribute tells angular to link this span to `/books/132` (if the `book.id` is 132).
 
 
 # More resources
