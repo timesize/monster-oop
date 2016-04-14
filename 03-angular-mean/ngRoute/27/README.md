@@ -61,7 +61,7 @@ Most apps have a certain amount of content that appears on every page.  It might
 
 Using a **view template** we can keep the content that *changes* in each page separate from the static content.
 
-The content that stays the same will live in our **layout**.  In other words, maybe our *sidebar*, *footer*, and *header* all stay the same.  We keep that in the layout.  The *content* that we change, depending on the URL, goes into a **view template**.  
+The content that stays the same will live in our **layout**.  In other words, maybe our *sidebar*, *footer*, and *header* all stay the same.  We keep those in the layout.  The *content* that we change, depending on the URL, goes into a **view template**.  
 
 ##### back to goats...
 
@@ -165,11 +165,13 @@ As your app grows, your single `index.html` file is going to get very big and me
     $routeProvider
       .when('/', {
         templateUrl: 'templates/home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeController',
+        controllerAs: 'homeCtrl'        
       })
       .when('/about', {
         templateUrl: 'templates/about.html',
-        controller: 'AboutCtrl'
+        controller: 'AboutController',
+        controllerAs: 'aboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -224,7 +226,8 @@ function config(   $routeProvider   ) {
   $routeProvider
     .when('/books/:bookId', {
       templateUrl: 'templates/books/show.html',
-      controller: 'BooksShowController'
+      controller: 'BooksShowController',
+      controllerAs: 'booksShowCtrl'
     });
 }
 
