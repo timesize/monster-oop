@@ -47,7 +47,6 @@ Please use any remaining time to complete and review the exercises from dawn & d
    * make a note to yourself about what each of the following is for: [ng-href, ng-view, $routeParams]
 2. Tunely Sprint 4!
     - Make sure you follow the instructions about [branching](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/starting_with_a_branch.md) and checkout the sprint3 solutions.
-    - Make sure you're 
 3. If you really want some more to do and you've caught up on your sleep:
     - Try to connect angular to your personal API.
     - Knock out any remaining issues in your project 1.
