@@ -6,19 +6,25 @@ If you have any remaining time, please complete/review the exercises from dawn a
 
 Please refer to the [Instructions for Submitting Homework](/how-to/homework-submission.md).
 
-<!--
+
 ## Day 1
 
+1. Coding: Finish up [tunely-angular sprint 5](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/sprint5.md). 
 1. Reading
-    * [Example](#example)
-2. Bonus/Stretch
-    * [Example](#example)
+      * Angular's [Conceptual Overview, Services Section](https://code.angularjs.org/1.5.1/docs/guide/concepts#view-independent-business-logic-services). Read to understand:
+         * When woud you use a service? What are services good for?
+         
+      * Angular's Custom Directives Guide, the [What are Directives?](https://code.angularjs.org/1.4.10/docs/guide/directive#what-are-directives-) and [Matching Directives](https://code.angularjs.org/1.4.10/docs/guide/directive#matching-directives) sections. Read to understand:
+         * What are directives?
+         * When would you use a directive?
+         * What does it mean for Angular to "compile" a directive?
 
-Please use any remaining time to complete and review the exercises from dawn & dusk:
+Please use any remaining time to complete and review these other resources available below:
 
-* [Example](#example)
-* [Example](#example)
--->
+* [Goat Tracker 95](https://github.com/sf-wdi-27-28/goat_tracker_95)
+* [geoquakes-angular](https://github.com/SF-WDI-LABS/geoquakes-angular.git)
+* Try adding an [Angular UI Bootstrap directive](https://angular-ui.github.io/bootstrap/) to one of your projects!
+
 
 <!-- 
 ## Day 2
