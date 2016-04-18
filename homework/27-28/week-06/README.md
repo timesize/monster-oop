@@ -10,7 +10,7 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 ## Day 1
 
 1. Coding: Finish up [tunely-angular sprint 5](https://github.com/SF-WDI-LABS/tunely-angular/blob/master/docs/sprint5.md). 
-1. Reading
+1. Reading: You don't need to master all the technical details, but try for a high-level understanding of the questions below.
       * Angular's [Conceptual Overview, Services Section](https://code.angularjs.org/1.5.1/docs/guide/concepts#view-independent-business-logic-services). Read to understand:
          * When woud you use a service? What are services good for?
          
