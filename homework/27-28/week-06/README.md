@@ -23,6 +23,7 @@ Please use any remaining time to complete and review these other resources avail
 
 * [Goat Tracker 95](https://github.com/sf-wdi-27-28/goat_tracker_95)
 * [geoquakes-angular](https://github.com/SF-WDI-LABS/geoquakes-angular.git)
+* Try adding an [Angular UI Bootstrap directive](https://angular-ui.github.io/bootstrap/) to one of your projects!
 
 
 <!-- 
