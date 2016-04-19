@@ -29,7 +29,9 @@ Please use any remaining time to complete and review these other resources avail
 
 ## Day 2
 
-1. Submit a pull request on [Cards Against Assembly](https://github.com/SF-WDI-LABS/angular-custom-directives/tree/master) to show us how far you got. It doesn't have to be complete; we just want to see what you have.  Follow the submission instructions above.
+1. Coding:
+    - Submit a pull request on [Cards Against Assembly](https://github.com/SF-WDI-LABS/angular-custom-directives/tree/master) to show us how far you got. It doesn't have to be complete; we just want to see what you have.  Follow the submission instructions above.
+    - Cohort 27, finish the delete functionality in the refactored services [Library App](https://github.com/SF-WDI-LABS/angular_books_api_with_services). Follow the submission instructions above to make a pull request. 
 1. Watch [this awesome video about how JavaScript works](https://www.youtube.com/watch?v=8aGhZQkoFbQ)!
 1. Angular Review Prep
     - Complete the [Angular Self-Assessment](https://docs.google.com/forms/u/0/d/1iSkktIKSi20hcAmBQ3a5jtMe1W8OcjHKMnNQimQ6cG4/viewform) and identify 2 topics you want to review tomorrow
