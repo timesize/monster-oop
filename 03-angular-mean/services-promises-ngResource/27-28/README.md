@@ -252,12 +252,12 @@ Great job, you wrote your own service.
 
 Many sites employ RESTful conventions and in large-part serve things in very similar ways.  So why do we need so much code for this?
 
-It turns out the Angular devs thought of that a long time ago.  ngResource implements a service very similar to the one we just built.  
+It turns out the Angular devs thought of that a long time ago.  ngResource implements a service very similar to the one we just built; with much less code!
 
 
 #### Using ngResource
 
-1. first add the correct script tag
+1. First add the correct script tag
 	`<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>`
 
 1. Include ngResource in your angular module.
@@ -295,7 +295,7 @@ function BookService($http, $q, $resource) {
       }
     });
   return resource;
-  ```
+```
 	
 	
 
