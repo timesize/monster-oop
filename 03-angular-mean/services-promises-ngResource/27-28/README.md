@@ -297,6 +297,6 @@ function BookService($http, $q, $resource) {
   return resource;
 ```
 	
-	
+#### ngResource resources
 
-
+* [http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/](http://www.sitepoint.com/creating-crud-app-minutes-angulars-resource/)
