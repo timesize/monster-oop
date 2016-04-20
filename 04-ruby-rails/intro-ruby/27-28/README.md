@@ -285,6 +285,8 @@ puts do_stuff2(foo)
 
 [Ruby Method Calls In Depth](https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Method_Calls)
 
+### Exercises
+Please complete [these exercises](exercises.md).
 
 ### Further Reading
 
