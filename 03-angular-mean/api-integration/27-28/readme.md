@@ -9,6 +9,8 @@
 | Separate appropriate functionality into services and directives.  |
 
 
+#### [Starter code](https://github.com/sf-wdi-27-28/angular_movie_project)
+
 #### Specs
 
 - The page should have a form that uses the [OMDB api](http://www.omdbapi.com/) to search for matching movies and then display the results.
