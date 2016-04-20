@@ -123,10 +123,14 @@ Let's recall some of our JS Data Types
     * used with `.each`, `.map`, et cetera
 
     ```ruby
-    some_method do [param1, [param2, [...]]
-        # some code
+    [1, 2, 3].each do |n|
+      puts "Number #{n}"
     end
 
+    ```
+    ^ is the same as
+    ```ruby
+    [1, 2, 3].each {|n| puts "Number #{n}"}
     ```
     * captures scope
 

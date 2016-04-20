@@ -50,7 +50,7 @@ end
 
 # Exercise 4
 def printContacts(contacts)
-  contacts.each do |k,v,l|
+  contacts.each do |k,v|
     puts k, v
   end
 end
@@ -72,18 +72,18 @@ end
 # puts getContact contactsHash
 
 ## List exercises
-# Array Inject 1
-def getSum(xs)
-  xs.inject do |memo,x|
+# Enumerable Inject 1
+def getSum(arr)
+  arr.inject do |memo,x|
     memo + x
   end
 end
 
 # puts getSum [1,2,3]
 
-# Array Inject 2
-def getMax(xs)
-  xs.inject do |memo,x|
+# Enumerable Inject 2
+def getMax(arr)
+  arr.inject do |memo,x|
     if memo < x
       x
     else
@@ -94,9 +94,9 @@ end
 
 # puts getMax [1,2,5,4,3]
 
-# Array Inject 3
-def getMin(xs)
-  xs.inject do |memo,x|
+# Enumerable Inject 3
+def getMin(arr)
+  arr.inject do |memo,x|
     if memo < x
       memo
     else
@@ -107,7 +107,7 @@ end
 
 # puts getMin [1,2,-2,5,4,3]
 
-# Array Inject 4
+# Enumerable Inject 4
 def reverseStr(str)
   str.chars.inject do |memo, x|
     x + memo
@@ -116,7 +116,7 @@ end
 
 # puts reverseStr "hello world"
 
-# Array Inject 5
+# Enumerable Inject Challenge
 def partialSums(arr)
   sums = [0]
   arr.inject(0) do |memo,x|
@@ -135,6 +135,8 @@ def multiplyBy(num,arr)
   end
 end
 
+# p multiplyBy 3, [2, 1]
+
 # Array Map 2
 def reverseEach(arr)
   arr.map do |x|
@@ -142,7 +144,7 @@ def reverseEach(arr)
   end
 end
 
-# p reverseEach ['hello','world','michael']
+# p reverseEach ['hello','world','juliana']
 
 # Array Map 3
 def getResponses(arr)
@@ -164,3 +166,17 @@ def factorial(n)
 end
 
 # puts factorial 4
+
+# Method 2
+def palindrome(num)
+
+end
+
+# puts palindrome 2442
+
+# Method 3
+def reverseStr(str)
+  str.reverse
+end
+
+# puts reverseStr 'hello'
