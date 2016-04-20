@@ -62,6 +62,9 @@ Write a method for each exercise below that uses `Array#map`:
 ### Method Exercises
 
 1.) Write a method to compute the `factorial` of a number.
+
 2.) Write a method to check if a string is a `palindrome`.
+
 3.) Write a method to `reverse` a word in-place, do not use iterators, use only a while loop and indices.
+
 4.) Write a method to `merge` to two sorted Arrays.
