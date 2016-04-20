@@ -26,14 +26,20 @@ Please use any remaining time to complete and review these other resources avail
 * Try adding an [Angular UI Bootstrap directive](https://angular-ui.github.io/bootstrap/) to one of your projects!
 
 
-<!-- 
+
 ## Day 2
 
-1. Reading
-2. Bonus/Stretch
+1. Coding:
+    - Submit a pull request on [Cards Against Assembly](https://github.com/SF-WDI-LABS/angular-custom-directives/tree/master) to show us how far you got. It doesn't have to be complete; we just want to see what you have.  Follow the submission instructions above.
+    - Finish the delete functionality in the refactored services [Library App](https://github.com/SF-WDI-LABS/angular_books_api_with_services). Follow the submission instructions above to make a pull request. 
+1. Watch [this awesome video about how JavaScript works](https://www.youtube.com/watch?v=8aGhZQkoFbQ)!
+1. Angular Review Prep
+    - Complete the [Angular Self-Assessment](https://docs.google.com/forms/u/0/d/1iSkktIKSi20hcAmBQ3a5jtMe1W8OcjHKMnNQimQ6cG4/viewform) and identify 2 topics you want to review tomorrow
+    - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w6.5-review
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
--->
+Please use any remaining time to complete and review the material from today.
+
+
 
 <!-- 
 ## Day 3
