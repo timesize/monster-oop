@@ -39,16 +39,11 @@ Please use any remaining time to complete and review these other resources avail
 
 Please use any remaining time to complete and review the material from today.
 
-
-
-<!-- 
 ## Day 3
 
-1. Reading
-2. Bonus/Stretch
+1. It's time to take a break from Javascript and start in on Ruby!  Check out <a href="" target="_blank">this</a> light and gentle introduction to Ruby.  It's a fun and easy little tutorial that will guide you through the basics.  Have fun!
 
 Please use any remaining time to complete and review the exercises from dawn & dusk. 
--->
 
 <!-- 
 ## Day 4
