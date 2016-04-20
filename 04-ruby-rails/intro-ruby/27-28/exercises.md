@@ -1,6 +1,6 @@
 ## Ruby Exercises
 
-Put your solutions in a file called `intro_ruby.rb`. To run, type `ruby intro_ruby.rb` in the command line. 
+Put your solutions in a file called `intro_ruby.rb`. To run, type `ruby intro_ruby.rb` in the command line.
 
 ### Looping And Other Exercises
 
@@ -59,9 +59,9 @@ Write a method for each exercise below that uses `Array#map`:
 
 3.)  Write method called `get_responses` that takes an array of questions (strings) and returns an array of responses input from the console for each question. (Hint: you will need to use `gets.chomp` and `puts` )
 
-### Method Problems
+### Method Exercises
 
-* Write a method to compute the `factorial` of a number.
-* Write a method to check if a number is a `palindrome`.
-* Write a method to `reverse` a word in-place, do not use iterators, use only a while loop and indices.
-* Write a method to `merge` to two sorted Arrays.
+1.) Write a method to compute the `factorial` of a number.
+2.) Write a method to check if a string is a `palindrome`.
+3.) Write a method to `reverse` a word in-place, do not use iterators, use only a while loop and indices.
+4.) Write a method to `merge` to two sorted Arrays.

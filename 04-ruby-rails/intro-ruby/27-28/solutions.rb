@@ -16,7 +16,7 @@ end
 
 # pTimes('hello',5)
 
-# Solution to Exercise 2
+# Exercise 2
 def letterCount(str)
   ans = {}
   i = 0
@@ -32,12 +32,15 @@ def letterCount(str)
 end
 
 # puts letterCount 'hello'
+
+# Exercise 3
+
 def mockMe
   while true do
     mock = gets.chomp
-    if mock == 'quit'
+    if mock == 'quit' || mock == 'q'
       break
-    else 
+    else
       puts mock
     end
   end
@@ -52,7 +55,7 @@ def printContacts(contacts)
   end
 end
 
-contactsHash = {'michael' => '555-555-5555', 'del' => '666-666-6666'}
+contactsHash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666'}
 # printContacts contactsHash
 
 # Exercise 5
@@ -69,6 +72,7 @@ end
 # puts getContact contactsHash
 
 ## List exercises
+# Array Inject 1
 def getSum(xs)
   xs.inject do |memo,x|
     memo + x
@@ -77,6 +81,7 @@ end
 
 # puts getSum [1,2,3]
 
+# Array Inject 2
 def getMax(xs)
   xs.inject do |memo,x|
     if memo < x
@@ -89,6 +94,7 @@ end
 
 # puts getMax [1,2,5,4,3]
 
+# Array Inject 3
 def getMin(xs)
   xs.inject do |memo,x|
     if memo < x
@@ -101,6 +107,7 @@ end
 
 # puts getMin [1,2,-2,5,4,3]
 
+# Array Inject 4
 def reverseStr(str)
   str.chars.inject do |memo, x|
     x + memo
@@ -109,9 +116,10 @@ end
 
 # puts reverseStr "hello world"
 
+# Array Inject 5
 def partialSums(arr)
   sums = [0]
- arr.inject(0) do |memo,x|
+  arr.inject(0) do |memo,x|
     sums.push(memo+x)
     memo+x
   end
@@ -120,12 +128,14 @@ end
 
 # p partialSums [1,2,3]
 
+# Array Map 1
 def multiplyBy(num,arr)
   arr.map do |x|
     x * num
   end
 end
 
+# Array Map 2
 def reverseEach(arr)
   arr.map do |x|
     reverseStr x
@@ -134,6 +144,7 @@ end
 
 # p reverseEach ['hello','world','michael']
 
+# Array Map 3
 def getResponses(arr)
   arr.map do |x|
     puts x
@@ -141,8 +152,9 @@ def getResponses(arr)
   end
 end
 
-# p getResponses ['what','the','fuck']
+# p getResponses ['what?','why?','how?']
 
+## Method Exercises
 def factorial(n)
   if n < 2
     1
@@ -152,4 +164,3 @@ def factorial(n)
 end
 
 # puts factorial 4
-

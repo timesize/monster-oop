@@ -8,7 +8,8 @@
 | Apply control flow to create command line applications |
 | Apply methods in ruby to solve problems |
 
-Ruby was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+### History
+Ruby was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. Ruby on Rails, or simply Rails, is a web application framework written in Ruby.
 
 ### Parts of A Language
 
