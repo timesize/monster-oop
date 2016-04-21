@@ -77,7 +77,7 @@ your path thus far [X_________________________________________________] 0/12
 
 While it may look verbose, all this output is doing is explaining why the code isn't running and stating which line (and which method, if applicable) to fix. Each time a fix is made, the koan will provide a new prompt when the file is run again.
 
-Each koan file has some blanks you should fill or lines you should change in to "reach enlightenment" or pass all of the code's tests.  Read the comments in a koan file one by one to see what each part should do. If you're unsure what one of the tests is asking for, try a few things, ask in Slack, and skip it if you need to instead of getting stuck.
+Each koan file has some blanks you should fill or lines you should change to "reach enlightenment" or pass all of the code's tests.  Read the comments in a koan file one by one to see what each part should do. If you're unsure what one of the tests is asking for, try a few things, ask in Slack, and skip it if you need to instead of getting stuck.
 
 The koan files have some structure we haven't seen yet. Methods are defined by the blocks that start with `def` and end with `end` -- these reserved words are like the curly brackets of Ruby methods. Also, the `class` line in each file is a way of organizing the code and grouping the methods together.
 
