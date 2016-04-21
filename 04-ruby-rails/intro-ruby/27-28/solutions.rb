@@ -168,11 +168,12 @@ end
 # puts factorial 4
 
 # Method 2
-def palindrome(num)
-
+def isPalindrome?(num)
+  num_string = num.to_s
+  num_string == num_string.reverse
 end
 
-# puts palindrome 2442
+# puts is_palindrome? 2442
 
 # Method 3
 def reverseStr(str)
