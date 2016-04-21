@@ -30,7 +30,9 @@ As we learn Ruby, it's important to revisit how we learned our first language an
 
 ## Challenges
 
-*Use `irb` in your terminal for these challenges. Feel free to copy your solutions into a file in Atom so you can reference them later.*
+*Options for running these challenges:*
+1. Use `irb` in your terminal.
+1. Create a `.rb` file. Put your code there and run with `ruby YOUR_FILE_NAME.rb`.
 
 ### Data Types
 
