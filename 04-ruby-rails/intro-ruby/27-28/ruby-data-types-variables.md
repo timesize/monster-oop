@@ -124,7 +124,7 @@ These type-conversion methods usually start with `.to_`.
 
 #### Oh look, comments.
 
-It's worth noting that will comments in JS look like this:
+It's worth noting that comments in JS look like this:
 
 ```js
 // I'm a comment
