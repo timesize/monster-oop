@@ -30,7 +30,7 @@ As we learn Ruby, it's important to revisit how we learned our first language an
 
 ## Challenges
 
-*Use `irb` in your terminal for these challenges. Feel free to copy your solutions into a file in Sublime so you can reference them later.*
+*Use `irb` in your terminal for these challenges. Feel free to copy your solutions into a file in Atom so you can reference them later.*
 
 ### Data Types
 
