@@ -10,7 +10,7 @@
 
 ## Intro
 
-Now that we've gotten your feet wet with HTML, CSS, and JavaScript, you've got a taste of what it's like to start building for the web – and we're about to kick it up a notch.
+Now that we worked with HTML, CSS, and JavaScript, you've got a taste of how to build for the web – and we're about to kick it up a notch with a different back-end strategy!
 
 Originally, the web was meant just as a place for documents – HTML pages that linked to each other, that was it.
 
