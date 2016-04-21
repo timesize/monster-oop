@@ -50,7 +50,7 @@ Please use any remaining time to complete and review the exercises from dawn & d
 
 ## About Ruby Koans
 
-Go to the Ruby Koans [website](http://rubykoans.com/) and click the link to download the koans. Open the zip file and save it in your `dev` directory. `cd` into the `koans` directory and run `ls`. Wow, that's a lot of files!
+Go to the Ruby Koans [website](http://rubykoans.com/) and click the link to download the koans. Open the zip file and save it in your `wdi` directory. `cd` into the `koans` directory and run `ls`. Wow, that's a lot of files!
 
 Each file is a self-contained exercise that will teach you a bit about Ruby, using test driven development. Essentially you will be given code that has something wrong with it, as well as instructions about what needs to be fixed. Then you make the necessary changes for the tests to pass.
 
@@ -135,6 +135,7 @@ Stretch Exercises:
 - About Objects - `about_objects.rb`
 - About Variable Scope - `about_variable_scope.rb`
 - About Iteration - `about_iteration.rb`
+
 
 <!-- 
 ## Day 5 - Weekend Homework
