@@ -1,301 +1,113 @@
-# Welcome To Ruby
-## Control Flow and Methods
+# <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Intro Ruby
 
+| Objectives |
+| :--- |
+| Identify data types, operators, and control flow patterns in JavaScript and utilize them in Ruby |
+| Apply Ruby control flow to create command line applications |
 
-| After this module, you can phone your friends and tell them you can: |
-|:--- |
-| Identify control flow patterns and functions in Ruby |
-| Apply control flow to create command line applications |
-| Apply methods in ruby to solve problems |
+## Framing for the Week
 
-### History
-Ruby was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan. Ruby on Rails, or simply Rails, is a web application framework written in Ruby.
+As we learn Ruby, it's important to revisit how we learned our first language and use that to organize the study of our new language. Learning our second programming language is a process of translating concepts, expressions, and patterns from our familiar language into our new language. Learning our first language involved more identification and comprehension of the knowledge required to implement our first programs. We should begin by organizing this knowledge to build a better understanding as we transition to Ruby.
 
-### Parts of A Language
+## Types of Knowledge
+
+* **Declarative Knowledge** > your "what is" knowledge, i.e. describing what something is
+* **Imperative knowledge** > your "how to" knowledge, i.e. describing how to do something
+
+## Parts of A Language
 
 * `Primitives`
 * `Combinations`
 * `Abstractions`
 
+## Discussion Questions
 
-### Ruby vs. JS Primitives
-
-Let's recall some of our JS Data Types
-
-
-#### Javascript
-
-* `null`, `undefined`
-* Strings
-* Booleans
-* Number
-  * `.toString`
-* Arrays
-  `indexOf`,`splice`, `slice`
-* Objects
-  * `["some_key"]`, `.some_key`
-* operators
-  * `==`, `===`, `>`, `>=`, ..
-  * `!`, `||`, `&&`
-  * `+`, `-`, `/`, `*`
-* Console methods
-    * `console.log`
-    * `prompt`
-
-#### Ruby
-
-* `nil`
-* Integers
-    * Fixnum
-    * Bignum
-     * `to_s`
-* Floats
-* Strings
-  * `.to_i` and `.to_f` `*INTEGER`
-* Symbols
-* Booleans
-* Arrays / Ranges
-  * `[x..y]`, `[x...y]`, `index`
-* Hashes
-  * `{ :key => value }`
-  * `{ key: value }` which is the same as `{:key =>value }`
-  * `[some_key]` and `[some_key]=`
-  * `key`,`.keys`, `.each`
-* operators
-  * `||=`, `*=`, `/=`
-  * `==`, `.equal?`,
-  * `!`, `not`, `||`, `&&`
-  * `**`, `+`, `-`, `/`, `*`
-* General Delimited Input
-    * `%w`, `%r`
-* Console Methods
-    * `puts`, `p`
-    * `gets` and `gets.chomp`
-
-### Control flow
-
-
-#### Javascript ([Some Control Flow Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Statements))
-
-* Conditionals
-    * `if`, `else if`, `else`, `switch`, ...
-* Loops
-    * `do-while`, `while`,  ...
-* iterators,
-    * `for-in`
-* Exceptions
-    * `try`, `catch`
-
-#### Ruby ([Some Control Flow Structures](http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures))
-
-* Conditionals
-    * `if`, `elsif`, `else`, `unless`, `case when else` ...
-* Loops
-    * `until`, `while`, `times` ...
-* iterators,
-    * `.each`, `for ... in`
-* Exceptions
-    *  `begin`, `rescue`, `ensure`
-
-
-### Some Abstractions
-
-#### Javascript
-
-* Function
-    * Anonymous: `function (param1, [..param2, [...]]){...}`,
-    * Named: `function Name(param1, [..param2, [...]]){...}`
-    * Uses lexical scope
-    * Used as values
-    * require explicit return
-    * all `params` are optional
-
-#### Ruby   
-
- * Function
-    * uses `def`
-    * Do not capture scope
-    * Not used as values
-    * optional parameters must be specified
-    * implicitly returns last evaluation
+* What is JavaScript? What does it look like?
+* What are some of the primitives in JavaScript?
+  * Think data types, variable declarations, conditionals, functions, etc.
+* How did we use JavaScript to build things? How did we build up from the fundamentals of the language?
+* What could possibly be different in another language? How could we change the syntax, but keep the semantics?
 
-* block
-    * used with `.each`, `.map`, et cetera
+## Challenges
 
-    ```ruby
-    [1, 2, 3].each do |n|
-      puts "Number #{n}"
-    end
-
-    ```
-    ^ is the same as
-    ```ruby
-    [1, 2, 3].each {|n| puts "Number #{n}"}
-    ```
-    * captures scope
-
-[Further Reading on Blocks](http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes)
-
-#Intro to Ruby
-
-#### Define a method
-
-```ruby
-# announce you are creating a method with 'def'
-def say_hello
-  # all logic and action within belongs to the method
-  puts "Hello"
-# end your method defniition with 'end'
-end
-
-# call the method 'say_hello'
-say_hello
-```
-
-#### Define a method with a parameter
-
-```ruby
-def say(something)
-  puts something
-end
-
-say('hello')
-
-say 'hello'
-```
-
-If you don't have code that needs to use method result immediately, Ruby allows to specify parameters omitting parentheses:
+*Use `irb` in your terminal for these challenges. Feel free to copy your solutions into a file in Sublime so you can reference them later.*
 
-```ruby
-# calling method, not using parentheses
-results = method_name parameter1
-
-# You need to use parentheses if you want to work with the result immediately.
-# e.g., if a method returns an array and we want to reverse element order:
-results = method_name(parameter1).reverse
-```
-
-#### Define a method that operates on two parameters
-```ruby
-def add_numbers(first, second)
-  puts first + second
-end
-
-add_numbers(1,2)
-add_numbers 1, 2
-```
-
-#### Printing and returning are different
-```ruby
-def add_numbers_quietly(first, second)
-  first + second
-end
-
-add_numbers_quietly(1,2)
-add_numbers_quietly 1, 2
-```
-
-#### Methods in Ruby always return the value of the last evaluated expression
-```ruby
-def implicitly_return_5
-  if true
-    5
-  end
-end
-
-implicitly_return_5
-```
-
-* What was the value of the if statement?
-* `status_of_world = if 1 == 2 then "messed up" else "a-o-k" end`
-* `result = 1 == 2 ? "wuh oh" : "phew"`
-
-
-#### Parameters can have default values
-
-```ruby
-def say(something = "Hello")
-  puts something
-end
-
-say # prints "Hello"
-say "Goodbye" # prints "Goodbye"
-```
-#### Recursion: methods can call themselves
-
-```ruby
-def recurse(depth)
-  if depth > 0
-    puts "Spiraling down..."
-    recurse(depth - 1)
-    puts "Spiraling up..."
-  else
-    puts "Bottom of the rabbit hole"
-  end
-end
-
-recurse(5)
-recurse 5
-```
-
-## The biggest difference from javascript
-
-#### Functions have locally scoped variables
-The following code wont work. Why?
-
-```ruby
-foo = 1
-
-def do_stuff
-  foo += 1
-  bar = 1
-  puts foo
-  puts bar
-end
-
-do_stuff
-
-puts foo
-puts bar
-```
-
-The problem is the ruby is locally scoped. Meaning that a function only has access to its variables and the variables it defined inside of itself.
-
-```ruby
-foo = 1
-
-def do_stuff
-  foo = 1
-  foo += 1
-  bar = 1
-  puts foo
-  puts bar
-end
-
-do_stuff
-
-puts foo
-puts bar
-
-def do_stuff2(x)
-  foo = x
-  foo += 1
-  bar = 1
-  puts foo
-  puts bar
-end
-
-puts do_stuff2(foo)
-```
-
-[Ruby Method Calls In Depth](https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Method_Calls)
-
-### Exercises
-Please complete [these exercises](exercises.md).
-
-### Further Reading
-
-* [Tutorialspoint Ruby Quick Guide](http://www.tutorialspoint.com/ruby/ruby_quick_guide.htm)
-* [Ruby Hash in Detail] (http://ruby-doc.org/core-2.2.0/Hash.html)
-* [RubyMonk Library](https://rubymonk.com/learning/books/1-ruby-primer)
-* [Online IRB Environment] (http://joshnuss.github.io/mruby-web-irb/)
+### Data Types
+
+1. Store your `first_name` in a variable and your `last_name` in another variable.
+
+2. Concatenate your `first_name` and `last_name` variables, and store the output in a new variable called `full_name`.
+
+3. Use <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-split" target="_blank">`.split`</a> to turn your `full_name` variable into an array.
+
+### Loops
+
+1. Print (`puts`) "Ruby is awesome!" 50 times. Implement this 3 different ways, using:
+  * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`while`</a>
+  * <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm" target="_blank">`for`</a>
+  * <a href="http://ruby-doc.org/core-2.0.0/Integer.html#method-i-times" target="_blank">`.times`</a>
+
+2. Save any string to a variable, then create an empty hash called count (`count = {}`). Loop through the string, and count occurrences of each letter. Store the counts in your hash like this example:
+  * For the string `apple`, your `count` hash would look like this: `{a: 1, p: 2, l: 1, e: 1}`.
+
+3. Write a program that gets user input from the terminal and `puts` it until the input is the word `"quit"` or `"q"`.
+  * **Hint:** Use `gets.chomp` instead of `gets` to remove trailing `\n`.
+
+4. Write a program that prints the "bottles of beer on the wall" song:
+
+  ```
+  5 bottles of beer on the wall,
+  5 bottles of beer!
+  Take one down and pass it around,
+  4 bottles of beer on the wall!
+  ...
+  ```
+
+  * Use `gets.chomp` to ask the user how many verses they want to hear.
+  * Make sure your song prints "1 **bottle** of beer".
+  * When the song gets to "0 bottles of beer on the wall", it should print "No more bottles of beer on the wall" instead.
+
+## Stretch Challenges
+
+### Iterators: Each
+
+1. Define an array of 4 phrases: `"Hello, world"`, `"OMG"`, `"Ruby"`, and `"Pair Programming"`. Use <a href="http://www.tutorialspoint.com/ruby/ruby_iterators.htm" target="_blank">`.each`</a> to iterate over the array and `puts` each phrase.
+
+2. Iterate over your array of phrases again, but this time, only `puts` the phrase if its length is 5 letters or longer. Otherwise, print a message that the phrase is too short, and include the phrase's index in the message (**Hint:** Look up `.each_with_index`).
+
+### Iterators: Map
+
+1. Write a program that <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-map" target="_blank">maps</a> an array of numbers to double each number.
+
+2. Write a program that maps an array of words to the reverse of each word. (**Hint:** Look up `.reverse`)
+
+### More Stretch Challenges
+
+1. Create a simple temperature convertor. It should function like the example below:
+
+  ```
+  Type '1' to convert from Celsius to Fahrenheit or '2' to convert from Fahrenheit to Celsius
+  1
+  Enter Celsius temperature:
+  24
+  24 degrees Celsius is equal to 75.2 degrees Fahrenheit
+  ```
+
+2. Create a simple calculator that first asks the user what method they would like to use (addition, subtraction, multiplication, or division), then asks the user for two numbers, printing the result of the method with the two numbers. Here is a sample prompt:
+
+  ```
+  What calculation would you like to do? (add, sub, mult, div)
+  add
+  What is the first number?
+  3
+  What is the second number?
+  6
+  The result is 9
+  ```
+
+## Docs & Resources
+
+* [Ruby Data Types & Variables](./ruby-data-types-variables.md)
+* <a href="http://ruby-doc.org/core-2.2.0/Array.html" target="_blank">Ruby Docs: Array</a>
+* <a href="http://ruby-doc.org/core-2.2.0/Hash.html" target="_blank">Ruby Docs: Hash</a>
+* <a href="https://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Control_Structures" target="_blank">Ruby Control Flow Structures</a>
