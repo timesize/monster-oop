@@ -181,7 +181,7 @@ genius = "me"
 ```
 
 Important to know how to use 'em. But that's only one type of variable, and there are a few.
-
+<!--
 ### Types of Variables
 
 Variables, of course, are just placeholders.
@@ -244,7 +244,7 @@ some_method # => "donuts"
 SOME_CONSTANT = "awesome" # warning: already initialized constant
 ```
 
-We can use a constant anywhere in a Ruby application – inside a method, outside a method, across objects & a whole app. But keep in mind, it's meant to be defined _only once_, so we'll use it for things like storing application settings, or other stuff we don't intend to change.
+We can use a constant anywhere in a Ruby application – inside a method, outside a method, across objects & a whole app. But keep in mind, it's meant to be defined _only once_, so we'll use it for things like storing application settings, or other stuff we don't intend to change. -->
 
 ## Ruby & ruby
 
