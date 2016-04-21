@@ -45,9 +45,10 @@ Please use any remaining time to complete and review the material from today.
 
 Please use any remaining time to complete and review the exercises from dawn & dusk. 
 
-## Day 4: Ruby Koans
+## Day 4
 
-#### About Ruby Koans
+
+#### Ruby Koans
 
 Go to the Ruby Koans [website](http://rubykoans.com/) and click the link to download the koans. Open the zip file and save it in your `wdi` directory. `cd` into the `koans` directory and run `ls`. Wow, that's a lot of files!
 
