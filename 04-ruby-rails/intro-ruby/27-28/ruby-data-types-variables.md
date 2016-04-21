@@ -70,6 +70,7 @@ Now, let's see which of those are similar in Ruby, and which are different.
 - `"hello world"` is still a **String**
 - `[1,2,3,4]` is still an **Array**
 - `{keys: ['some', 'values'] }` is called a **Hash**, but works the same
+- `:symbol` is a **Symbol**, which is like a string but saves a little memory when reused
 
 Most importantly, **in Ruby, _everything_ is an object**. We'll talk about that in more detail later, but that means that each of the above data types have methods & properties just like our JS objects did.
 
