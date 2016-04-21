@@ -250,11 +250,11 @@ We can use a constant anywhere in a Ruby application – inside a method, outsid
 
 Until now, we have been running and debugging our HTML, CSS and JavaScript files using the browser. However, when using Ruby, we run our code using the command-line Ruby interpreter called ruby (with a lowercase 'r'). But don't worry, the process of writing our code and checking for errors is exactly the same!
 
-So, let's create our first Ruby file and run it with ruby. First, let's create a new `.rb` file and open it with Sublime:
+So, let's create our first Ruby file and run it with ruby. First, let's create a new `.rb` file and open it with Atom:
 
 ```bash
 touch my_first_ruby_file.rb
-subl .
+atom .
 ```
 
 Now, inside this file let's add:
