@@ -31,7 +31,9 @@ As we learn Ruby, it's important to revisit how we learned our first language an
 ## Challenges
 
 *Options for running these challenges:*
+
 1. Use `irb` in your terminal.
+
 1. Create a `.rb` file. Put your code there and run with `ruby YOUR_FILE_NAME.rb`.
 
 ### Data Types
