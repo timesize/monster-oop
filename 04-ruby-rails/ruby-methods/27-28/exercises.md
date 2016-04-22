@@ -2,6 +2,8 @@
 
 Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
+Exhausted your resources (google, classmates, etc) and still super stuck on a problem? Check out the [solutions](solutions.rb).
+
 ### Looping
 
 Use a loop to do  the following:
