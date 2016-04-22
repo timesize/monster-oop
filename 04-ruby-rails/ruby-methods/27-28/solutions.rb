@@ -1,5 +1,5 @@
 # Basic Solution to Exercise 1
-def pTimes(statement,num)
+def p_times(statement,num)
   i = 0
   while i < num do
     puts statement
@@ -8,16 +8,16 @@ def pTimes(statement,num)
 end
 
 # A spiffy way to do it
-def pTimes2(statement,num)
+def p_times2(statement,num)
   num.times do
     puts statement
   end
 end
 
-# pTimes('hello',5)
+# p_times2('hello',5)
 
 # Exercise 2
-def letterCount(str)
+def letter_count(str)
   ans = {}
   i = 0
   while i < str.length do
@@ -31,11 +31,23 @@ def letterCount(str)
   ans
 end
 
-# puts letterCount 'hello'
+def letter_count2(str)
+  ans = {}
+  str.each_char do |c|
+    if ans.has_key? c
+      ans[c] += 1
+    else
+      ans[c] = 1
+    end
+  end
+  ans
+end
+
+# puts letter_count 'hello'
 
 # Exercise 3
 
-def mockMe
+def mock_me
   while true do
     mock = gets.chomp
     if mock == 'quit' || mock == 'q'
@@ -46,20 +58,20 @@ def mockMe
   end
 end
 
-# mockMe
+# mock_me
 
 # Exercise 4
-def printContacts(contacts)
+def print_contacts(contacts)
   contacts.each do |k,v|
     puts k, v
   end
 end
 
-contactsHash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666'}
-# printContacts contactsHash
+contacts_hash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666'}
+# print_contacts contacts_hash
 
 # Exercise 5
-def getContact(contacts)
+def get_contact(contacts)
   puts contacts
   puts 'Name: '
   name = gets.chomp
@@ -69,21 +81,21 @@ def getContact(contacts)
   contacts
 end
 
-# puts getContact contactsHash
+# puts get_contact contacts_hash
 
 ## List exercises
 # Enumerable Inject 1
-def getSum(arr)
-  arr.inject do |memo,x|
+def get_sum(arr)
+  arr.inject do |memo, x|
     memo + x
   end
 end
 
-# puts getSum [1,2,3]
+# puts get_sum [1,2,3]
 
 # Enumerable Inject 2
-def getMax(arr)
-  arr.inject do |memo,x|
+def get_max(arr)
+  arr.inject do |memo, x|
     if memo < x
       x
     else
@@ -92,10 +104,10 @@ def getMax(arr)
   end
 end
 
-# puts getMax [1,2,5,4,3]
+# puts get_max [1,2,5,4,3]
 
 # Enumerable Inject 3
-def getMin(arr)
+def get_min(arr)
   arr.inject do |memo,x|
     if memo < x
       memo
@@ -105,19 +117,19 @@ def getMin(arr)
   end
 end
 
-# puts getMin [1,2,-2,5,4,3]
+# puts get_min [1,2,-2,5,4,3]
 
 # Enumerable Inject 4
-def reverseStr(str)
+def reverse_str(str)
   str.chars.inject do |memo, x|
     x + memo
   end
 end
 
-# puts reverseStr "hello world"
+# puts reverse_str "hello world"
 
 # Enumerable Inject Challenge
-def partialSums(arr)
+def partial_sums(arr)
   sums = [0]
   arr.inject(0) do |memo,x|
     sums.push(memo+x)
@@ -126,35 +138,35 @@ def partialSums(arr)
  sums
 end
 
-# p partialSums [1,2,3]
+# p partial_sums [1,2,3]
 
 # Array Map 1
-def multiplyBy(num,arr)
+def multiply_by(num,arr)
   arr.map do |x|
     x * num
   end
 end
 
-# p multiplyBy 3, [2, 1]
+# p multiply_by 3, [2, 1]
 
 # Array Map 2
-def reverseEach(arr)
+def reverse_each(arr)
   arr.map do |x|
-    reverseStr x
+    reverse_str x
   end
 end
 
-# p reverseEach ['hello','world','juliana']
+# p reverse_each ['hello','world','juliana']
 
 # Array Map 3
-def getResponses(arr)
+def get_responses(arr)
   arr.map do |x|
     puts x
     gets.chomp
   end
 end
 
-# p getResponses ['what?','why?','how?']
+# p get_responses ['what?','why?','how?']
 
 ## Method Exercises
 def factorial(n)
@@ -168,7 +180,7 @@ end
 # puts factorial 4
 
 # Method 2
-def isPalindrome?(num)
+def is_palindrome?(num)
   num_string = num.to_s
   num_string == num_string.reverse
 end
@@ -176,8 +188,8 @@ end
 # puts is_palindrome? 2442
 
 # Method 3
-def reverseStr(str)
+def reverse_str(str)
   str.reverse
 end
 
-# puts reverseStr 'hello'
+# puts reverse_str 'hello'
