@@ -67,7 +67,7 @@ def print_contacts(contacts)
   end
 end
 
-contacts_hash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666'}
+contacts_hash = {'juliana' => '555-555-5555', 'brianna' => '666-666-6666', 'jenny' => "867-5309"}
 # print_contacts contacts_hash
 
 # Exercise 5
@@ -82,6 +82,19 @@ def get_contact(contacts)
 end
 
 # puts get_contact contacts_hash
+
+def get_contacts(existing_contacts)
+  puts "add contact? (y or n)"
+  add_contact = gets.chomp.downcase == "y"
+  while add_contact do
+    get_contact(existing_contacts)
+    puts "add another contact? (y or n)"
+    add_contact = gets.chomp.downcase == "y"
+  end
+  existing_contacts
+end
+
+# puts get_contacts contacts_hash
 
 ## List exercises
 # Enumerable Inject 1
