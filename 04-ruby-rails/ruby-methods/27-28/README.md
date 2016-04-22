@@ -136,7 +136,7 @@ Let's recall some of our JS Data Types
 
 [Further Reading on Blocks](http://mixandgo.com/blog/mastering-ruby-blocks-in-less-than-5-minutes)
 
-#Intro to Ruby
+#Ruby Methods
 
 #### Define a method
 
