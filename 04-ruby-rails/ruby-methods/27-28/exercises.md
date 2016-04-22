@@ -1,8 +1,8 @@
 ## Ruby Exercises
 
-Put your solutions in a file called `intro_ruby.rb`. To run, type `ruby intro_ruby.rb` in the command line.
+Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
-### Looping And Other Exercises
+### Looping 
 
 Use a loop to do  the following:
 
@@ -12,20 +12,34 @@ Use a loop to do  the following:
 
 3.) Write a method called `mock_me` that `gets` some input from the terminal and puts it until the users type `quit` or `q` in the terminal. (Be sure to remove trailing `\n`.)
 
-4.) Write a method called `print_contacts` that takes a `hash` of `name` and `phone-number` key-value pairs and `puts` the `name` and `phone-number`.
+4.) Write a method called `print_contacts` that takes a `hash` of `name` and `phone-number` key-value pairs and `puts` the `name` and `phone-number` for each contact.
 
 5.) Write a method called `get_contact` that
 
-* takes a `contacts` hash,
-* prints the contacts,
-* prompts the terminal for a **new** `name` and a `phone` number,
-* and then adds the `name` and `phone` as a key value pair respectively if `name` is not already a contact.
-* The `get_contact` method should `return` the `contacts` hash.
+  * takes a `contacts` hash,
+  * prints the contacts,
+  * prompts the terminal for a **new** `name` and a `phone` number,
+  * and then adds the `name` and `phone` as a key value pair respectively if `name` is not already a contact, or
+  * changes the phone number associated with `name` if the name is already a contact.
+  * The `get_contact` method should `return` the `contacts` hash.
+
+6.) Write a method called `get_contacts` that 
+
+  * takes a `contacts` hash
+  * keeps prompting the user to ask if they'd like to add a contact
+  * lets them add a contact (as in the last exercise) if they say `y` or `Y`, then prompts them again
+  * exits the program if they say `n` or `N`
+
 
 ### List exercises
 
 #### Using `Enumerable#inject`
-[Docs for Enumerable#inject](http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-inject)
+
+Sometimes you want to turn an array  into  one cumulative value.  In Ruby, the iterator method that does this is called `inject` or `reduce` (Ruby has two names for this same function).  In JavaScript, it's [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce). You might also see it called `fold`.
+
+
+[Docs for Enumerable#inject](http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-inject)  
+
 
 Write a method for each exercise below that uses `Enumerable#inject`:
 
