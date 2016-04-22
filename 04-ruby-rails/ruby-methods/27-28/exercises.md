@@ -10,7 +10,7 @@ Use a loop to do  the following:
 
 2.) Write a method called `letter_count` to count letter occurence in a string, returned as a `Hash`.
 
-3.) Write a method called `mock_me` that `gets` some input from the terminal and puts it until the you type `quit` or `q` in the terminal. (Be sure to remove trailing `\n`.)
+3.) Write a method called `mock_me` that `gets` some input from the terminal and puts it until the users type `quit` or `q` in the terminal. (Be sure to remove trailing `\n`.)
 
 4.) Write a method called `print_contacts` that takes a `hash` of `name` and `phone-number` key-value pairs and `puts` the `name` and `phone-number`.
 
@@ -29,13 +29,13 @@ Use a loop to do  the following:
 
 Write a method for each exercise below that uses `Enumerable#inject`:
 
-1.) Write a method called `getSum` to find the `sum` of the values in an array.
+1.) Write a method called `get_sum` to find the `sum` of the values in an array.
 
-2.) Write a method called `getMax` to find the `max` of the values in an array.
+2.) Write a method called `get_max` to find the `max` of the values in an array.
 
-3.) Write a method called `getMin` to find the `min` of the values in an array.
+3.) Write a method called `get_min` to find the `min` of the values in an array.
 
-4.) Write a method called `reverseStr` to reverse a string.
+4.) Write a method called `reverse_str` to reverse a string.
 
 **Challenge**: *write a method called `partial_sums` that `push`es the partial sum of an array to a new list*
 
@@ -53,11 +53,11 @@ partial_sums([5,6,7])
 
 Write a method for each exercise below that uses `Array#map`:
 
-1.)  Write a method called `multiplyBy` that takes a number and returns an array of numbers multiplied by that number.
+1.)  Write a method called `multiply_by` that takes a number and returns an array of numbers multiplied by that number.
 
-2.)  Write a method called `reverseEach` that takes an array of words and returns an array of reversed words.
+2.)  Write a method called `reverse_each` that takes an array of words and returns an array of reversed words.
 
-3.)  Write method called `getResponses` that takes an array of questions (strings) and returns an array of responses input from the console for each question. (Hint: you will need to use `gets.chomp` and `puts` )
+3.)  Write method called `get_responses` that takes an array of questions (strings) and returns an array of responses input from the console for each question. (Hint: you will need to use `gets.chomp` and `puts` )
 
 ### Method Exercises
 
