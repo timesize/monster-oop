@@ -1,8 +1,7 @@
-# Welcome To Ruby
-## Control Flow and Methods
+# Ruby Control Flow and Methods
 
 
-| After this module, you can phone your friends and tell them you can: |
+| Objectives: |
 |:--- |
 | Identify control flow patterns and functions in Ruby |
 | Apply control flow to create command line applications |
@@ -164,7 +163,7 @@ say('hello')
 say 'hello'
 ```
 
-If you don't have code that needs to use method result immediately, Ruby allows to specify parameters omitting parentheses:
+If you don't have code that needs to use method result immediately, Ruby allows us to specify parameters omitting parentheses:
 
 ```ruby
 # calling method, not using parentheses
