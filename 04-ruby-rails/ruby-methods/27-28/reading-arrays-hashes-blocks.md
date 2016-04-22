@@ -80,9 +80,9 @@ numbers.sort.reverse # => [5, 4, 3, 2, 1]
 
 #### You'll be trying this soon, but first – iterating!
 
-Now the good stuff – looping through our array and doing something with each value.
+Now the good stuff: looping through our array and doing something with each value.
 
-**How did we iterate over an array in JS?** It was pretty convoluted:
+**How did we iterate over an array in JS?** We saw for loops:
 
 ```js
 for (var i = 0; i < numbers.length; i++) {
@@ -90,7 +90,15 @@ for (var i = 0; i < numbers.length; i++) {
 };
 ```
 
-We can do for loops in Ruby, too, but we've got something _much_ nicer:
+... and `.forEach`:
+
+```js
+numbers.forEach(function(number){
+  console.log(number);
+});
+```
+
+We can do for loops in Ruby, too, but Ruby's `.each` method is _much_ more widely used:
 
 ```ruby
 numbers.each do |number|
@@ -105,7 +113,6 @@ end
 
 ```
 
-Isn't that just so incredibly readable?
 
 #### Extra Detail: Dem Blocks Tho!
 
@@ -136,7 +143,7 @@ number = 5
 puts "i am number #{number}"
 ```
 
-Oh, and for best practice, always try to name`|a_variable_of_my_choosing|` the singular tense of the array you're iterating over: ```numbers.each do |number|``` or ```articles.each do |article|```
+Oh, and for best practice, always try to name`|a_variable_of_my_choosing|` the singular version of the array you're iterating over: ```numbers.each do |number|``` or ```articles.each do |article|```
 
 Of course, the beauty of loops is that we don't have to write all that out.
 
@@ -168,7 +175,7 @@ students = ['Suzy', 'Daniel', 'James', 'Mary', 'Phillip', 'Siegfried']
 
 We use hashes constantly. Hashes, like JS objects, are a great way to store related data of all different kinds, in a way that's super readable.
 
-The key to hashes is that they always house key/value pairs. **The key describes the properties, the value is the information relating to or describing the property.**
+Hashes always house key/value pairs. **The key describes the properties, the value is the information relating to or describing the property.**
 
 #### Creating a Hash
 
@@ -233,9 +240,9 @@ Symbols on their own don't do much, but they work great as keys. There are two w
 }
 ```
 
-Either are fine; you'll see both a lot. Use the "new way" one if you can help it, just cuz it's nice.
+Either are fine; you'll see both a lot. Use the "new way" one if you can help it but keep in mind what's happening behind the scenes.
 
-For the record, strings as keys _are_ possible – we just try not to use them.
+For the record, strings as keys _are_ possible if we use the "old way," but we rarely want or need string keys.
 
 #### Adding to our hash
 
@@ -269,7 +276,7 @@ fan.delete :color
 ## Hashes - Independent Practice (10 minutes)
 Now you try it!
 
-- Partner up! Together and **by hand with markers on the desk**, describe your computer as a hash. Use any data types you can think of, cuz hash values can be anything!
+- Partner up! Together and **by hand with markers on the desk**, describe your computer as a hash. Use any data types you can think of, because hash values can be anything!
 - When you're done, each of you, independently **open your computer, write it out in IRB**. Try getting each key out, adding in new ones, and deleting ones just for fun.
 - In your hashes, try to:
   - Include one key value with the value as an array 
