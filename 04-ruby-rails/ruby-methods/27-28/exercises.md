@@ -2,7 +2,7 @@
 
 Put your solutions in a file called `ruby_methods.rb`. To run, type `ruby ruby_methods.rb` in the command line.
 
-### Looping 
+### Looping
 
 Use a loop to do  the following:
 
@@ -22,6 +22,8 @@ Use a loop to do  the following:
   * and then adds the `name` and `phone` as a key value pair respectively if `name` is not already a contact, or
   * changes the phone number associated with `name` if the name is already a contact.
   * The `get_contact` method should `return` the `contacts` hash.
+  
+ *Hint:* No loop required for this one.
 
 6.) Write a method called `get_contacts` that 
 
