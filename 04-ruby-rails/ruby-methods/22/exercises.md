@@ -6,7 +6,7 @@
 
 1. Install the httparty gem from your Terminal with `gem install httparty`.
 
-1. Require the gem in a new ruby script file.
+1. Require the gem in a new ruby script file with `require 'httparty'`.
 
 1. Referencing the httparty docs and the spotify API docs, create a `spotify_album_search` method. It should use the gem to do an album search on the word "White" to the spotify API. 
 
