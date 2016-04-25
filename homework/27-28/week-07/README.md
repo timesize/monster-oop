@@ -9,7 +9,7 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 ## Day 1
 
-1. **High Priority**: Review [OOP in Ruby](https://github.com/sf-wdi-25/notes/tree/master/week-06-ruby/day-02/dusk-ruby-OOP) and finish the exercises
+1. **High Priority**: Review [OOP in Ruby](https://github.com/SF-WDI-LABS/shared_modules/tree/master/04-ruby-rails/ruby-oop) and finish the [exercises](https://github.com/SF-WDI-LABS/shared_modules/blob/master/04-ruby-rails/ruby-oop/exercises.md)
 2. Finish up
     * [Username Generator Lab](https://github.com/sf-wdi-27-28/username_generator)
 3. More OO Practice (Don't spend more than 1.5 hrs on this)
