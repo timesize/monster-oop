@@ -1,4 +1,3 @@
-```ruby
 class Animal
   attr_accessor :state
   def initialize(kind)
@@ -60,5 +59,3 @@ justin.eat('dogs')
 justin.greet
 jimmy.eat('person')
 puts Person.count
-
-```

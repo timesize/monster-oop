@@ -45,11 +45,11 @@ JavaScript lets us access variables inside objects with syntax like `obj.var` or
 
 ```ruby
 class Car
-  def color=(color)
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -78,11 +78,11 @@ class Car
     puts "A brand new carrrr!!!!!!"
   end
 
-  def color=(color)
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -99,11 +99,11 @@ class Car
     @color = color
   end
 
-  def color=(color)  
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -136,19 +136,19 @@ class Car
     @make = make
   end
 
-  def make=(make)
+  def make=(make) # setter
     @make = make
   end
 
-  def make
+  def make # getter
     @make
   end
 
-  def color=(color)
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -168,15 +168,15 @@ class Car
     @make = make
   end
 
-  def make=(make)
+  def make=(make) # setter
     @make = make
   end
 
-  def color=(color)
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -197,11 +197,11 @@ class Car
     @make = make
   end
 
-  def color=(color)
+  def color=(color) # setter
     @color = color
   end
 
-  def color
+  def color # getter
     @color
   end
 end
@@ -395,4 +395,3 @@ class EighteenWheeler < Vehicle
   @num_wheels = 18
 end
 ```
-
