@@ -12,8 +12,6 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 1. Read [OOP in Ruby](https://github.com/SF-WDI-LABS/shared_modules/tree/master/04-ruby-rails/ruby-oop/27/oop-reading.md) and try to follow along with the code.
 2. Finish up [Username Generator Lab](https://github.com/sf-wdi-27-28/username_generator) and submit a pull request according to the instructions for submittig homework liked above. 
 
-<!-- 3. More Practice (Don't spend more than 1 hour on this) -->
-
 <!--
 ## Day 2
 
