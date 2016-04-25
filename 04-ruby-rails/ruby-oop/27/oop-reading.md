@@ -6,7 +6,7 @@ An object represents an abstract thing, usually with some properties (attributes
 
 ### Define and Instantiate a Class
 
-Class definitions require three basic components: the reserved word `class`, a name of the class, and the reserved word `end`. By convention, the class name begins with a capital letter.
+Class definitions require three basic components: the reserved word `class`, a name of the class, and the reserved word `end`. By convention, the class name begins with a capital letter. Everything between the class name and `end` is part of the class definition. 
 
 ```ruby
 class Car
@@ -16,7 +16,7 @@ end
 To create instances of our class, we will create a variable and assign it the return value of the `Car` class's `Car.new` method.
 
 ```ruby
-# Try it!
+# see it in action:
 car = Car.new
 ```
 
@@ -35,7 +35,7 @@ end
 Now every car we create will have a "drive" behavior.
 
 ```ruby
-# Try it!
+# see it in action:
 car.drive
 ```
 
@@ -60,17 +60,15 @@ end
 ```
 
 ```ruby
-# Try it!
+# see it in action:
 car_one = Car.new
 car_one.color = "green" # sets @color using the setter method
 car_one.color           # gets @color using the getter method
+# => "green"
 
 car_two = Car.new
-car_two.color = "black"
-car_two.color
-
-car_three = Car.new
 car_three.color
+# => nil
 ```
 
 
@@ -97,7 +95,7 @@ class Car
 end
 ```
 ```ruby
-# Try it!
+# see it in action:
 bmw = Car.new
 audi = Car.new
 ```
@@ -121,7 +119,7 @@ end
 ```
 
 ```ruby
-# Try it!
+# see it in action:
 bmw = Car.new("black")
 bmw.color
 ```
@@ -129,7 +127,7 @@ bmw.color
 Since we don't *have* to put parentheses around method parameters when we call them, we can change a car's color with familiar syntax:
 
 ```ruby
-# Try it!
+# see it in action:
 bmw.color=("red")
 bmw.color="red with FLAME decals"
 # both work to change the car's color
@@ -198,7 +196,7 @@ end
 ```
 
 ```ruby
-# Try it!
+# see it in action:
 bmw = Car.new("red", "bmw")
 bmw.make
 ```
@@ -280,7 +278,7 @@ end
 ```
 
 ```ruby
-# Try it!
+# see it in action:
 Car.count
 # => 0
 ```
@@ -306,7 +304,7 @@ end
 ```
 
 ```ruby
-# Try it!
+# see it in action:
 Car.count
 # => 0
 
@@ -379,7 +377,7 @@ end
 Even though we didn't define the `accelerate` method again, a pickup truck will inherit the behavior from the `Car` class.
 
 ```ruby
-# Try it!
+# see it in action:
 truck_one = Pickup.new("red", "Chevrolet", "Silverado")
 truck_one.speed
 # => 0
@@ -391,7 +389,7 @@ truck_one.speed
 Inheritance doesn't go the other way, though -- new cars don't know how to use the `ride_in_back` behavior.
 
 ```ruby
-# Try it!
+# see it in action:
 cilantro = Car.new("pink", "Kia", "Cilantro")
 #=> #<Car:0x007f8c4c1b3520 @speed=0, @color="pink", @make="Kia" @model="Cilantro">
 focus.ride_in_back
@@ -400,7 +398,7 @@ focus.ride_in_back
 
 ### Inheritance and Class Variables
 
-Class variables  in Ruby don't interact with inheritance in the way many people would expect.  All subclasses share the same class variable, so changing a class variable within a subclass changes the class variable for the base class and all other subclasses.  This can be good when, for instance, we want to update the total `Car` count whenever a new `Pickup` is created. However, `Pickup`'s `@@count` will always be equal to the total `Car` count.  
+Class variables  in Ruby don't interact with inheritance in the way many people would expect.  All subclasses share the same class variable, so **changing a class variable within a subclass changes the class variable for the base class and all other subclasses**.  This can be good when, for instance, we want to update the total `Car` count whenever a new `Pickup` is created. However, `Pickup`'s `@@count` will always be equal to the total `Car` count.  
 
 This connection can cause lots of issues if it's not intended. For example, a `Vehicle` class might have an `@@num_wheels` variable that stores a "default" number of wheels for a vehicle, say 4.  If `Boat` is later created as a subclass of `Vehicle`, and `Boat`'s `@@num_wheels` is set to 0, then all vehicles will now have their number of wheels set to 0, even `Motorcylces`, `Cars`, `EighteenWheelers` and any other instances of `Vehicle` subclasses.
 
@@ -471,7 +469,7 @@ end
 Note that now two cars with the same speed will be equal (`==`):
 
 ```ruby
-# Try it!
+# see it in action:
 car_a = Car.new
 # => #<Car:0x007fea4a871928 @speed=0>
 car_b = Car.new
