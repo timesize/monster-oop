@@ -6,39 +6,34 @@ If you have any remaining time, please complete/review the exercises from dawn a
 
 Please refer to the [Instructions for Submitting Homework](/how-to/homework-submission.md).
 
-<!--
+
 ## Day 1
 
-1. Reading
-    * [Example](#example)
-2. Bonus/Stretch
-    * [Example](#example)
+1. **High Priority**: Review [OOP in Ruby](https://github.com/sf-wdi-25/notes/tree/master/week-06-ruby/day-02/dusk-ruby-OOP) and finish the exercises
+2. Finish up
+    * [Username Generator Lab](https://github.com/sf-wdi-27-28/username_generator)
+3. More OO Practice (Don't spend more than 1.5 hrs on this)
+    * [Wheel Of Fortune](https://github.com/sf-wdi-27-28/wheel_of_fortune)
 
-Please use any remaining time to complete and review the exercises from dawn & dusk:
-
-* [Example](#example)
-* [Example](#example)
--->
-
-<!-- 
+<!--
 ## Day 2
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 3
 
 1. Reading
 2. Bonus/Stretch
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 4
 
 1. Reading
@@ -46,10 +41,10 @@ Please use any remaining time to complete and review the exercises from dawn & d
     - Complete the [Week 1 Self-Assessment](#PENDING) and identify 2 topics you want to review tomorrow
     - Ask and/or upvote 3 questions on QuestionCookie: http://www.questioncookie.com/wdi-27-28-w7-review
 
-Please use any remaining time to complete and review the exercises from dawn & dusk. 
+Please use any remaining time to complete and review the exercises from dawn & dusk.
 -->
 
-<!-- 
+<!--
 ## Day 5 - Weekend Homework
 
 1. Reading
