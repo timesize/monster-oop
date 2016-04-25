@@ -405,10 +405,12 @@ end
 
 ## Modules
 
-Ruby <a href="http://ruby-doc.org/core-2.2.0/Module.html" target="_blank">`Module`</a>s group together related information (attributes and methods).  They're like simplified classes that can't have instances and don't have inheritance. Rubyists often use them for:
+Ruby "modules" group together related information (attributes and methods).  They're like simplified classes that can't have instances and don't have inheritance. Rubyists often use them for:
   * "namespacing": encapsulation or bundling of related content, 
   * "mixins": extra methods that can be added into classes without influencing the inheritance tree
 
+
+#### Namespacing
 
 A commonly used built-in module is `Math`. It encapsulates methods for mathematical concepts like [logarithms](http://ruby-doc.org/core-2.3.0/Math.html#method-c-log) and [square roots](http://ruby-doc.org/core-2.3.0/Math.html#method-c-sqrt) alongside [constants for e and pi](http://ruby-doc.org/core-2.3.0/Math.html#constants-list).  Note how we access the `Math` module's constants with the `::` operator:
 
@@ -417,3 +419,8 @@ puts Math::PI
 ```
 
 The `::` operator has a number of uses related to namespacing. You can think of it as a way to open up a namespace provided by a class or module (like `Math`) and reach inside for a constant (like `PI`).  You'll see this in Rails!
+
+#### Mixins
+
+Check out the first example in Ruby's [documentation for `modules`](http://ruby-doc.org/core-2.3.0/Module.html) to see how you'd `include` one as a mixin.  You can `include` a module in another module or in a class.
+
