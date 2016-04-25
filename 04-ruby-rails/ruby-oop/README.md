@@ -120,11 +120,6 @@ bmw.color="red with FLAME decals"
 # both work to change the car's color
 ```
 
-**Think Break!**
-
-How does this compare to using JavaScript constructors to create objects?
-
-
 ### `attr_*`
 
 If we add more methods to our class, we will start to notice a lot of repetition:
