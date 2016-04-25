@@ -9,8 +9,14 @@ Please refer to the [Instructions for Submitting Homework](/how-to/homework-subm
 
 ## Day 1
 
-1. Read [OOP in Ruby](https://github.com/SF-WDI-LABS/shared_modules/tree/master/04-ruby-rails/ruby-oop/27/oop-reading.md) and try to follow along with the code.
-2. Finish up [Username Generator Lab](https://github.com/sf-wdi-27-28/username_generator) and submit a pull request according to the instructions for submittig homework liked above. 
+
+1. Finish up [Username Generator Lab](https://github.com/sf-wdi-27-28/username_generator) through Level 3 and submit a pull request according to the instructions for submittig homework liked above. 
+1. Read [OOP in Ruby](https://github.com/SF-WDI-LABS/shared_modules/tree/master/04-ruby-rails/ruby-oop/27/oop-reading.md) and try to follow along with the code.  We'll go over Ruby OOP tomorrow.  Pay special attention to the following questions:
+   - What is a class?
+   - What is the basic Ruby syntax for creating a class and an instance?
+   - What is the difference between an instance variable and a class variable?
+   - What is the difference between an instance method and a class method?
+   - What is inheritance?
 
 <!--
 ## Day 2
