@@ -308,17 +308,18 @@ Inheritance lets us reuse code from one class as we create subtypes of that clas
 
 We'll use our `Car` class as a base class and make a new `Pickup` class that inherits from `Car`.  Another way to say this is that `Pickup` will be a *subclass* of `Car`.  You can also think of `Car` as `Pickup`'s parent and `Pickup` as `Car`'s child (as in a class inheritance tree).
 
-Notice that this `Car` class is spruced up with a new `@speed` instance variable and an `accelerate` instance method.
+Notice that this `Car` class is spruced up with two new instance variables: `@speed` and `@model`, and an `accelerate` instance method.
 
 ```ruby
 class Car
-  attr_accessor :make, :color, :speed
+  attr_accessor :make, :model, :color, :speed
   @@count = 0
 
-  def initialize(color, make)
+  def initialize(color, make, model)
     @speed = 0
     @color = color
     @make = make
+    @model = model
     @@count = @@count + 1
   end
 
@@ -339,9 +340,9 @@ The syntax for inheritance uses `<` in the class definition.  Our pickup trucks 
 
 ```ruby
 class Pickup < Car
-  attr_accessor :make, :color, :bed_capacity, :speed
+  attr_accessor :make, :model, :color, :bed_capacity, :speed
 
-  def initialize(color, make, bed_capacity)
+  def initialize(color, make, model, bed_capacity)
     @speed = 0
     @color = color
     @make = make
@@ -358,7 +359,7 @@ end
 Even though we didn't define the `accelerate` method again, a pickup truck will inherit the behavior from the `Car` class.
 
 ```ruby
-truck_one = Pickup.new("red", "Ford", 100)
+truck_one = Pickup.new("red", "Chevrolet", "Silverado")
 truck_one.speed
 => 0
 truck_one.accelerate(40)
@@ -369,10 +370,10 @@ truck_one.speed
 Inheritance doesn't go the other way, though -- new cars don't know how to use the `ride_in_back` behavior.
 
 ```ruby
-focus = Car.new("green", "Ford")
-#=> #<Car:0x007f8c4c1b3520 @speed=0, @color="green", @make="Ford">
+cilantro = Car.new("pink", "Kia", "Cilantro")
+#=> #<Car:0x007f8c4c1b3520 @speed=0, @color="pink", @make="Kia" @model="Cilantro">
 focus.ride_in_back
-#=> NoMethodError: undefined method `ride_in_back' for #<Car:0x007f8c4c1b3520 @speed=0, @color="green", @make="Ford">
+#=> NoMethodError: undefined method `ride_in_back' for #<Car:0x007f8c4c1b3520 @speed=0, @color="pink", @make="Kia", @model="Cilantro">
 ```
 
 ### Inheritance and Class Variables
@@ -399,3 +400,20 @@ class EighteenWheeler < Vehicle
   @num_wheels = 18
 end
 ```
+
+
+
+## Modules
+
+Ruby <a href="http://ruby-doc.org/core-2.2.0/Module.html" target="_blank">`Module`</a>s group together related information (attributes and methods).  They're like simplified classes that can't have instances and don't have inheritance. Rubyists often use them for:
+  * "namespacing": encapsulation or bundling of related content, 
+  * "mixins": extra methods that can be added into classes without influencing the inheritance tree
+
+
+A commonly used built-in module is `Math`. It encapsulates methods for mathematical concepts like [logarithms](http://ruby-doc.org/core-2.3.0/Math.html#method-c-log) and [square roots](http://ruby-doc.org/core-2.3.0/Math.html#method-c-sqrt) alongside [constants for e and pi](http://ruby-doc.org/core-2.3.0/Math.html#constants-list).  Note how we access the `Math` module's constants with the `::` operator:
+
+```ruby
+puts Math::PI
+```
+
+The `::` operator has a number of uses related to namespacing. You can think of it as a way to open up a namespace provided by a class or module (like `Math`) and reach inside for a constant (like `PI`).  You'll see this in Rails!
