@@ -16,6 +16,7 @@ end
 To create instances of our class, we will create a variable and assign it the return value of the `Car` class's `Car.new` method.
 
 ```ruby
+# Try it!
 car = Car.new
 ```
 
@@ -34,6 +35,7 @@ end
 Now every car we create will have a "drive" behavior.
 
 ```ruby
+# Try it!
 car.drive
 ```
 
@@ -55,7 +57,10 @@ class Car
     @color
   end
 end
+```
 
+```ruby
+# Try it!
 car_one = Car.new
 car_one.color = "green" # sets @color using the setter method
 car_one.color           # gets @color using the getter method
@@ -90,7 +95,9 @@ class Car
     @color
   end
 end
-
+```
+```ruby
+# Try it!
 bmw = Car.new
 audi = Car.new
 ```
@@ -111,7 +118,10 @@ class Car
     @color
   end
 end
+```
 
+```ruby
+# Try it!
 bmw = Car.new("black")
 bmw.color
 ```
@@ -119,6 +129,7 @@ bmw.color
 Since we don't *have* to put parentheses around method parameters when we call them, we can change a car's color with familiar syntax:
 
 ```ruby
+# Try it!
 bmw.color=("red")
 bmw.color="red with FLAME decals"
 # both work to change the car's color
@@ -184,7 +195,10 @@ class Car
     @color
   end
 end
+```
 
+```ruby
+# Try it!
 bmw = Car.new("red", "bmw")
 bmw.make
 ```
@@ -263,7 +277,10 @@ class Car
     @@count
   end
 end
+```
 
+```ruby
+# Try it!
 Car.count
 # => 0
 ```
@@ -286,7 +303,10 @@ class Car
     @@count
   end
 end
+```
 
+```ruby
+# Try it!
 Car.count
 # => 0
 
@@ -359,6 +379,7 @@ end
 Even though we didn't define the `accelerate` method again, a pickup truck will inherit the behavior from the `Car` class.
 
 ```ruby
+# Try it!
 truck_one = Pickup.new("red", "Chevrolet", "Silverado")
 truck_one.speed
 # => 0
@@ -370,6 +391,7 @@ truck_one.speed
 Inheritance doesn't go the other way, though -- new cars don't know how to use the `ride_in_back` behavior.
 
 ```ruby
+# Try it!
 cilantro = Car.new("pink", "Kia", "Cilantro")
 #=> #<Car:0x007f8c4c1b3520 @speed=0, @color="pink", @make="Kia" @model="Cilantro">
 focus.ride_in_back
@@ -449,6 +471,7 @@ end
 Note that now two cars with the same speed will be equal (`==`):
 
 ```ruby
+# Try it!
 car_a = Car.new
 # => #<Car:0x007fea4a871928 @speed=0>
 car_b = Car.new
