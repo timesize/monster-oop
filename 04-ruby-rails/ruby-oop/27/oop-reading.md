@@ -361,10 +361,10 @@ Even though we didn't define the `accelerate` method again, a pickup truck will 
 ```ruby
 truck_one = Pickup.new("red", "Chevrolet", "Silverado")
 truck_one.speed
-=> 0
+# => 0
 truck_one.accelerate(40)
 truck_one.speed
-=> 40
+# => 40
 ```
 
 Inheritance doesn't go the other way, though -- new cars don't know how to use the `ride_in_back` behavior.
@@ -422,5 +422,41 @@ The `::` operator has a number of uses related to namespacing. You can think of 
 
 #### Mixins
 
-Check out the first example in Ruby's [documentation for `modules`](http://ruby-doc.org/core-2.3.0/Module.html) to see how you'd `include` one as a mixin.  You can `include` a module in another module or in a class.
+Check out the first example in Ruby's [documentation for `modules`](http://ruby-doc.org/core-2.3.0/Module.html) to see how you'd `include` one as a mixin.  You can `include` a module in another module or in a class.  One built-in module that's commonly mixed into classes is [`Comparable`](http://ruby-doc.org/core-2.3.0/Comparable.html).
 
+Here's how a simplified `Car` class might look with `Comparable` mixed in to compare cars just based on speed.
+
+```ruby 
+
+class Car
+  include Comparable
+  attr_accessor :speed
+
+  def initialize
+    @speed = 0
+  end
+
+  def accelerate(change)
+    @speed += change
+  end
+  
+  def <=>(otherCar)
+    @speed <=> otherCar.speed
+  end
+end
+```
+
+Note that now two cars with the same speed will be equal (`==`):
+
+```ruby
+car_a = Car.new
+# => #<Car:0x007fea4a871928 @speed=0>
+car_b = Car.new
+# => #<Car:0x007fea4a869700 @speed=0>
+car_a == car_b
+# => true
+car_a.accelerate(20)
+# => 20
+car_a > car_b
+# => true
+```
