@@ -113,9 +113,9 @@ teletubby.threat_level
 
 ##Instance Methods
 
-> **Challenge:** Create a `habitat?` instance method for `Monster` that tests whether the monster's habitat matches what is passed in.
+**Challenge:** Create a `habitat?` instance method for `Monster` that tests whether the monster's habitat matches an argument that is passed in.
 
->```ruby
+> ```ruby
 yeti = Monster.new
 # Rawr!
 yeti.habitat = "tundra"
@@ -133,11 +133,10 @@ What if I wanted a running count of all the Monsters ever created?  Let's keep t
 
 > **Challenge:** Add a class variables to enable this code...
 
->```ruby
+> ```ruby
 predator = Monster.new(:high)
 # Rawr!
 # 2 monsters now roam the world!
-
 alien = Monster.new(:high)
 # Rawr!
 # 3 monsters now roam the world!
