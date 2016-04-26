@@ -12,9 +12,8 @@
   # initial behavior
 
   # habitat? instance method
-  
+
   # get_dangerous instance method
-  
 
   # fight class method
 
@@ -22,15 +21,14 @@
 
   # zombie version of class_description
   
-
   # initial behavior and values
 
 # Werewolf class
 
   # werewolf version of class_description
 
-  # initial behavior and values 
-  
+  # initial behavior and values
+
   # update_threat_level instance method
 
 # Flying module
@@ -40,5 +38,5 @@
 # Vampire class
 
   # vampire class description
-  
+
   # Flying module included
