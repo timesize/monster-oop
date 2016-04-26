@@ -208,3 +208,6 @@ rubber_ducky = Monster.new(:friendly)
     - a class method
   * Why do we use classes?
   * Looking ahead: What is inheritance?
+
+
+  ## Head over to [Part 2](part2.md)
