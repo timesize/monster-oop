@@ -204,7 +204,7 @@ rubber_ducky = Monster.new(:friendly)
     - an instance variable
     - a class variable
   * What is the difference between:
-    - an instance mthod
+    - an instance method
     - a class method
   * Why do we use classes?
   * Looking ahead: What is inheritance?
