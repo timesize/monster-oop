@@ -9,7 +9,6 @@ Ruby <img alt="heart" src="https://em.wattpad.com/6d0355863f6ca950858ed30d2b8b9b
 | Distinguish between objects in JS, hashes and objects in Ruby, and classes in Ruby. |
 | Create your own class and use the `initialize` method to set up initial behavior. |
 | Define attributes and methods for instances, and for the class as a whole. |
-| Explain the class-based inheritance pattern with Ruby as an example. |
 
 ##Hashes
 
@@ -209,4 +208,4 @@ rubber_ducky = Monster.new(:friendly)
     - an instance mthod
     - a class method
   * Why do we use classes?
-  * What is inheritance?
+  * Looking ahead: What is inheritance?
