@@ -54,19 +54,21 @@ puts rob.name
 
 >*Hint*: The syntax for inheritance uses the `<` symbol in the class definition!
 
-<br>
+<br><br>
 
 > **Challenge:** Create a `Werewolf` class that inherits from the base `Monster` class.  Give werewolves a default initial threat level of `:low`. Enable this code:
 
->```ruby
+> ```ruby
 teen_wolf = Werewolf.new
 puts teen_wolf.threat_level
 # :low
 ```
-<br>
+
+<br><br>
 
 > **Challenge:** During a full moon, a werewolf's threat level jumps all the way up to `:midnight`. Write an `update_threat_level` method for `Werewolf` that calculates a werewolf's threat level based on a boolean parameter, `full_moon`. The `update_threat_level` method should update the werewolf's `@threat_level` and return its new value.
-<br>
+
+<br><br>
 
 > **Challenge:** Use the class instance variable pattern to add a  `class_description` variable to the `Monster` class. The Monster class description should be `"A scary monster!"`.
 
