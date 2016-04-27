@@ -1,5 +1,10 @@
 require "./solutions/stretch.rb"
 
+1 new message since 8:56 PM
+Mark as read
+Team Directory
+
+
 #### BASE CLASS ####
 puts "\n#### BASE CLASS ####"
 
@@ -105,7 +110,7 @@ puts "\ndracula (test Vampire / Flying with name)"
 # # Rawr!
 # # 8 monsters now roam the world!
 # dracula.name = "Count Dracula"
-# dracula.fly  
+# dracula.fly
 # # Count Dracula soars through the air
 
 #### STRETCH ####
@@ -143,7 +148,7 @@ puts "\n(test Comparable)"
 # monster_array = [
 # 	rubber_ducky,  # :low
 # 	rob,  # :medium
-# 	dalek,  # :high 
+# 	dalek,  # :high
 # 	teen_wolf # :midnight
 # ]
 # puts "\nshuffling monsters:"
@@ -151,4 +156,3 @@ puts "\n(test Comparable)"
 # puts "\nsorted by Ruby using <=>"
 # p monster_array.sort!
 # puts "(expected order is ducky, Rob Zombie, dalex, Michael)"
-
